@@ -1,9 +1,9 @@
 <section class="py-20">
-    <div class="max-w-4xl mx-auto px-8">
-        <h2 class="mb-3 text-brand-gray-dark-1 font-semibold text-2xl text-center">Market value of top cyptocurrencies</h2>
-        <p class="max-w-xs mx-auto text-brand-gray-light text-center mb-6">Be updated on the current market standings and growths value of various top coins</p>
-        <div class="flex justify-between items-center mb-6">
-            <p>Current value: $35,770</p>
+    <div class="max-w-5xl mx-auto px-6">
+        <h2 class="mb-3 text-brand-gray-dark-1 font-bold text-3xl text-center">Market value of top cyptocurrencies</h2>
+        <p class="max-w-xs mx-auto text-brand-gray-light text-center mb-12">Be updated on the current market standings and growths value of various top coins</p>
+        <div class="flex justify-between items-center mb-10 text-brand-gray-light">
+            <p class="">Current value: <span class="text-brand-gray-dark-1 font-bold text-md">$35,770</span></p>
             <select name="" id="">
                 <option value="">Bitcoin</option>
                 <option value="">Bitcoin Cash</option>

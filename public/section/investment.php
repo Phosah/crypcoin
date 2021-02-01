@@ -1,89 +1,113 @@
-<section class="py-20">
-    <h2 class="text-brand-gray-dark-1 text-2xl font-semibold text-center">Investment plan</h2>
-    <p class="text-brand-gray-light text-center mb-8">The investment plan selected would determine your profit made on the cryptocurrency purchased</p>
-    <div class="flex max-w-4xl mx-auto px-8">
-        <div class="w-1/3 mx-2 pt-4 pb-12 px-2 bg-blue-300 rounded-2xl">
-            <div class="flex justify-center items-center bg-blue-100 rounded-full h-24 w-24 mx-auto my-4 ">
+<section class="py-16">
+    <h2 class="text-brand-gray-dark-1 text-3xl font-bold text-center mb-6">Investment Plans</h2>
+    <p class="max-w-lg mx-auto text-brand-gray-light text-center mb-14">The investment plan selected would determine your profit made on the cryptocurrency purchased</p>
+    <div class="flex space-x-16 max-w-5xl mx-auto px-6">
+        <div class="w-1/3 pt-4 pb-12 rounded-3xl shadow-lg">
+            <div class="flex justify-center items-center bg-blue-100 rounded-full h-32 w-32 mx-auto mb-8 ">
                 <div class="">
-                    <img class="w-8" src="img/price-tag.png" alt="Price tag">
+                    <img class="w-14" src="img/price-tag.png" alt="Price tag">
                 </div>
             </div>
-            <div class="text-center ">
-                <h3 class="text-brand-gray-dark-1 text-lg font-bold">700% Profit</h3>
-                <p class="p-6">Daily for 24 Hours</p>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Minimum deposit is $100</p>
+            <div class="w-9/12 mx-auto">
+                <h3 class="text-brand-gray-dark-1 font-bold text-3xl">700% Profit</h3>
+                <p class="mb-6">Daily for 24 Hours</p>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light">Minimum deposit is <span class="text-brand-gray-dark-1 font-bold">$100</span></p>
                 </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Maximum deposit is $500</p>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light">Maximum deposit is <span class="text-brand-gray-dark-1 font-bold">$500</span></p>
                 </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Principal is included</p>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light">Principal is <span class="text-brand-gray-dark-1 font-bold">included</span></p>
                 </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light mb-4">Referral commission is 10%</p>
+                <div class="flex space-x-4 mb-8">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light mb-4">Referral commission is <span class="text-brand-gray-dark-1 font-bold">10%</span></p>
                 </div>
-                <button class="bg-blue-600 px-4 py-2 text-white rounded-md">Make Deposit</button>
-            </div>
-        </div>
-        <div class="w-1/3 mx-2 pt-4 pb-12 px-2 bg-blue-300 rounded-2xl">
-            <div class="flex justify-center items-center bg-blue-100 rounded-full h-24 w-24 mx-auto my-4 ">
-                <div class="flex justify-center items-center">
-                    <img class="w-8" src="img/price-tag.png" alt="Price tag">
-                </div>
-            </div>
-            <div class="text-center ">
-                <h3 class="text-brand-gray-dark-1 text-lg font-bold">700% Profit</h3>
-                <p class="p-6">Daily for 24 Hours</p>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Minimum deposit is $100</p>
-                </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Maximum deposit is $500</p>
-                </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Principal is included</p>
-                </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light mb-4">Referral commission is 10%</p>
-                </div>
-                <button class="bg-blue-600 px-4 py-2 text-white rounded-md">Make Deposit</button>
+                <button class="bg-blue-700 px-8 py-4 text-white rounded-2xl">Make Deposit</button>
             </div>
         </div>
-        <div class="w-1/3 mx-2 pt-4 pb-12 px-2 bg-blue-300 rounded-2xl">
-            <div class="flex justify-center items-center bg-blue-100 rounded-full h-24 w-24 mx-auto my-4 ">
-                <div class="flex justify-center items-center">
-                    <img class="w-8" src="img/price-tag.png" alt="Price tag">
+        <div class="w-1/3 pt-4 pb-12 bg-blue-700 rounded-3xl shadow-lg">
+            <div class="flex justify-center items-center bg-blue-100 rounded-full h-32 w-32 mx-auto mb-8 ">
+                <div class="">
+                    <img class="w-16" src="img/price-tag.png" alt="Price tag">
                 </div>
             </div>
-            <div class="text-center ">
-                <h3 class="text-brand-gray-dark-1 text-lg font-bold">700% Profit</h3>
-                <p class="p-6">Daily for 24 Hours</p>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Minimum deposit is $100</p>
+            <div class="w-9/12 mx-auto text-white">
+                <h3 class=" font-bold text-3xl">1000% Profit</h3>
+                <p class="mb-6">Daily for 24 Hours</p>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box-white.png" alt="Investment plan icon">
+                    </div>
+                    <p class="">Minimum deposit is <span class=" font-bold">$500</span></p>
                 </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Maximum deposit is $500</p>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box-white.png" alt="Investment plan icon">
+                    </div>
+                    <p class="">Maximum deposit is <span class=" font-bold">$2000</span></p>
                 </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light">Principal is included</p>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box-white.png" alt="Investment plan icon">
+                    </div>
+                    <p class="">Principal is <span class=" font-bold">included</span></p>
                 </div>
-                <div class="mb-2">
-                    <i></i>
-                    <p class="text-brand-gray-dark-light mb-4">Referral commission is 10%</p>
+                <div class="flex space-x-4 mb-8">
+                    <div>
+                        <img class="w-6" src="img/box-white.png" alt="Investment plan icon">
+                    </div>
+                    <p class=" mb-4">Referral commission is <span class=" font-bold">10%</span></p>
                 </div>
-                <button class="bg-blue-600 px-4 py-2 text-white rounded-md">Make Deposit</button>
+                <button class="bg-white px-8 py-4 text-blue-700 font-semibold rounded-2xl">Make Deposit</button>
+            </div>
+        </div>
+        <div class="w-1/3 pt-4 pb-12 bg-white rounded-3xl shadow-lg">
+            <div class="flex justify-center items-center bg-blue-100 rounded-full h-32 w-32 mx-auto mb-8 ">
+                <div class="">
+                    <img class="w-14" src="img/price-tag.png" alt="Price tag">
+                </div>
+            </div>
+            <div class="w-9/12 mx-auto">
+                <h3 class="text-brand-gray-dark-1 font-bold text-3xl">2000% Profit</h3>
+                <p class="mb-6">Daily for 24 Hours</p>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light">Minimum deposit is <span class="text-brand-gray-dark-1 font-bold">$1000</span></p>
+                </div>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light">Maximum deposit is <span class="text-brand-gray-dark-1 font-bold">$5000</span></p>
+                </div>
+                <div class="flex space-x-4 mb-3">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light">Principal is <span class="text-brand-gray-dark-1 font-bold">included</span></p>
+                </div>
+                <div class="flex space-x-4 mb-8">
+                    <div>
+                        <img class="w-6" src="img/box.png" alt="Investment plan icon">
+                    </div>
+                    <p class="text-brand-gray-dark-light mb-4">Referral commission is <span class="text-brand-gray-dark-1 font-bold">10%</span></p>
+                </div>
+                <button class="bg-blue-700 px-8 py-4 text-white rounded-2xl">Make Deposit</button>
             </div>
         </div>
     </div>

@@ -1,15 +1,17 @@
-<section class="py-20">
-    <div class="flex items-center max-w-4xl mx-auto px-8">
-        <div class="w-1/2 mx-4">
+<section class="py-32">
+    <div class="flex items-center space-x-12 max-w-5xl mx-auto px-6">
+        <div class="w-1/2">
             <img class="" src="img/update.png" alt="Update">
         </div>
-        <div class="w-1/2 mx-4">
-            <h3 class="text-brand-gray-dark-1 font-semibold text-2xl mb-3">Stay connected</h3>
-            <p class="text-brand-gray-light mb-4">Stay updated with our regular development and special offers</p>
-            <form action="">
-                <div class="rounded-full bg-blue-100 px-3 py-2">
-                    <input type="email" name="" id="">
-                    <i></i>
+        <div class="w-1/2">
+            <h3 class="text-brand-gray-dark-1 font-bold text-3xl mb-3">Stay connected</h3>
+            <p class="text-brand-gray-light mb-8">Stay updated with our regular development and special offers</p>
+            <form action="" class="flex">
+                <div class="flex-1 text-brand-gray-dark-1 ">
+                    <input class="w-full bg-blue-100 rounded-full py-4 px-4 font-bold" type="email" name="" id="" placeholder="Email address">
+                </div>
+                <div>
+                    <img class="w-12" src="img/arrow.png" alt="Send">
                 </div>
             </form>
         </div>

@@ -1,4 +1,4 @@
-<section class="py-20 bg-green-100">
+<section class="py-16">
     <div class="flex items-center justify-center">
         <div class="flex-1 mr-8">
             <img class="w-40" src="img/ethereum.png" alt="ethereum photo">
