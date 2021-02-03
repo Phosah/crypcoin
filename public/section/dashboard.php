@@ -1,7 +1,7 @@
 <section class="py-16">
-    <div class="flex items-center max-w-5xl mx-auto space-x-12 px-6">
-        <div class="w-1/2">
-            <h2 class="text-brand-gray-dark-1 text-2xl mb-8 font-bold">What we offer</h2>
+    <div class="md:flex items-center max-w-5xl mx-auto md:space-x-12 px-12 md:px-6">
+        <div class="md:w-1/2 mx-auto mb-12 md:mb-0">
+            <h2 class="sm:text-center md:text-left text-brand-gray-dark-1 text-2xl mb-8 font-bold">What we offer</h2>
             <div class="flex space-x-4 mb-6 w-10/12">
                 <div>
                     <img class="w-6" src="img/checkmark.png" alt="Checkmark">
@@ -16,7 +16,7 @@
             </div>
             <button class="bg-blue-700 px-6 py-2 text-white rounded-md">Get started</button>
         </div>
-        <div class="w-1/2">
+        <div class="md:w-1/2">
             <img src="img/dashboard.png" alt="Dashboard photo">
         </div>
     </div>
