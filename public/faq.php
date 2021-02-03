@@ -106,12 +106,9 @@
                     </div>
                     <div class="p-4 text-sm text-brand-gray-light">Depending on each plan. Interest on your Crypcoin account is acquired Daily, Weekly, Bi-Weekly, Monthly and Yearly and credited to your available balance at the end of each day</div>
                 </div>
-                <div class="bg-yellow-700 ">
-                    Pagination buttons
-                </div>
             </div>
         </section>
-        <section class="py-40">
+        <section class="py-32">
             <div class="flex items-center space-x-16 max-w-5xl mx-auto">
                 <div class="w-1/2">
                     <img src="img/faq-photo.png" alt="Woman standing and smiling">
