@@ -26,29 +26,33 @@
                     <button class="bg-blue-700 py-2 px-6 rounded-md text-white">Get started</button>
                 </div>
                 <div class="w-1/2">
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-blue-200 p-2">
-                            <img class="w-6" src="img/trust.png" alt="Trust">
+                    <div class="flex mb-8">                 
+                        <div class="flex flex-1 items-center space-x-4">
+                            <div class="bg-blue-200 p-2">
+                                <img class="w-6" src="img/trust.png" alt="Trust">
+                            </div>
+                            <p class="text-brand-gray-dark-1 font-semibold text-lg">Trust & Respect</p>
                         </div>
-                        <p class="text-brand-gray-dark-1 font-semibold text-lg">Trust & Respect</p>
+                        <div class="flex flex-1 items-center space-x-4">
+                            <div class="bg-blue-200 p-2">
+                                <img class="w-6" src="img/transparency.png" alt="Transparency">
+                            </div>
+                            <p class="text-brand-gray-dark-1 font-semibold text-lg">Transparency</p>
+                        </div>
                     </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-blue-200 p-2">
-                            <img class="w-6" src="img/transparency.png" alt="Transparency">
+                    <div class="flex">                  
+                        <div class="flex flex-1 items-center space-x-4">
+                            <div class="bg-blue-200 p-2">
+                                <img class="w-6" src="img/bulb.png" alt="Innovation">
+                            </div>
+                            <p class="text-brand-gray-dark-1 font-semibold text-lg">Innovation</p>
                         </div>
-                        <p class="text-brand-gray-dark-1 font-semibold text-lg">Transparency</p>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-blue-200 p-2">
-                            <img class="w-6" src="img/bulb.png" alt="Innovation">
+                        <div class="flex flex-1 items-center space-x-4">
+                            <div class="bg-blue-200 p-2">
+                                <img class="w-6" src="img/crown.png" alt="Simplicity">
+                            </div>
+                            <p class="text-brand-gray-dark-1 font-semibold text-lg">Simplicity</p>
                         </div>
-                        <p class="text-brand-gray-dark-1 font-semibold text-lg">Innovation</p>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <div class="bg-blue-200 p-2">
-                            <img class="w-6" src="img/crown.png" alt="Simplicity">
-                        </div>
-                        <p class="text-brand-gray-dark-1 font-semibold text-lg">Simplicity</p>
                     </div>
                 </div>
             </div>
