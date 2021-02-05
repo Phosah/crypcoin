@@ -8,9 +8,9 @@
 </head>
 <body>
     <main>
-        <section class="min-h-screen flex">
-             <div class="w-1/2 flex flex-col">
-                <div class=" flex items-end h-20 pb-6">
+        <section class="min-h-screen md:flex px-6 md:px-0">         
+            <div class="md:w-1/2 min-h-screen flex flex-col">
+                <div class="flex items-end h-20 pb-6">
                     <div class="flex space-x-4 w-96 mx-auto">
                         <i>&LeftArrow;</i>
                         <div class="text-brand-gray-light font-semibold">
@@ -52,10 +52,9 @@
                         </div>
                     </div>
                 </div>
-             </div>
-             <div class="w-1/2 object-cover bg-blue-300" style="background-position: top center; background-size: cover; background-image: url('img/createpassword-photo.png')">
-             
-             </div>
+            </div>
+            <div class="md:w-1/2 hidden md:block object-cover bg-blue-300" style="background-position: top center; background-size: cover; background-image: url('img/createpassword-photo.png')">           
+            </div>
         </section>
     </main>
 </body>

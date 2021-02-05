@@ -9,16 +9,13 @@
 </head>
 <body>
     <header class="home-header min-h-screen pb-30 text-white">
-        <div class="max-w-5xl mx-auto px-12 md:px-6">
+        <div class="min-h-screen flex flex-col max-w-6xl mx-auto px-6">
             <?php include("navbar.php") ?>
-            <div class="md:flex md:items-center md:justify-between pb-8">
+            <div class=" flex-1 md:flex md:items-center md:justify-between pb-8">
                 <div class="md:w-1/2 w-full mb-12 md:mb-0">
                     <div class="md:w-9/12">
                         <h2 class="text-3xl font-semibold mb-4">Crypto Trade Made Easy</h2>
-                        <!-- <h2 class="text-3xl mb-4 font-semibold">Easy</h2> -->
                         <p class="font-extralight">Investing in cryptocurrencies simplified and made accessible at lightening speed with Crypcoin</p>
-                        <!-- <button>Get started</button>
-                        <button>Know more</button> -->
                     </div>
                 </div>
                 <div class="md:w-1/2 w-full md:flex md:justify-end">

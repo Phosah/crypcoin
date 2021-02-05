@@ -1,5 +1,5 @@
-<section class="py-32">
-    <div class="md:flex items-center md:space-x-12 max-w-5xl mx-auto px-12 md:px-6">
+<section class="py-20">
+    <div class="md:flex items-center md:space-x-12 max-w-6xl mx-auto px-6">
         <div class="md:w-1/2 mx-auto mb-12 md:mb-0">
             <img class="" src="img/update.png" alt="Update">
         </div>

@@ -7,19 +7,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="max-w-5xl mx-auto">
+    <header class="max-w-6xl mx-auto px-6">
         <?php include("navbar-light.php") ?>
     </header>
     <main>
-        <section class="py-16">
-            <div class="max-w-5xl mx-auto mb-8 text-center">
+        <section class="py-20">
+            <div class="max-w-6xl mx-auto mb-8 px-6 text-center">
                 <h2 class="text-brand-gray-dark-1 text-3xl font-bold mb-4">Contact US</h2>
                 <p class="text-brand-gray-light ">It doesnt matter where you are or the time of the day, we are always here to answer you</p>
             </div>
         </section>
-        <section class="py-16">
-            <div class="max-w-5xl mx-auto flex items-center space-x-12">               
-                <div class="w-1/2 ">
+        <section class="py-20">
+            <div class="md:flex items-center md:space-x-12 max-w-6xl mx-auto px-6">               
+                <div class="md:w-1/2 mb-12 md:mb-0">
                     <h3 class="max-w-sm mb-6 text-brand-gray-dark-1 text-3xl font-bold">Want to make more enquires?</h3>
                     <h4 class="mb-6 text-brand-gray-dark-1 font-bold">Want a direct reach?</h4>
                     <p class="mb-4 text-brand-gray-light ">crypcoinsupport@gmail.com</p>
@@ -27,7 +27,7 @@
                     <p class="mb-
                      text-brand-gray-light ">2345A Kent mac hall avenue, Manchester, London</p>
                 </div>
-                <div class="w-1/2">
+                <div class="md:w-1/2">
                     <form action="">
                         <div class="mb-6 rounded-md shadow-md ">
                             <input class="w-full rounded-md py-3 px-4 " type="text" name="" id="" placeholder="Fullname">

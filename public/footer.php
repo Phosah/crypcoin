@@ -1,5 +1,5 @@
 <footer class="py-20 border-t border-gray-300">
-    <div class="md:flex items-start justify-center mx-auto max-w-5xl px-12 md:px-6">
+    <div class="md:flex items-start justify-center mx-auto max-w-6xl px-6">
         <div class="flex-1 mb-10 md:mb-0">
             <img class="w-32" src="img/footer-logo.png" alt="Crypcoin Logo">
         </div>

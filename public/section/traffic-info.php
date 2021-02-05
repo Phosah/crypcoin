@@ -1,5 +1,5 @@
-<section class="py-16">
-    <div class="md:flex items-center max-w-5xl mx-auto px-12 md:px-6">
+<section class="py-20">
+    <div class="md:flex items-center max-w-6xl mx-auto px-6">
         <div class="flex mb-5 md:mb-0 md:w-1/2">
             <div class="flex-1 text-center">
                 <h3 class="text-brand-gray-dark-1 text-3xl mb-2 font-bold">12k+</h3>

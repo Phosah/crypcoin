@@ -1,5 +1,5 @@
-<section  class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-12 md:px-6">
+<section  class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
         <h2 class="mb-3 text-center text-3xl text-brand-gray-dark-1 font-bold">Why Us</h2>
         <p class="max-w-md mx-auto text-center text-base text-brand-gray-light mb-14">We are a company guided by some simple values which form the core of our operations </p>
         <div class="md:flex md:space-x-12">
