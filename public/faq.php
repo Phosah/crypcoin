@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="max-w-5xl mx-auto">
+    <header class="max-w-6xl mx-auto px-6">
         <?php include("navbar-light.php") ?>
     </header>
     <main>
-        <section class="py-16">
-            <div class="text-center">
+        <section class="py-20">
+            <div class="text-center px-6">
                 <h3 class="text-brand-gray-dark-1 text-3xl font-bold mb-3">Hello, How can we help?</h3>
                 <p class="max-w-md mx-auto text-brand-gray-light">Listed below are a list of our frequently asked questions by inquisitive users</p>
             </div>
         </section>
-        <section class="py-16">
+        <section class="py-20">
             <div class="max-w-3xl mx-auto">
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -108,14 +108,14 @@
                 </div>
             </div>
         </section>
-        <section class="py-32">
-            <div class="flex items-center space-x-16 max-w-5xl mx-auto">
-                <div class="w-1/2">
+        <section class="py-20">
+            <div class="md:flex items-center md:space-x-16 max-w-6xl mx-auto px-6">
+                <div class="md:w-1/2 mb-12">
                     <img src="img/faq-photo.png" alt="Woman standing and smiling">
                 </div>
-                <div class="w-1/2 py-2">
-                    <h2 class="max-w-md text-brand-gray-dark-1 font-bold text-3xl mb-4">Still have unanswered questions?</h2>
-                    <p class="max-w-md mb-16 text-brand-gray-light">Send us a personalised mail and we would answer your question</p>
+                <div class="md:w-1/2 py-2">
+                    <h2 class="max-w-md text-center md:text-center mx-auto text-brand-gray-dark-1 font-bold text-3xl mb-4">Still have unanswered questions?</h2>
+                    <p class="max-w-md mb-16 text-center md:text-center mx-auto text-brand-gray-light">Send us a personalised mail and we would answer your question</p>
                     <form action="">
                         <div class="flex space-x-3 mb-8 border-b border-brand-gray-light ">     
                             <div>                              

@@ -2,7 +2,7 @@
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-brand-gray-dark-1 font-bold text-3xl mb-2 text-center">Lovely sound from users</h2>
         <p class="mb-16 text-brand-gray-light text-center max-w-sm mx-auto">We are a company guided by some simple values which form the core of our operations </p>
-        <div class="w-1/3 mx-auto items-center justify-center">
+        <div class="md:w-1/3 w-full mx-auto items-center justify-center">
             <div class="">
                 <img class="w-4/12 mx-auto" src="img/profile.png" alt="Crypcoin user">
             </div>

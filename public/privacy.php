@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="max-w-5xl mx-auto">
+    <div class="max-w-6xl mx-auto px-6">
         <?php include("navbar-light.php") ?>
     </div>
     <main>
         <section class="pt-16 pb-32">
-            <div class="max-w-5xl mx-auto">
+            <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-32">
                     <h2 class="text-3xl font-bold text-brand-gray-dark-1 mb-3">Privacy Policy</h2>
                     <p class="max-w-md mx-auto text-brand-gray-light">Below are our legal requirements and policies that guide our organisation to ensure the benefits of the users</p>

@@ -6,9 +6,9 @@
         <div class="md:w-1/2 mx-auto">
             <h3 class="sm:text-center md:text-left text-brand-gray-dark-1 font-bold text-3xl mb-3">Stay connected</h3>
             <p class="text-brand-gray-light mb-8">Stay updated with our regular development and special offers</p>
-            <form action="" class="flex">
+            <form action="" class="flex items-center bg-blue-100 rounded-full pl-4 font-bold">
                 <div class="flex-1 text-brand-gray-dark-1 ">
-                    <input class="w-full bg-blue-100 rounded-full py-4 px-4 font-bold" type="email" name="" id="" placeholder="Email address">
+                    <input class="w-full bg-transparent" type="email" name="" id="" placeholder="Email address">
                 </div>
                 <div>
                     <img class="w-12" src="img/arrow.png" alt="Send">
