@@ -22,28 +22,28 @@
                     <div class="md:w-9/12 py-10 px-6 border-2 bg-transparent rounded-3xl">
                         <h3 class="pb-10 text-lg font-semibold">Start earning with <br> Crypcoin binary trade</h3>
                         <form action="">
-                            <div class="flex space-x-3 mb-4 border-b border-brand-gray-light">
-                                <div>                              
+                            <div class="flex space-x-3 mb-4 border-b pb-3 focus-within:border-transparent border-brand-gray-light focus-within:ring-2 rounded-t-lg ring-white">
+                                <div class="">                              
                                     <img class="w-6" src="img/user.png" alt="User icon">                         
                                 </div>
-                                <input class="w-full bg-transparent pb-3" type="text" name="" id="" placeholder="Full name">
+                                <input class="w-full bg-transparent focus:outline-none" type="text" name="" id="" placeholder="Full name">
                             </div>
-                            <div class="flex space-x-3 mb-4 border-b border-brand-gray-light ">     
+                            <div class="flex space-x-3 mb-4 border-b pb-3 border-brand-gray-light focus-within:border-transparent focus-within:ring-2 rounded-t-lg ring-white">     
                                 <div>                              
                                     <img class="w-6" src="img/mail.png" alt="Email icon">                         
                                 </div>                   
-                                <input class="w-full bg-transparent pb-3" type="email" name="" id="" placeholder="Email address">
+                                <input class="w-full bg-transparent focus:outline-none" type="email" name="" id="" placeholder="Email address">
                             </div>
-                            <div class="flex space-x-3 mb-8 border-b border-brand-gray-light ">     
+                            <div class="flex space-x-3 mb-8 border-b pb-3 border-brand-gray-light focus-within:border-transparent focus-within:ring-2 rounded-t-lg ring-white">     
                                 <div>                              
                                     <img class="w-6" src="img/password.png" alt="Password icon">                         
                                 </div>                     
-                                <input class="w-full bg-transparent pb-3" type="password" name="" id="" placeholder="Password">
+                                <input class="w-full bg-transparent focus:outline-none" type="password" name="" id="" placeholder="Password">
                                 <div>                              
                                     <img class="w-6" src="img/password-show.png" alt="Password icon">                         
                                 </div>
                             </div>
-                            <button class="px-6 py-2 bg-blue-600 rounded-md">Register</button>
+                            <button class="px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700">Register</button>
                         </form>
                     </div>
                 </div>             

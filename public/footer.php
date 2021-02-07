@@ -1,7 +1,7 @@
 <footer class="py-20 border-t border-gray-300">
     <div class="md:flex items-start justify-center mx-auto max-w-6xl px-6">
         <div class="flex-1 mb-10 md:mb-0">
-            <img class="w-32" src="img/footer-logo.png" alt="Crypcoin Logo">
+            <a href="index.php"><img class="w-32" src="img/footer-logo.png" alt="Crypcoin Logo"></a>
         </div>
         <div class="flex-1 mb-10 md:mb-0">
             <h3 class="text-brand-gray-dark-1 font-bold mb-4">Quick Links</h3>

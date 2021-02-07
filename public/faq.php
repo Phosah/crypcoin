@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
 </head>
 <body>
     <header class="max-w-6xl mx-auto px-6">
         <?php include("navbar-light.php") ?>
     </header>
     <main>
-        <section class="py-20">
+        <section class="py-10 md:py-20">
             <div class="text-center px-6">
                 <h3 class="text-brand-gray-dark-1 text-3xl font-bold mb-3">Hello, How can we help?</h3>
                 <p class="max-w-md mx-auto text-brand-gray-light">Listed below are a list of our frequently asked questions by inquisitive users</p>
             </div>
         </section>
-        <section class="py-20">
+        <section class="py-10 md:py-20">
             <div class="max-w-3xl mx-auto">
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -108,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="py-20">
+        <section class="py-10 md:py-20">
             <div class="md:flex items-center md:space-x-16 max-w-6xl mx-auto px-6">
                 <div class="md:w-1/2 mb-12">
                     <img src="img/faq-photo.png" alt="Woman standing and smiling">
@@ -117,23 +118,23 @@
                     <h2 class="max-w-md text-center md:text-center mx-auto text-brand-gray-dark-1 font-bold text-3xl mb-4">Still have unanswered questions?</h2>
                     <p class="max-w-md mb-16 text-center md:text-center mx-auto text-brand-gray-light">Send us a personalised mail and we would answer your question</p>
                     <form action="">
-                        <div class="flex space-x-3 mb-8 border-b border-brand-gray-light ">     
+                        <div class="flex space-x-3 mb-8 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg ">     
                             <div>                              
                                 <img class="w-6" src="img/mail-dark.png" alt="Email icon">                         
                             </div>                   
-                            <input class="w-full bg-transparent pb-4" type="email" name="" id="" placeholder="Email address">
+                            <input class="w-full bg-transparent pb-4 focus:outline-none" type="email" name="" id="" placeholder="Email address">
                         </div>
-                        <div class="flex space-x-3 mb-12 border-b border-brand-gray-light ">     
+                        <div class="flex space-x-3 mb-12 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                             <div>                              
                                 <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                             </div>                     
-                            <input class="w-full bg-transparent pb-4" type="password" name="" id="" placeholder="Password">
+                            <input class="w-full bg-transparent pb-4 focus:outline-none" type="password" name="" id="" placeholder="Password">
                             <div>                              
                                 <img class="w-6" src="img/password-show-dark.png" alt="Password icon">                         
                             </div>
                         </div>
                     
-                        <button class="px-6 py-2 bg-blue-700 rounded-md text-white">Register</button>
+                        <button class="px-6 py-2 border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700">Register</button>
                     </form>
                 </div>
             </div>

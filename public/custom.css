@@ -10,9 +10,18 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+.video {
 
+    background-image: url("img/video.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 @media screen and (max-width: 768px) {
     .user {
         background-image: none;
     }
+}
+#menu-toggle:checked + #menu {
+    display: block;
 }

@@ -1,4 +1,4 @@
-<section class="py-20">
+<section class="py-10 md:py-20">
     <div class="md:flex items-center max-w-6xl mx-auto px-6">
         <div class="flex mb-5 md:mb-0 md:w-1/2">
             <div class="flex-1 text-center">

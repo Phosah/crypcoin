@@ -11,9 +11,9 @@
         <section class="min-h-screen md:flex px-6 md:px-0">
              <div class="md:w-1/2 flex flex-col min-h-screen">
                 <div class=" flex items-end h-20 pb-6">
-                    <div class="flex space-x-4 w-96 mx-auto">
+                    <div class="flex space-x-4 w-96 mx-auto text-brand-gray-light hover:text-blue-700">
                         <i>&LeftArrow;</i>
-                        <div class="text-brand-gray-light font-semibold">
+                        <div class="font-semibold">
                             <a href="login.php">Back to Login</a>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                             <p class="px-4 py-2 border-b border-brand-gray-light">8</p>
                         </div>
                         <p class="mb-8 text-brand-gray-light">Wait for <span class="text-blue-700 font-semibold">5:00</span> to resend OTP</p>
-                        <button class="px-6 py-2 bg-blue-700 rounded-md text-white">Submit</button>
+                        <button class="px-6 py-2 bg-blue-700 rounded-md text-white border hover:bg-blue-800">Submit</button>
                     </div>
                 </div>
              </div>

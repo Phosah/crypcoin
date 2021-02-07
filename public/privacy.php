@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="custom.css">
 </head>
 <body>
     <div class="max-w-6xl mx-auto px-6">
         <?php include("navbar-light.php") ?>
     </div>
     <main>
-        <section class="pt-16 pb-32">
+        <section class="py-10 md:pt-20 md:pb-32">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-32">
                     <h2 class="text-3xl font-bold text-brand-gray-dark-1 mb-3">Privacy Policy</h2>
