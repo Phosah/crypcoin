@@ -11,7 +11,7 @@
         <section class="min-h-screen md:flex px-6 md:px-0">
              <div class="md:w-1/2 flex flex-col min-h-screen">
                 <div class=" flex items-end h-20 pb-6">
-                    <div class="flex space-x-4 w-96 mx-auto text-brand-gray-light hover:text-blue-700">
+                    <div class="flex space-x-4 w-80 lg:w-96 mx-auto text-brand-gray-light hover:text-blue-700">
                         <i>&LeftArrow;</i>
                         <div class="font-semibold">
                             <a href="login.php">Back to Login</a>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="flex-1 flex items-center justify-center pb-12">
-                    <div class="w-96 mx-auto">
+                    <div class="w-80 lg:w-96 mx-auto">
                         <h2 class="text-3xl text-brand-gray-dark-1 font-bold mb-3">Log into your account</h2>
                         <p class="mb-20 text-brand-gray-light">Input OTP sent to your phone (******6871) or email address
                         to reset your password</p>

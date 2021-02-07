@@ -11,7 +11,7 @@
         <section class="min-h-screen flex">
              <div class="w-1/2 flex flex-col">
                 <div class=" flex items-end h-20 pb-6">
-                    <div class="flex space-x-4 w-96 mx-auto">
+                    <div class="flex space-x-4 w-80 lg:w-96 mx-auto">
                         <i>&LeftArrow;</i>
                         <div class="text-brand-gray-light">
                             <a href="login.php">Back to Login</a>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="flex-1 flex items-center justify-center pb-12">
-                    <div class="w-96 mx-auto">
+                    <div class="w-80 lg:w-96 mx-auto">
                         <h2 class="text-3xl text-brand-gray-dark-1 font-bold mb-3">Reset Password</h2>
                         <p class="mb-20 text-brand-gray-light font-semibold">Enter your new password to gain access to your account</p>
                         <div>
