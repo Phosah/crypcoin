@@ -24,18 +24,18 @@
                         <h2 class="text-3xl text-brand-gray-dark-1 font-bold mb-3">Log into your account</h2>
                         <p class="mb-20 text-brand-gray-light">Do not have an account? <span class="text-blue-700 font-semibold hover:text-blue-800"><a href="register.php">Sign Up</a></span></p>
                         <div>
-                            <form action="">
+                            <form action="includes/login.inc.php" method="POST">
                                 <div class="flex space-x-3 mb-8 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/mail-dark.png" alt="Email icon">                         
                                     </div>                   
-                                    <input class="w-full pb-4  bg-transparent focus:outline-none" type="email" name="" id="" placeholder="Email address">
+                                    <input class="w-full pb-4  bg-transparent focus:outline-none" type="email" name="email" id="" placeholder="Email address">
                                 </div>
                                 <div class="flex space-x-3 mb-8 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                                     </div>                     
-                                    <input class="w-full pb-4 bg-transparent focus:outline-none" type="password" name="" id="" placeholder="Password">
+                                    <input class="w-full pb-4 bg-transparent focus:outline-none" type="password" name="pwd" id="" placeholder="Password">
                                     <div>                              
                                         <img class="w-6" src="img/password-show-dark.png" alt="Password icon">                         
                                     </div>
@@ -49,7 +49,7 @@
                                         <a class="text-blue-700 hover:text-blue-800" href="forgotpassword.php">Forgot password?</a>
                                     </div>
                                 </div>
-                                <button class="px-6 py-2 bg-blue-700 rounded-md text-white hover:bg-blue-800">Log In</button>
+                                <button class="px-6 py-2 bg-blue-700 rounded-md text-white hover:bg-blue-800" type="submit" name="submit">Log In</button>
                             </form>
                         </div>
                     </div>
@@ -59,6 +59,16 @@
              
             </div>
         </section>
+        <?php 
+            if(isset($_GET["error"])) {
+                if($_GET["error"] == "emptyinput") {
+                    echo "<p>Fill in all fields</p>";
+                }
+                else if($_GET["error"] == "wronglogin") {
+                    echo "<p>Incorrect login information</p>";
+                }
+            }
+        ?>
     </main>
 </body>
 </html>
