@@ -13,7 +13,7 @@
                 <div class=" flex items-end h-20 pb-6">
                     <div class="flex space-x-4 w-80 lg:w-96 mx-auto">
                         <i>&LeftArrow;</i>
-                        <div class="text-brand-gray-light">
+                        <div class="text-brand-gray-light-1">
                             <a href="login.php">Back to Login</a>
                         </div>
                     </div>
@@ -22,10 +22,10 @@
                 <div class="flex-1 flex items-center justify-center pb-12">
                     <div class="w-80 lg:w-96 mx-auto">
                         <h2 class="text-3xl text-brand-gray-dark-1 font-bold mb-3">Reset Password</h2>
-                        <p class="mb-20 text-brand-gray-light font-semibold">Enter your new password to gain access to your account</p>
+                        <p class="mb-20 text-brand-gray-light-1 font-semibold">Enter your new password to gain access to your account</p>
                         <div>
                             <form action="">
-                                <div class="flex space-x-3 mb-10 border-b border-brand-gray-light ">     
+                                <div class="flex space-x-3 mb-10 border-b border-brand-gray-light-1 ">     
                                     <div>                              
                                         <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                                     </div>                     
@@ -34,7 +34,7 @@
                                         <img class="w-6" src="img/password-show-dark.png" alt="Password icon">                         
                                     </div>
                                 </div>
-                                <div class="flex space-x-3 mb-12 border-b border-brand-gray-light ">     
+                                <div class="flex space-x-3 mb-12 border-b border-brand-gray-light-1 ">     
                                     <div>                              
                                         <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                                     </div>                     

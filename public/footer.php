@@ -5,16 +5,16 @@
         </div>
         <div class="flex-1 mb-10 md:mb-0">
             <h3 class="text-brand-gray-dark-1 font-bold mb-4">Quick Links</h3>
-            <p class="text-sm text-brand-gray-light"><a href="faq.php">FAQ</a></p>
+            <p class="text-sm text-brand-gray-light-1"><a href="faq.php">FAQ</a></p>
         </div>
         <div class="flex-1 mb-10 md:mb-0">
             <h3 class="text-brand-gray-dark-1 font-bold mb-4">Legal</h3>
-            <p class="text-sm text-brand-gray-light"><a href="privacy.php">Privacy policy</a></p>
+            <p class="text-sm text-brand-gray-light-1"><a href="privacy.php">Privacy policy</a></p>
         </div>
         <div class="flex-1 mb-10 md:mb-0">
             <h3 class="text-brand-gray-dark-1 font-bold mb-4">Know more</h3>
-            <p class="mb-4 text-sm text-brand-gray-light"><a href="contact.php">Contact Us</a></p>
-            <p class="text-sm text-brand-gray-light"><a href="about.php">About Us</a></p>
+            <p class="mb-4 text-sm text-brand-gray-light-1"><a href="contact.php">Contact Us</a></p>
+            <p class="text-sm text-brand-gray-light-1"><a href="about.php">About Us</a></p>
         </div>
     </div>
 </footer>

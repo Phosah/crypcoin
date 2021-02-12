@@ -11,7 +11,7 @@
         <section class="min-h-screen md:flex px-6 md:px-0">
             <div class="md:w-1/2 flex flex-col min-h-screen">
                 <div class="flex items-end h-20 pb-6">
-                    <div class="flex space-x-4 w-80 lg:w-96 mx-auto text-brand-gray-light hover:text-blue-700">
+                    <div class="flex space-x-4 w-80 lg:w-96 mx-auto text-brand-gray-light-1 hover:text-blue-700">
                         <i>&LeftArrow;</i>
                         <div class="font-semibold">
                             <a href="index.php">Back Home</a>
@@ -22,16 +22,16 @@
                 <div class="flex-1 flex items-center justify-center pb-12">
                     <div class="w-80 lg:w-96 mx-auto">
                         <h2 class="text-3xl text-brand-gray-dark-1 font-bold mb-3">Log into your account</h2>
-                        <p class="mb-20 text-brand-gray-light">Do not have an account? <span class="text-blue-700 font-semibold hover:text-blue-800"><a href="register.php">Sign Up</a></span></p>
+                        <p class="mb-20 text-brand-gray-light-1">Do not have an account? <span class="text-blue-700 font-semibold hover:text-blue-800"><a href="register.php">Sign Up</a></span></p>
                         <div>
                             <form action="includes/login.inc.php" method="POST">
-                                <div class="flex space-x-3 mb-8 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
+                                <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/mail-dark.png" alt="Email icon">                         
                                     </div>                   
                                     <input class="w-full pb-4  bg-transparent focus:outline-none" type="email" name="email" id="" placeholder="Email address">
                                 </div>
-                                <div class="flex space-x-3 mb-8 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
+                                <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                                     </div>                     
@@ -41,11 +41,11 @@
                                     </div>
                                 </div>
                                 <div class="flex justify-between mb-12">
-                                    <div class="text-xs text-brand-gray-light">
+                                    <div class="text-xs text-brand-gray-light-1">
                                         <input type="checkbox" name="" id="rem">
                                         <label for="rem">Remember me</label>
                                     </div>
-                                    <div class="text-xs text-brand-gray-light">
+                                    <div class="text-xs text-brand-gray-light-1">
                                         <a class="text-blue-700 hover:text-blue-800" href="forgotpassword.php">Forgot password?</a>
                                     </div>
                                 </div>

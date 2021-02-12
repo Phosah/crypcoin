@@ -15,7 +15,7 @@
         <section class="py-10 md:py-20">
             <div class="max-w-6xl mx-auto mb-8 px-6 text-center">
                 <h2 class="text-brand-gray-dark-1 text-3xl font-bold mb-4">Contact US</h2>
-                <p class="text-brand-gray-light ">It doesnt matter where you are or the time of the day, we are always here to answer you</p>
+                <p class="text-brand-gray-light-1 ">It doesnt matter where you are or the time of the day, we are always here to answer you</p>
             </div>
         </section>
         <section class="py-10 md:py-20">
@@ -23,10 +23,10 @@
                 <div class="md:w-1/2 mb-12 md:mb-0">
                     <h3 class="max-w-sm mb-6 text-brand-gray-dark-1 text-3xl font-bold">Want to make more enquires?</h3>
                     <h4 class="mb-6 text-brand-gray-dark-1 font-bold">Want a direct reach?</h4>
-                    <p class="mb-4 text-brand-gray-light ">crypcoinsupport@gmail.com</p>
-                    <p class="mb-4 text-brand-gray-light ">+091123930400</p>
+                    <p class="mb-4 text-brand-gray-light-1 ">crypcoinsupport@gmail.com</p>
+                    <p class="mb-4 text-brand-gray-light-1 ">+091123930400</p>
                     <p class="mb-
-                     text-brand-gray-light ">2345A Kent mac hall avenue, Manchester, London</p>
+                     text-brand-gray-light-1 ">2345A Kent mac hall avenue, Manchester, London</p>
                 </div>
                 <div class="md:w-1/2">
                     <form action="">

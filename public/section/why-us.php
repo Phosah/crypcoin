@@ -1,7 +1,7 @@
 <section  class="py-10 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
         <h2 class="mb-3 text-center text-3xl text-brand-gray-dark-1 font-bold">Why Us</h2>
-        <p class="max-w-md mx-auto text-center text-base text-brand-gray-light mb-14">We are a company guided by some simple values which form the core of our operations </p>
+        <p class="max-w-md mx-auto text-center text-base text-brand-gray-light-1 mb-14">We are a company guided by some simple values which form the core of our operations </p>
         <div class="md:flex md:space-x-12">
             <div class="md:w-1/3 rounded-lg shadow-lg py-10 px-8">
                 <div>

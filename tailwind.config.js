@@ -6,11 +6,19 @@ module.exports = {
       colors: {
         brand: {
           gray: {
-            light: "#828282",
+            light: {
+              1: "#828282",
+              2: "#E5E5E5",
+              3: "#BCBCBC",
+              4: "#C2C2C2"
+            },
             dark: {
               1: "#3A3A3A",
               2: "4F4F4F"
             }
+          },
+          blue: {
+            light: "#FBFBFB"
           }
         }
       }

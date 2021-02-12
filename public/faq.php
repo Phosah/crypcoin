@@ -15,7 +15,7 @@
         <section class="py-10 md:py-20">
             <div class="text-center px-6">
                 <h3 class="text-brand-gray-dark-1 text-3xl font-bold mb-3">Hello, How can we help?</h3>
-                <p class="max-w-md mx-auto text-brand-gray-light">Listed below are a list of our frequently asked questions by inquisitive users</p>
+                <p class="max-w-md mx-auto text-brand-gray-light-1">Listed below are a list of our frequently asked questions by inquisitive users</p>
             </div>
         </section>
         <section class="py-10 md:py-20">
@@ -27,7 +27,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">To make a investment you must first become a member of Crypcoin. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup.</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">To make a investment you must first become a member of Crypcoin. Once you are signed up, you can make your first deposit. All deposits must be made through the Members Area. You can login using the member username and password you receive when signup.</div>
                 </div>
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -36,7 +36,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">
+                    <div class="p-4 text-sm text-brand-gray-light-1">
                         <p>You can open a free PM account here: <span>www.perfectmoney.is</span></p> 
                         <p>Payeer account here: <a class="text-blue-600" href="">www.payeer.com</a> </p> 
                         <p>Bitcoin account here: <a class="text-blue-600" href="">www.blockchain.info</a> </p> 
@@ -51,7 +51,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">It's quite easy and convenient. Follow this link, <span class="text-blue-600"> fill</span> in the registration form and then press "Register"</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">It's quite easy and convenient. Follow this link, <span class="text-blue-600"> fill</span> in the registration form and then press "Register"</div>
                 </div>
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -60,7 +60,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">Currently we accept Perfect Money, Bitcoin , Payeer , Litecoin & Ethereum. If new payment methods are added , it will be announced via news & email. e-currencies.</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">Currently we accept Perfect Money, Bitcoin , Payeer , Litecoin & Ethereum. If new payment methods are added , it will be announced via news & email. e-currencies.</div>
                 </div>
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -69,7 +69,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">Login to your account using your username and password and check the Withdraw section.</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">Login to your account using your username and password and check the Withdraw section.</div>
                 </div>
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -78,7 +78,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">Your account will be updated as fast, as you deposit.</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">Your account will be updated as fast, as you deposit.</div>
                 </div>
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -87,7 +87,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">Log into your Crypcoin account and click on the "Account Information". You can change your e-mail address and password there.</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">Log into your Crypcoin account and click on the "Account Information". You can change your e-mail address and password there.</div>
                 </div>
                 <div class="mb-6">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -96,7 +96,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">No, profits are gathered on your Crypcoin account and you can withdraw them anytime.</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">No, profits are gathered on your Crypcoin account and you can withdraw them anytime.</div>
                 </div>
                 <div class="mb-">
                     <div class="flex justify-between items-center bg-gray-100 px-8 py-4">
@@ -105,7 +105,7 @@
                             <img src="img/down-arrow.png" alt="Down arrow">
                         </div>
                     </div>
-                    <div class="p-4 text-sm text-brand-gray-light">Depending on each plan. Interest on your Crypcoin account is acquired Daily, Weekly, Bi-Weekly, Monthly and Yearly and credited to your available balance at the end of each day</div>
+                    <div class="p-4 text-sm text-brand-gray-light-1">Depending on each plan. Interest on your Crypcoin account is acquired Daily, Weekly, Bi-Weekly, Monthly and Yearly and credited to your available balance at the end of each day</div>
                 </div>
             </div>
         </section>
@@ -116,15 +116,15 @@
                 </div>
                 <div class="md:w-1/2 py-2">
                     <h2 class="max-w-md text-center md:text-center mx-auto text-brand-gray-dark-1 font-bold text-3xl mb-4">Still have unanswered questions?</h2>
-                    <p class="max-w-md mb-16 text-center md:text-center mx-auto text-brand-gray-light">Send us a personalised mail and we would answer your question</p>
+                    <p class="max-w-md mb-16 text-center md:text-center mx-auto text-brand-gray-light-1">Send us a personalised mail and we would answer your question</p>
                     <form action="">
-                        <div class="flex space-x-3 mb-8 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg ">     
+                        <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg ">     
                             <div>                              
                                 <img class="w-6" src="img/mail-dark.png" alt="Email icon">                         
                             </div>                   
                             <input class="w-full bg-transparent pb-4 focus:outline-none" type="email" name="" id="" placeholder="Email address">
                         </div>
-                        <div class="flex space-x-3 mb-12 border-b border-brand-gray-light focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
+                        <div class="flex space-x-3 mb-12 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                             <div>                              
                                 <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                             </div>                     
