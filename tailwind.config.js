@@ -19,10 +19,13 @@ module.exports = {
           },
           blue: {
             light: "#FBFBFB"
+          },
+          border: {
+            1: "E0E0E0"
           }
         }
       }
-    },
+    }
   },
   variants: {
     extend: {},

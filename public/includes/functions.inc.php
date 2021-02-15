@@ -105,7 +105,7 @@ function loginUser($conn, $email, $pwd) {
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["email"] = $uidExists["usersEmail"];
-        header("location: ../index.php");
+        header("location: ../dashboard.php");
         exit();
 
     }
