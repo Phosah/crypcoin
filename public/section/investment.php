@@ -2,7 +2,7 @@
     <h2 class="text-brand-gray-dark-1 text-5xl font-body font-bold text-center mb-8 px-6">Investment Plans</h2>
     <p class="max-w-2xl mx-auto text-brand-gray-light-1 text-center text-xl mb-20 px-12 md:px-6">The investment plan selected would determine your profit made on the cryptocurrency purchased</p>
     <div class="md:flex md:space-x-16 max-w-6xl mx-auto px-12 md:px-6">
-        <div class="md:w-1/3 w-64 mb-16 mx-auto pt-4 pb-12 rounded-3xl shadow-lg">
+        <div class="md:w-1/3 w-64 mb-16 mx-auto pt-4 pb-12 rounded-3xl shadow-lg bg-white">
             <div class="flex justify-center items-center bg-blue-100 rounded-full h-32 w-32 mx-auto mb-8 ">
                 <div class="">
                     <img class="w-14" src="img/price-tag.png" alt="Price tag">

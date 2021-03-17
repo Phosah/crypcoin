@@ -6,7 +6,7 @@
     <title>Log In</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-black">
     <main>
         <section class="min-h-screen md:flex px-6 md:px-0">
             <div class="md:w-1/2 flex flex-col min-h-screen">

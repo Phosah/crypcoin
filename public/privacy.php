@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="custom.css">
 </head>
-<body>
+<body class="bg-black">
     <div class="max-w-6xl mx-auto px-6">
-        <?php include("navbar-light.php") ?>
+        <?php include("navbar.php") ?>
     </div>
     <main>
         <section class="py-10 md:pt-28 md:pb-32">

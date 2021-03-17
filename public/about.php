@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="custom.css">
 </head>
-<body class="">
+<body class="bg-black">
     <header class="max-w-6xl mx-auto px-6">
-        <?php include("navbar-light.php") ?>
+        <?php include("navbar.php") ?>
     </header>
     <main>
         <section class="py-28">
@@ -23,7 +23,7 @@
                 <div class="md:w-1/2 mb-20 md:mb-0">
                     <h3 class="mb-8 text-brand-gray-dark-1 text-5xl font-body font-bold">Our values</h3>
                     <p class="mb-12 text-brand-gray-light-1 text-xl">We are guided by our values which represent us as a company  and these values have formed our foundation for the over 4 years and counting</p>
-                    <button class="bg-blue-700 py-3 px-8 rounded-md text-white  hover:bg-white hover:text-blue-700 border hover:border-blue-700">Get started</button>
+                    <button class="bg-blue-700 py-3 px-8 rounded-md text-white border-blue-700 hover:bg-white hover:text-blue-700 border hover:border-blue-700">Get started</button>
                 </div>
                 <div class="md:w-1/2">
                     <div class="flex mb-8">                 

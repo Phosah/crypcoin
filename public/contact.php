@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="custom.css">
 </head>
-<body>
+<body class="bg-black">
     <header class="max-w-6xl mx-auto px-6">
-        <?php include("navbar-light.php") ?>
+        <?php include("navbar.php") ?>
     </header>
     <main>
         <section class="py-10 md:py-28">
@@ -29,18 +29,18 @@
                 </div>
                 <div class="md:w-1/2">
                     <form action="">
-                        <div class="flex items-center mb-6 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700">
+                        <div class="flex items-center mb-6 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700 bg-white">
                             <span class=""><img src="img/user-dark.png" alt="User icon"></span>
                             <input class=" w-full rounded-md py-3 px-4 focus:outline-none" type="text" name="" id="" placeholder="Fullname">
                         </div>
-                        <div class="flex items-center mb-12 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700">
+                        <div class="flex items-center mb-12 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700 bg-white">
                         <span class=""><img src="img/mail-dark.png" alt="Mail icon"></span>
                             <input class="w-full rounded-md py-3 px-4 focus:outline-none" type="email" name="" id="" placeholder="Email address">
                         </div>
-                        <div class="mb-12 rounded-md border focus-within:ring-2 ring-blue-700">
+                        <div class="mb-12 rounded-md border focus-within:ring-2 ring-blue-700 bg-white">
                             <textarea class="w-full rounded-md py-3 px-4 focus:outline-none" name="" id="" cols="30" rows="10" placeholder="Type a description"></textarea>
                         </div>
-                        <button class="bg-blue-700 px-8 py-4 text-white font-semibold rounded-md border hover:bg-white hover:text-blue-700 hover:border-blue-700">Send message</button>
+                        <button class="bg-blue-700 px-8 py-4 text-white font-semibold rounded-md border border-blue-700 hover:bg-white hover:text-blue-700 hover:border-blue-700">Send message</button>
                     </form>
                 </div>
             </div>

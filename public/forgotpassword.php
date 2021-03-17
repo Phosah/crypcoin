@@ -6,7 +6,7 @@
     <title>Forgot Password</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-black">
     <main>
         <section class="min-h-screen md:flex px-6 md:px-0">
              <div class="md:w-1/2 flex flex-col min-h-screen">
@@ -31,7 +31,7 @@
                             <p class="px-4 py-2 border-b border-brand-gray-light-1">8</p>
                         </div>
                         <p class="mb-8 text-brand-gray-light-1">Wait for <span class="text-blue-700 font-semibold">5:00</span> to resend OTP</p>
-                        <button class="px-8 py-3 bg-blue-700 rounded-md text-white border hover:bg-blue-800">Submit</button>
+                        <button class="px-8 py-3 bg-blue-700 rounded-md text-white hover:bg-blue-800">Submit</button>
                     </div>
                 </div>
              </div>

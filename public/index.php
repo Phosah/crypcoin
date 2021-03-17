@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="custom.css">
 </head>
-<body>
+<body class="bg-black">
     <header class="home-header min-h-screen pb-30 text-white">
         <div class="min-h-screen flex flex-col max-w-6xl mx-auto px-6">
             <?php include("navbar.php") ?>
