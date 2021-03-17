@@ -14,14 +14,14 @@
             <?php include("navbar.php") ?>
             <div class=" flex-1 md:flex md:items-center md:justify-between pb-8">
                 <div class="md:w-1/2 w-full mb-12 md:mb-0 wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
-                    <div class="md:w-9/12">
-                        <h2 class="text-3xl font-semibold mb-4">Crypto Trade Made Easy</h2>
-                        <p class="font-extralight">Investing in cryptocurrencies simplified and made accessible at lightening speed with Crypcoin</p>
+                    <div class="md:w-10/12">
+                        <h2 class="text-5xl font-body mb-8">Crypto Trade Made Easy</h2>
+                        <p class="text-xl opacity-60">Investing in cryptocurrencies simplified and made accessible at lightening speed with Crypcoin</p>
                     </div>
                 </div>
                 <div class="md:w-1/2 w-full md:flex md:justify-end">
                     <div class="md:w-9/12 py-10 px-6 border-2 bg-transparent rounded-3xl">
-                        <h3 class="pb-10 text-lg font-semibold">Start earning with <br> Crypcoin binary trade</h3>
+                        <h3 class="pb-10 text-2xl font-body">Start earning with <br> Crypcoin binary trade</h3>
                         <form action="">
                             <div class="flex space-x-3 mb-4 border-b pb-3 focus-within:border-transparent border-brand-gray-light-1 focus-within:ring-2 rounded-t-lg ring-white">
                                 <div class="">                              
@@ -63,13 +63,13 @@
     <main>
         <?php include("section/coinlist.php") ?>
         <?php include("section/why-us.php") ?>
+        <?php include("section/video.php") ?>
+        <?php include("section/investment.php") ?>
         <?php include("section/about-us.php") ?>
         <?php include("section/traffic-info.php") ?>
         <?php include("section/dashboard.php") ?>
         <?php include("section/graph.php") ?>
-        <?php include("section/video.php") ?>
         <?php include("section/user.php") ?>
-        <?php include("section/investment.php") ?>
         <?php include("section/update.php") ?>
     </main>
     <?php include("footer.php") ?>

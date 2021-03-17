@@ -24,6 +24,9 @@ module.exports = {
             1: "E0E0E0"
           }
         }
+      },
+      fontFamily: {
+        body: ['DM Sans']
       }
     }
   },

@@ -13,7 +13,7 @@
                 <div class=" flex items-end h-20 pb-6">
                     <div class="flex space-x-4 w-80 lg:w-96 mx-auto">
                         <i>&LeftArrow;</i>
-                        <div class="text-brand-gray-light-1">
+                        <div class="text-brand-gray-light-1 font-body font-bold">
                             <a href="login.php">Back to Login</a>
                         </div>
                     </div>

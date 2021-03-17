@@ -12,10 +12,10 @@
         <?php include("navbar-light.php") ?>
     </header>
     <main>
-        <section class="py-10 md:py-20">
+        <section class="py-10 md:py-28">
             <div class="text-center px-6">
-                <h3 class="text-brand-gray-dark-1 text-3xl font-bold mb-3">Hello, How can we help?</h3>
-                <p class="max-w-md mx-auto text-brand-gray-light-1">Listed below are a list of our frequently asked questions by inquisitive users</p>
+                <h3 class="text-brand-gray-dark-1 text-5xl font-body font-bold mb-8">Hello, How can we help?</h3>
+                <p class="max-w-2xl mx-auto text-brand-gray-light-1 text-2xl">Listed below are a list of our frequently asked questions by inquisitive users</p>
             </div>
         </section>
         <section class="py-10 md:py-20">
@@ -115,8 +115,8 @@
                     <img src="img/faq-photo.png" alt="Woman standing and smiling">
                 </div>
                 <div class="md:w-1/2 py-2">
-                    <h2 class="max-w-md text-center md:text-center mx-auto text-brand-gray-dark-1 font-bold text-3xl mb-4">Still have unanswered questions?</h2>
-                    <p class="max-w-md mb-16 text-center md:text-center mx-auto text-brand-gray-light-1">Send us a personalised mail and we would answer your question</p>
+                    <h2 class="max-w-xl mx-auto text-brand-gray-dark-1 font-body font-bold text-5xl mb-8">Still have unanswered questions?</h2>
+                    <p class="max-w-xl mb-24 mx-auto text-xl text-brand-gray-light-1">Send us a personalised mail and we would answer your question</p>
                     <form action="">
                         <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg ">     
                             <div>                              
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                     
-                        <button class="px-6 py-2 border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700">Register</button>
+                        <button class="px-8 py-3 font-medium border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700">Register</button>
                     </form>
                 </div>
             </div>

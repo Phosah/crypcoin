@@ -13,7 +13,7 @@
                 <div class="flex items-end h-20 pb-6">
                     <div class="flex space-x-4 w-80 lg:w-96 mx-auto text-brand-gray-light-1 hover:text-blue-700">
                         <i>&LeftArrow;</i>
-                        <div class="font-semibold">
+                        <div class="font-bold font-body">
                             <a href="index.php">Back Home</a>
                         </div>
                     </div>
@@ -21,7 +21,7 @@
 
                 <div class="flex-1 flex items-center justify-center pb-12">
                     <div class="w-80 lg:w-96 mx-auto">
-                        <h2 class="text-3xl text-brand-gray-dark-1 font-bold mb-3">Log into your account</h2>
+                        <h2 class="text-3xl text-brand-gray-dark-1 font-body font-bold mb-3">Log into your account</h2>
                         <p class="mb-20 text-brand-gray-light-1">Do not have an account? <span class="text-blue-700 font-semibold hover:text-blue-800"><a href="register.php">Sign Up</a></span></p>
                         <div>
                             <form action="includes/login.inc.php" method="POST">
@@ -49,7 +49,7 @@
                                         <a class="text-blue-700 hover:text-blue-800" href="forgotpassword.php">Forgot password?</a>
                                     </div>
                                 </div>
-                                <button class="px-6 py-2 bg-blue-700 rounded-md text-white hover:bg-blue-800" type="submit" name="submit">Log In</button>
+                                <button class="px-8 py-3 bg-blue-700 rounded-md text-white hover:bg-blue-800" type="submit" name="submit">Log In</button>
                             </form>
                         </div>
                     </div>
