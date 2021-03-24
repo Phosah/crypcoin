@@ -1,10 +1,10 @@
 <?php 
-    session_start();
+/*  session_start();
 
     if(!isset($_SESSION["userid"])) {
         header("location: index.php");
         exit();
-    }
+    *   } */
 ?>
 
 <!DOCTYPE html>
@@ -17,33 +17,7 @@
     <link rel="stylesheet" href="custom.css">
 </head>
 <body>
-    <header class="max-w-6xl mx-auto py-3 px-6 shadow-md">
-        <nav class="flex justify-between items-center space-x-8 text-brand-gray-dark-1">
-            <div class="w-2/3 flex justify-between">
-                <div>
-                    <img class="w-24" src="img/footer-logo.png" alt="Logo">
-                </div>
-                <div class="flex space-x-6 font-medium">
-                    <a href="">Dashboard</a>
-                    <a href="">Earnings</a>
-                    <a href="">Withdrawals</a>
-                    <a href="">Deposits</a>
-                    <div class="flex items-center space-x-2">              
-                        <img class="h-4" src="img/referral-crown.png" alt="">
-                        <a href="">Referrals</a>
-                    </div>
-                </div>
-            </div>
-            <div class="w-1/3 flex items-center justify-end space-x-4"> 
-                <img src="img/notification bell.png" alt="Notification">
-                <div>
-                    <img src="img/dashboard-profile.png" alt="Profile image">
-                </div>
-                <p class="text-brand-gray-dark-1 font-semibold">Kristin C.</p>
-                <img src="img/down-arrow.png" alt="down arrow">
-            </div>
-        </nav>
-    </header>
+    <?php include("dashboard-header.php") ?>
     <main class="bg-brand-gray-light-2">
         <div class="max-w-6xl mx-auto flex items-stretch space-x-8 px-6">       
             <section class="w-9/12 py-10">
@@ -71,7 +45,7 @@
                         </div>
                     </div>
                     <div class="flex space-x-4 p-4">
-                        <div class="flex flex-1 items-center space-x-4 p-5 border rounded-md bg-brand-blue-light border-brand-border-1 border-opacity-50">
+                        <div class="flex flex-1 items-center space-x-4 p-5 border rounded-md bg-brand-blue-light-1 border-brand-border-1 border-opacity-50">
                             <div class="flex items-center justify-center p-2 bg-blue-700 rounded-full">
                                 <img src="img/money-tag.png" alt="Price tag">
                             </div>
@@ -80,7 +54,7 @@
                                 <p class="text-brand-gray-light-1 text-sm">Current price</p>
                             </div>
                         </div>
-                        <div class="flex flex-1 items-center space-x-4 p-5 border rounded-md bg-brand-blue-light border-brand-border-1 border-opacity-50">
+                        <div class="flex flex-1 items-center space-x-4 p-5 border rounded-md bg-brand-blue-light-1 border-brand-border-1 border-opacity-50">
                             <div class="flex items-center justify-center p-2 bg-blue-700 rounded-full">
                                 <img src="img/cart.png" alt="Buy cart">
                             </div>
@@ -89,7 +63,7 @@
                                 <p class="text-brand-gray-light-1 text-sm">Total bought</p>
                             </div>
                         </div>
-                        <div class="flex flex-1 items-center space-x-4 p-5 border rounded-md bg-brand-blue-light border-brand-border-1 border-opacity-50">
+                        <div class="flex flex-1 items-center space-x-4 p-5 border rounded-md bg-brand-blue-light-1 border-brand-border-1 border-opacity-50">
                             <div class="flex items-center justify-center p-2 bg-blue-700 rounded-full">
                                 <img src="img/earnings.png" alt="Earnings">
                             </div>
