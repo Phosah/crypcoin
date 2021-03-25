@@ -12,7 +12,10 @@
     <main class="bg-brand-blue-light-1">
         <section class="py-10">       
             <div class="max-w-6xl mx-auto px-6 bg-white">
+            <div class="flex justify-between items-center">
                 <h2 class="mb-2 px-4 py-6 font-bold text-brand-gray-dark-1 text-xl">Withdraw</h2>
+                <button class="bg-blue-700 text-white px-6 py-3 rounded-md">Withdraw</button>
+            </div>
                 <div>
                     <div class="flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">
                         <div  class="flex-1">Amount</div>

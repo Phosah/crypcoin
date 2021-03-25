@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="custom.css">
 </head>
-<body>
+<body class="font-body">
     <?php include("dashboard-header.php") ?>
     <main class="bg-brand-gray-light-2">
         <div class="max-w-6xl mx-auto flex items-stretch space-x-8 px-6">       
