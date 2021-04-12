@@ -1,4 +1,5 @@
-<?php 
+<?php
+    include('api.php');
 /*  session_start();
 
     if(!isset($_SESSION["userid"])) {
@@ -50,7 +51,7 @@
                                 <img src="img/money-tag.png" alt="Price tag">
                             </div>
                             <div>
-                                <h2 class="text-brand-gray-dark-1 text-lg font-bold">$35,000.00</h2>
+                                <h2 class="text-brand-gray-dark-1 text-lg font-bold"><?php echo '$'. $btc; ?></h2>
                                 <p class="text-brand-gray-light-1 text-sm">Current price</p>
                             </div>
                         </div>

@@ -2,16 +2,16 @@
     <nav class="flex justify-between items-center space-x-8 text-brand-gray-dark-1">
         <div class="w-2/3 flex justify-between">
             <div>
-                <img class="w-24" src="img/footer-logo.png" alt="Logo">
+                <a href="dashboard.php"><img class="w-24" src="img/footer-logo.png" alt="Logo"></a>
             </div>
             <div class="flex space-x-6 font-medium">
-                <a href="">Dashboard</a>
+                <a href="dashboard.php">Dashboard</a>
                 <a href="">Earnings</a>
-                <a href="">Withdrawals</a>
-                <a href="">Deposits</a>
+                <a href="withdraw.php">Withdrawals</a>
+                <a href="deposit.php">Deposits</a>
                 <div class="flex items-center space-x-2">              
                     <img class="h-4" src="img/referral-crown.png" alt="">
-                    <a href="">Referrals</a>
+                    <a href="referral.php">Referrals</a>
                 </div>
             </div>
         </div>

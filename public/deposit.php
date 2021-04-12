@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,6 +98,15 @@
                 </div>
             </div>
         </section>
+        
+        <?php 
+            if(isset($_SESSION['deposit'])) {
+                echo $_SESSION['deposit'];
+                unset($_SESSION['deposit']);
+            }
+        ?>
+        
+
         <section class="py-10">       
             <div class="max-w-6xl mx-auto px-6 bg-white">
                 <h2 class="mb-2 px-4 py-6 font-bold text-brand-gray-dark-1 text-xl">Deposit history</h2>
@@ -108,45 +121,40 @@
                         <div  class="flex-1">Proof of Payment</div>
                     </div>
                     <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">Silver</div>
-                        <div class="flex-1">BTC</div>
-                        <div class="flex-1">0.0123BTC</div>
-                        <div class="flex-1">$200</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-yellow-400">Pending</div>
-                        <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md">Update payment slip</button></div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">Gold</div>
-                        <div class="flex-1">LTC</div>
-                        <div class="flex-1">0.923BTC</div>
-                        <div class="flex-1">$200</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-yellow-400">Pending</div>
-                        <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md">Update payment slip</button></div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">Platinum</div>
-                        <div class="flex-1">BTC</div>
-                        <div class="flex-1">0.0323BTC</div>
-                        <div class="flex-1">$2000</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-green-700">Successful</div>
-                        <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md">Update payment slip</button></div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">Diamond</div>
-                        <div class="flex-1">BTC</div>
-                        <div class="flex-1">0.0623BTC</div>
-                        <div class="flex-1">$900</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-red-500">Failed</div>
-                        <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md">Update payment slip</button></div>
-                    </div>
+                   
+                    <?php
+                        include('includes/dbh.inc.php');
+                        // $db_select = mysqli_select_db($conn, 'crypcoin') or die(mysqli_error()); 
+
+                        $sql = "SELECT * FROM tbl_deposits WHERE users_id=2";
+                        $res = mysqli_query($conn, $sql);
+
+                        if($res==true) {
+
+                            while ($row = mysqli_fetch_assoc($res)) {
+                                $plan = $row['plan'];
+                                $coin = $row['coin'];
+                                $amount = $row['amount'];
+                                $value = $row['value'];
+                                $date = $row['date'];
+                                $status = $row['status'];
+                                ?>
+
+                                <div class="flex items-center justify-center py-6 px-6 font-bold">
+                                    <div class="flex-1"><?php echo $plan; ?></div>
+                                    <div class="flex-1"><?php echo $coin; ?></div>
+                                    <div class="flex-1"><?php echo $amount; ?></div>
+                                    <div class="flex-1"><?php echo $value; ?></div>
+                                    <div class="flex-1"><?php echo $date; ?></div>
+                                    <div class="flex-1 text-yellow-400"><?php echo $status; ?></div>
+                                    <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md">Update payment slip</button></div>
+                                </div>
+                                <div class="border-b border-brand-gray-dark-3"></div>
+                                <?php
+                            }                       
+                        }
+                    ?>
+
                 </div>
             </div>
         </section>

@@ -34,7 +34,7 @@ function pwdMatch($pwd, $pwdRepeat) {
 }
 
 function uidExists($conn, $email) {
-    $sql = "SELECT * FROM users WHERE usersEmail = ?;";
+    $sql = "SELECT * FROM tbl_users WHERE usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../register.php?error=stmtfailed");
@@ -58,7 +58,7 @@ function uidExists($conn, $email) {
 }
 
 function createUser($conn, $name, $email, $pwd) {
-    $sql = "INSERT INTO users (usersName, usersEmail, usersPwd) VALUES (?, ?, ?);";
+    $sql = "INSERT INTO tbl_users (usersName, usersEmail, usersPwd) VALUES (?, ?, ?);";
 
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -75,7 +75,7 @@ function createUser($conn, $name, $email, $pwd) {
     exit();
 }
 
-function emptyInputLogin($email, $pwd,) {
+function emptyInputLogin($email, $pwd) {
     $result;
     
     if (empty($email) || empty($pwd)) {
@@ -103,7 +103,7 @@ function loginUser($conn, $email, $pwd) {
     }
     else if ($checkedPwd === true) {
         session_start();
-        $_SESSION["userid"] = $uidExists["usersId"];
+        $_SESSION["usersid"] = $uidExists["usersId"];
         $_SESSION["email"] = $uidExists["usersEmail"];
         header("location: ../dashboard.php");
         exit();

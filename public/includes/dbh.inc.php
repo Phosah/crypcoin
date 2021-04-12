@@ -3,7 +3,7 @@
 $serverName = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$dBName = "crypcoin_db";
+$dBName = "crypcoin";
 
 $conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
 

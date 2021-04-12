@@ -29,19 +29,19 @@
                                     <div>                              
                                         <img class="w-6" src="img/user-dark.png" alt="User icon">                         
                                     </div>                   
-                                    <input class="w-full bg-transparent pb-4 focus:outline-none" type="text" name="name" id="" placeholder="Fullname">
+                                    <input class="w-full text-white bg-transparent pb-4 focus:outline-none" type="text" name="name" id="" placeholder="Fullname">
                                 </div>
                                 <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/mail-dark.png" alt="Email icon">                         
                                     </div>                   
-                                    <input class="w-full bg-transparent pb-4 focus:outline-none" type="email" name="email" id="" placeholder="Email address">
+                                    <input class="w-full text-white bg-transparent pb-4 focus:outline-none" type="email" name="email" id="" placeholder="Email address">
                                 </div>
                                 <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                                     </div>                     
-                                    <input class="w-full bg-transparent pb-4  focus:outline-none" type="password" name="pwd" id="" placeholder="Password">
+                                    <input class="w-full text-white bg-transparent pb-4  focus:outline-none" type="password" name="pwd" id="" placeholder="Password">
                                     <div>                              
                                         <img class="w-6" src="img/password-show-dark.png" alt="Password icon">                         
                                     </div>
@@ -50,7 +50,7 @@
                                     <div>                              
                                         <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                                     </div>                     
-                                    <input class="w-full bg-transparent pb-4  focus:outline-none" type="password" name="pwdrepeat" id="" placeholder="Confirm Password">
+                                    <input class="w-full text-white bg-transparent pb-4  focus:outline-none" type="password" name="pwdrepeat" id="" placeholder="Confirm Password">
                                     <div>                              
                                         <img class="w-6" src="img/password-show-dark.png" alt="Password icon">                         
                                     </div>
