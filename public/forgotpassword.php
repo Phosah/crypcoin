@@ -21,7 +21,7 @@
 
                 <div class="flex-1 flex items-center justify-center pb-12">
                     <div class="w-80 lg:w-96 mx-auto">
-                        <h2 class="text-3xl text-brand-gray-dark-1 font-body font-bold mb-3">Log into your account</h2>
+                        <h2 class="text-3xl text-white font-body font-bold mb-3">Forgot Password</h2>
                         <p class="mb-20 text-brand-gray-light-1">Input OTP sent to your phone (******6871) or email address
                         to reset your password</p>
                         <div class="flex justify-start space-x-4 mb-8 text-brand-gray-dark-1 font-semibold">

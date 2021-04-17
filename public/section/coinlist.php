@@ -1,5 +1,5 @@
-<section class="py-10 md:py-28">
-    <div class="flex items-center justify-center space-x-12">
+<section class="py-16 md:py-28">
+    <div class="flex items-center justify-center space-x-6 md:space-x-12 wow animate__slideInLeft" data-wow-duration="1.5s">
         <div class="flex-1 ">
             <img class="" src="img/ethereum.png" alt="ethereum photo">
         </div>

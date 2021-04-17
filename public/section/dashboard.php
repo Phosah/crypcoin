@@ -1,7 +1,7 @@
-<section class="py-10 md:py-28">
+<section class="py-16 md:py-28">
     <div class="md:flex items-center max-w-6xl mx-auto md:space-x-12 px-6">
         <div class="md:w-1/2 mx-auto mb-20 md:mb-0">
-            <h2 class="sm:text-center md:text-left text-brand-gray-dark-1 text-5xl mb-12 font-body font-bold">What we offer</h2>
+            <h2 class="sm:text-center md:text-left text-white text-4xl lg:text-5xl mb-12 font-body font-bold">What we offer</h2>
             <div class="flex space-x-4 mb-8 w-10/12">
                 <div class="flex-shrink-0">
                     <img class="w-6" src="img/checkmark.png" alt="Checkmark">

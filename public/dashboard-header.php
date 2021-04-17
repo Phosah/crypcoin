@@ -13,6 +13,7 @@
                     <img class="h-4" src="img/referral-crown.png" alt="">
                     <a href="referral.php">Referrals</a>
                 </div>
+                <a href="index.php">Logout</a>
             </div>
         </div>
         <div class="w-1/3 flex items-center justify-end space-x-4"> 

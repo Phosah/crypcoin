@@ -21,7 +21,7 @@
 
                 <div class="flex-1 flex items-center justify-center pb-12">
                     <div class="w-80 lg:w-96 mx-auto">
-                        <h2 class="text-3xl text-brand-gray-dark-1 font-bold mb-3">Reset Password</h2>
+                        <h2 class="text-3xl text-white font-bold mb-3">Reset Password</h2>
                         <p class="mb-20 text-brand-gray-light-1 font-semibold">Enter your new password to gain access to your account</p>
                         <div>
                             <form action="">

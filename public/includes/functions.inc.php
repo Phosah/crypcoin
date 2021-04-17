@@ -1,7 +1,7 @@
 <?php 
-
+// session_start();
 function emptyInputRegister($name, $email, $pwd, $pwdRepeat) {
-    $result;
+    $result = true;
     
     if (empty($name) || empty($email) || empty($pwd) || empty($pwdRepeat)) {
         $result = true;
@@ -12,7 +12,7 @@ function emptyInputRegister($name, $email, $pwd, $pwdRepeat) {
 }
 
 function invalidEmail($email) {
-    $result;
+    $result = true;
 
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $result = true;
@@ -23,7 +23,7 @@ function invalidEmail($email) {
 }
 
 function pwdMatch($pwd, $pwdRepeat) {
-    $result;
+    $result = true;
 
     if ($pwd !== $pwdRepeat) {
         $result = true;
@@ -76,7 +76,7 @@ function createUser($conn, $name, $email, $pwd) {
 }
 
 function emptyInputLogin($email, $pwd) {
-    $result;
+    $result = true;
     
     if (empty($email) || empty($pwd)) {
         $result = true;
@@ -109,4 +109,74 @@ function loginUser($conn, $email, $pwd) {
         exit();
 
     }
+}
+
+function createSubscriber($conn, $subscriberEmail) {
+    $sql = "INSERT INTO tbl_subscribers (subscriber_email) VALUES (?);";
+
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../index.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $subscriberEmail);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../register.php?error=none");
+    exit();
+}
+
+function createEnquiry($conn, $message_name, $message_email, $message_content) {
+    $sql = "INSERT INTO tbl_enquiry (message_name, message_email, message_content) VALUES (?, ?, ?);";
+
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../contact.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sss", $message_name, $message_email, $message_content);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../contact.php?error=none");
+    exit();
+}
+
+function emptyInputEnquiry($name, $email, $message) {
+    $result = true;
+    
+    if (empty($name) || empty($email) || empty($message)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function createQuestion($conn, $question_email, $question_content) {
+    $sql = "INSERT INTO tbl_question (question_email, question_content) VALUES (?, ?);";
+
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../contact.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ss", $question_email, $question_content);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../contact.php?error=none");
+    exit();
+}
+
+function emptyInputQuestion($email, $message) {
+    $result = true;
+    
+    if (empty($email) || empty($message)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
 }

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include('api.php');
 /*  session_start();
 
@@ -18,7 +19,16 @@
     <link rel="stylesheet" href="custom.css">
 </head>
 <body class="font-body">
-    <?php include("dashboard-header.php") ?>
+    <?php 
+        include("dashboard-header.php");
+        include("includes/functions.inc.php");
+
+        if(isset($_SESSION["usersid"])) {
+            echo $_SESSION["usersid"];
+            // unset($_SESSION["usersid"]);
+        }
+    ?>
+
     <main class="bg-brand-gray-light-2">
         <div class="max-w-6xl mx-auto flex items-stretch space-x-8 px-6">       
             <section class="w-9/12 py-10">

@@ -15,7 +15,7 @@
     <section class="mx-20 py-20 bg-red-200">
         <h1>Manage Deposit</h1>
         <form action="" method="POST">
-        <div class="flex space-x-4 mb-4">
+            <div class="flex space-x-4 mb-4">
                 <label for="">User id</label>
                 <input type="text" name="user_id">
             </div>
@@ -59,6 +59,7 @@
     
 
     if(isset($_POST['submit'])) {
+        // $id = $_POST['user_id'];
         $plan = $_POST['plan'];
         $coin = $_POST['coin'];
         $amount = $_POST['amount'];
@@ -75,34 +76,35 @@
             status = '$status'
         ";
 
-        $res = mysqli_query($conn, $sql) or die(mysqli_error());
+        $res = mysqli_query($conn, $sql);
 
         if($res==true) {
             $_SESSION['deposit'] = "<div class='font-body font-bold'>Deposit completed</div>";
             header('location: ../deposit.php');
             // echo $_SESSION['deposit'];
         } else {
-            $_SESSION['deposit'] = "<div class='text-red-300 font-bold font-body'>Failed to deposit</div>";
+            $_SESSION['deposit'] = "<div class='text-red-600 font-bold font-body'>Failed to deposit</div>";
         }
 
-        $id=$_GET['id'];
-        $sql2 = "SELECT * FROM tbl_deposits WHERE users_id=$id";
-        $res = mysqli_query($conn, $sql2);
+        // $id=$_GET['id'];
+        // echo $id;
+        // $sql2 = "SELECT * FROM tbl_deposits WHERE users_id=$id";
+        // $res = mysqli_query($conn, $sql2);
 
-        if($res==true) {
-            $count = mysqli_num_rows($res);
-            if($count==1) {
-                $row = mysqli_fetch_assoc($res);
-                $plan = $row['plan'];
-                $coin = $row['coin'];
-                $amount = $row['amount'];
-                $value = $row['value'];
-                $date = $row['date'];
-                $status = $row['status'];
-            } else {
-                echo 'Not retrieving data from database';
-                // header('location: admin/manage-admin.php');
-            }
-        }
+        // if($res==true) {
+        //     $count = mysqli_num_rows($res);
+        //     if($count==1) {
+        //         $row = mysqli_fetch_assoc($res);
+        //         $plan = $row['plan'];
+        //         $coin = $row['coin'];
+        //         $amount = $row['amount'];
+        //         $value = $row['value'];
+        //         $date = $row['date'];
+        //         $status = $row['status'];
+        //     } else {
+        //         echo 'Not retrieving data from database';
+        //         // header('location: admin/manage-admin.php');
+        //     }
+        // }
     }
 ?>

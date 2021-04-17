@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-black">
     <main>
@@ -21,7 +21,7 @@
 
                 <div class="flex-1 flex items-center justify-center pb-12">
                     <div class="w-80 lg:w-96 mx-auto">
-                        <h2 class="text-3xl text-brand-gray-dark-1 font-body font-bold mb-3">Log into your account</h2>
+                        <h2 class="text-3xl text-white font-body font-bold mb-3">Create Your Account</h2>
                         <p class="mb-20 text-brand-gray-light-1">Already have an account? <span class="text-blue-700 font-semibold hover:text-blue-800"><a href="login.php">Login</a></span></p>
                         <div>
                             <form action="includes/register.inc.php" method="POST">

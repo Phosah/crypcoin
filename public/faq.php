@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="bg-black">
     <header class="max-w-6xl mx-auto px-6">
@@ -14,8 +14,8 @@
     <main>
         <section class="py-10 md:py-28">
             <div class="text-center px-6">
-                <h3 class="text-brand-gray-dark-1 text-5xl font-body font-bold mb-8">Hello, How can we help?</h3>
-                <p class="max-w-2xl mx-auto text-brand-gray-light-1 text-2xl">Listed below are a list of our frequently asked questions by inquisitive users</p>
+                <h3 class="text-white text-4xl lg:text-5xl font-body font-bold mb-8">Hello, How can we help?</h3>
+                <p class="max-w-2xl mx-auto text-brand-gray-light-1 text-xl lg:text-2xl">Listed below are a list of our frequently asked questions by inquisitive users</p>
             </div>
         </section>
         <section class="py-10 md:py-20">
@@ -115,27 +115,23 @@
                     <img src="img/faq-photo.png" alt="Woman standing and smiling">
                 </div>
                 <div class="md:w-1/2 py-2">
-                    <h2 class="max-w-xl mx-auto text-brand-gray-dark-1 font-body font-bold text-5xl mb-8">Still have unanswered questions?</h2>
+                    <h2 class="max-w-xl mx-auto text-white font-body font-bold text-4xl lg:text-5xl mb-8">Still have unanswered questions?</h2>
                     <p class="max-w-xl mb-24 mx-auto text-xl text-brand-gray-light-1">Send us a personalised mail and we would answer your question</p>
-                    <form action="">
-                        <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg ">     
+
+                    <form action="includes/question.inc.php" method="POST">
+                        <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg text-white">     
                             <div>                              
                                 <img class="w-6" src="img/mail-dark.png" alt="Email icon">                         
                             </div>                   
-                            <input class="w-full bg-transparent pb-4 focus:outline-none" type="email" name="" id="" placeholder="Email address">
+                            <input class="w-full bg-transparent pb-4 focus:outline-none" type="email" name="email" id="" placeholder="Email address">
                         </div>
-                        <div class="flex space-x-3 mb-12 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
-                            <div>                              
-                                <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
-                            </div>                     
-                            <input class="w-full bg-transparent pb-4 focus:outline-none" type="password" name="" id="" placeholder="Password">
-                            <div>                              
-                                <img class="w-6" src="img/password-show-dark.png" alt="Password icon">                         
-                            </div>
+                        <div class="mb-12 rounded-md border focus-within:ring-2 ring-blue-700 bg-white">
+                            <textarea class="w-full rounded-md py-3 px-4 focus:outline-none" name="message" id="" cols="30" rows="4" placeholder="Enter your question"></textarea>
                         </div>
                     
-                        <button class="px-8 py-3 font-medium border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700">Register</button>
+                        <button class="px-8 py-3 font-medium border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700" type="submit" name="submit">Register</button>
                     </form>
+
                 </div>
             </div>
         </section>
