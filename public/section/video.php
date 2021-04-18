@@ -5,8 +5,8 @@
         <!-- <video src=""></video> -->
         <div class="video h-48 md:h-96 flex justify-center items-center rounded-3xl">
             <!-- <img class="block w-24" src="img/play.png" alt="Play button"> -->
-            <div class="mx-auto">
-            <iframe width="720" height="415" src="https://www.youtube.com/embed/41JCpzvnn_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="max-w-lg mx-auto">
+            <iframe width="200" height="300" src="https://www.youtube.com/embed/41JCpzvnn_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </div>

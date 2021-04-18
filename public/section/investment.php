@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="w-full sm:flex sm:space-x-4">       
-            <div class="w-1/2 my-16 mx-auto py-12 rounded-2xl shadow-lg bg-brand-gray-dark-3 text-white">
+            <div class="w-64 sm:w-1/2 my-16 mx-auto py-12 rounded-2xl shadow-lg bg-brand-gray-dark-3 text-white">
                 <div class="flex justify-center items-center bg-brand-yellow-light-1 opacity-20 rounded-full h-16 w-16 mx-auto mb-4">
                     <div class="">
                         <img class="w-8" src="img/gold.png" alt="Gold tag">
@@ -53,7 +53,7 @@
                     <button class="px-3 lg:px-10 py-3 rounded-md border border-white hover:text-blue-700 hover:bg-white hover:border-blue-700"><a href="register.php">Get started</a></button>
                 </div> 
             </div>
-            <div class="w-1/2 my-16 mx-auto py-12 rounded-2xl shadow-lg bg-brand-gray-dark-3 text-white">
+            <div class="w-64 sm:w-1/2 my-16 mx-auto py-12 rounded-2xl shadow-lg bg-brand-gray-dark-3 text-white">
                 <div class="flex justify-center items-center bg-brand-yellow-light-2 opacity-90 rounded-full h-16 w-16 mx-auto mb-4">
                     <div class="">
                         <img class="w-8" src="img/platinum.png" alt="Price tag">
