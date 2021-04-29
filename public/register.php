@@ -6,7 +6,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-black">
+<body class="bg-gray-900">
     <main>
         <section class="min-h-screen md:flex px-6 md:px-0">         
             <div class="md:w-1/2 min-h-screen flex flex-col">
@@ -69,7 +69,7 @@
         <?php 
             if(isset($_GET["error"])) {
                 if($_GET["error"] == "emptyinput") {
-                    echo "<p>Fill in all fields</p>";
+                    echo "<p class='text-white'>Fill in all fields</p>";
                 }
                 else if($_GET["error"] == "invalidemail") {
                     echo "<p>Choose a proper email</p>";
@@ -84,7 +84,7 @@
                     echo "<p>This email is already used!</p>";
                 }
                 else if($_GET["error"] == "none") {
-                    echo "<p>You have signed up!</p>";
+                    echo "<p class='text-white'>You have signed up!</p>";
                 }
             }
         ?>

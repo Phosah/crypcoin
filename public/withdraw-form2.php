@@ -2,7 +2,7 @@
     <div class="max-w-xl mx-auto pb-10 bg-white rounded-md">
         <div class="flex justify-between px-4 py-6">
             <h1 class="font-body font-bold text-brand-gray-dark-1 text-xl">Withdraw</h1>
-            <svg id="withdraw-close-modal" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer p-1 hover:bg-gray-500 rounded-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg id="withdraw-close-modal-two" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer p-1 hover:bg-gray-500 rounded-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
             </svg>
         </div>
@@ -10,7 +10,7 @@
         <form action="">
             <div class="flex space-x-8 justify-between mb-6 px-6">
                 <div class="flex flex-1 w-1/2 items-center space-x-6">               
-                    <div class="w-6">
+                    <div class="w-6">  
                         <img src="img/bitcoin-small.png" alt="Bitcoin small logo">
                     </div>
                     <div class="flex space-x-6 h-14 w-full bg-green-100 border-b border-brand-gray-light-7">

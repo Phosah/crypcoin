@@ -9,13 +9,28 @@
 </head>
 <body class="font-body">
     <?php include("dashboard-header.php") ?>
+    <div id="withdraw-overlay"class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center">
+        <div class="bg-gray-200 max-w-lg py-2 px-3 rounded shadow-xl text-gray-800">
+        <?php 
+            include('withdraw-form.php');
+        ?>
+        </div>
+    </div>
+
     <main class="bg-brand-blue-light-1">
-        <section class="py-10">       
+        <section class="py-20">       
             <div class="max-w-6xl mx-auto px-6 bg-white">
             <div class="flex justify-between items-center">
                 <h2 class="mb-2 px-4 py-6 font-bold text-brand-gray-dark-1 text-xl">Withdraw</h2>
-                <button class="bg-blue-700 text-white px-6 py-3 rounded-md">Withdraw</button>
+                <div id="withdraw-btn" class="bg-blue-700 text-white px-6 py-3 rounded-md cursor-pointer">Withdraw</div>
             </div>
+
+            <?php
+                if(isset($_SESSION['withdraw'])) {
+                    echo $_SESSION['withdraw'];
+                    unset($_SESSION['withdraw']);
+                }
+            ?>
                 <div>
                     <div class="flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">
                         <div  class="flex-1">Amount</div>
@@ -26,54 +41,43 @@
                         <div  class="flex-1">Status</div>
                     </div>
                     <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">0.0123BTC</div>
-                        <div class="flex-1">$200</div>
-                        <div class="flex-1">Bank of America</div>
-                        <div class="flex-1">0133677202</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-green-400">Success</div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">0.0123BTC</div>
-                        <div class="flex-1">$200</div>
-                        <div class="flex-1">Bank of America</div>
-                        <div class="flex-1">0133677202</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-yellow-400">Pending</div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">0.0123BTC</div>
-                        <div class="flex-1">$200</div>
-                        <div class="flex-1">Bank of America</div>
-                        <div class="flex-1">0133677202</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-yellow-400">Pending</div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">0.0123BTC</div>
-                        <div class="flex-1">$200</div>
-                        <div class="flex-1">Bank of America</div>
-                        <div class="flex-1">0133677202</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-red-400">Failed</div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>
-                    <div class="flex items-center justify-center py-6 px-6 font-bold">
-                        <div class="flex-1">0.0123BTC</div>
-                        <div class="flex-1">$200</div>
-                        <div class="flex-1">Bank of America</div>
-                        <div class="flex-1">0133677202</div>
-                        <div class="flex-1">25 / 05 / 2020</div>
-                        <div class="flex-1 text-red-400">Failed</div>
-                    </div>
-                    <div class="border-b border-brand-gray-dark-3"></div>                
+
+                    <?php
+                        include('includes/dbh.inc.php');
+                        $id = $_SESSION["usersid"];
+                        $sql = "SELECT * FROM tbl_withdrawals WHERE user_id=$id;";
+                        $res = mysqli_query($conn, $sql);
+
+                        if($res==true) {
+
+                            while ($row = mysqli_fetch_assoc($res)) {
+                                $userId = $row['user_id'];
+                                $amount = $row['amount'];
+                                $value = $row['value'];
+                                $bank = $row['bank'];
+                                $accountNumber = $row['accountNumber'];
+                                $date = $row['date'];
+                                $status = $row['status'];
+                                ?>
+
+                                <div class="flex items-center justify-center py-6 px-6 font-bold">
+                                    <div class="flex-1"><?php echo $amount; ?></div>
+                                    <div class="flex-1"><?php echo $value; ?></div>
+                                    <div class="flex-1"><?php echo $bank; ?></div>
+                                    <div class="flex-1"><?php echo $accountNumber; ?></div>
+                                    <div class="flex-1"><?php echo $date; ?></div>
+                                    <div class="flex-1 text-yellow-400"><?php echo $status; ?></div>
+                                </div>
+                                <div class="border-b border-brand-gray-dark-3"></div>
+                                <?php
+                            }                       
+                        }
+                    ?>            
                 </div>
             </div>
         </section>
     </main>
+
+    <script src="js/withdraw.js"></script>
 </body>
 </html>

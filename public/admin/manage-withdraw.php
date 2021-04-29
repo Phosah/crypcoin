@@ -8,24 +8,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Deposits</title>
+    <title>Manage Withdrawals</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <section class="mx-20 py-20 bg-red-200">
-        <h1>Manage Deposit</h1>
+        <h1>Manage Withdrawals</h1>
         <form action="" method="POST">
             <div class="flex space-x-4 mb-4">
                 <label for="">User id</label>
                 <input type="text" name="user_id">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Plan</label>
-                <input type="text" name="plan">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Coin</label>
-                <input type="text" name="coin">
             </div>
             <div class="flex space-x-4 mb-4">
                 <label for="">Amount</label>
@@ -34,6 +26,14 @@
             <div class="flex space-x-4 mb-4">
                 <label for="">Value</label>
                 <input type="text" name="value">
+            </div>
+            <div class="flex space-x-4 mb-4">
+                <label for="">Bank</label>
+                <input type="text" name="bank">
+            </div>
+            <div class="flex space-x-4 mb-4">
+                <label for="">Account number</label>
+                <input type="text" name="account_number">
             </div>
             <div class="flex space-x-4 mb-4">
                 <label for="">Date</label>
@@ -57,19 +57,19 @@
 
     if(isset($_POST['submit'])) {
         $userId = $_POST['user_id'];
-        $plan = $_POST['plan'];
-        $coin = $_POST['coin'];
         $amount = $_POST['amount'];
         $value = $_POST['value'];
+        $bank = $_POST['bank'];
+        $accountNumber = $_POST['account_number'];
         $date = $_POST['date'];
         $status = $_POST['status'];
 
-        $sql = "INSERT INTO tbl_deposits SET
-            users_id = '$userId',
-            plan = '$plan',
-            coin = '$coin',
+        $sql = "INSERT INTO tbl_withdrawals SET
+            user_id = '$userId',
             amount = '$amount',
             value = '$value',
+            bank = '$bank',
+            accountNumber = '$accountNumber',
             date = '$date',
             status = '$status'
         ";
@@ -77,11 +77,11 @@
         $res = mysqli_query($conn, $sql);
 
         if($res==true) {
-            $_SESSION['deposit'] = "<div class='font-body font-bold'>Deposit completed</div>";
-            header('location: ../deposit.php');
-            // echo $_SESSION['deposit'];
+            $_SESSION['withdraw'] = "<div class='font-body font-bold'>withdraw completed</div>";
+            header('location: ../withdraw.php');
+            // echo $_SESSION['withdraw'];
         } else {
-            $_SESSION['deposit'] = "<div class='text-red-600 font-bold font-body'>Failed to deposit</div>";
+            $_SESSION['withdraw'] = "<div class='text-red-600 font-bold font-body'>Failed to deposit</div>";
         }
     }
 ?>

@@ -103,11 +103,11 @@ function loginUser($conn, $email, $pwd) {
     }
     else if ($checkedPwd === true) {
         session_start();
-        $_SESSION["usersid"] = $uidExists["usersId"];
+        $_SESSION["usersid"] = $uidExists["users_id"];
         $_SESSION["email"] = $uidExists["usersEmail"];
+        $_SESSION["name"] = $uidExists["usersName"];
         header("location: ../dashboard.php");
         exit();
-
     }
 }
 

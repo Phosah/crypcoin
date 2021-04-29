@@ -1,7 +1,3 @@
-<?php 
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +9,15 @@
 </head>
 <body class="font-body">
     <?php include("dashboard-header.php") ?>
+
+    <div id="deposit-overlay" class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center">
+        <div class="bg-gray-200 max-w-lg py-2 px-3 rounded shadow-xl text-gray-800">
+        <?php 
+            include('deposit-form.php');
+        ?>
+        </div>
+    </div>
+
     <main class="bg-brand-blue-light-1">
         <section class="pt-20 pb-10">       
             <div class="max-w-6xl px-6 mx-auto">
@@ -32,8 +37,8 @@
                         </div>
                         <div class="border-b border-brand-gray-light-7"></div>
                         <div class="flex py-3 px-4 space-x-4 w-80 lg:w-96 mx-auto text-brand-blue-dark-1 hover:text-blue-700">
-                            <div class="font-bold font-body">
-                                <a href="index.php">Deposit here</a>
+                            <div id="" class="deposit-btn font-bold font-body">
+                                Deposit here
                             </div>
                             <i>&rightarrow;</i>
                         </div>
@@ -51,8 +56,8 @@
                         </div>
                         <div class="border-b border-brand-gray-light-7"></div>
                         <div class="flex py-3 px-4 space-x-4 w-80 lg:w-96 mx-auto text-brand-gray-dark-3 hover:text-blue-700">
-                            <div class="font-bold font-body">
-                                <a href="index.php">Deposit here</a>
+                            <div id="" class="deposit-btn font-bold font-body">
+                                Deposit here
                             </div>
                             <i>&rightarrow;</i>
                         </div>
@@ -70,8 +75,8 @@
                         </div>
                         <div class="border-b border-brand-gray-light-7"></div>
                         <div class="flex py-3 px-4 space-x-4 w-80 lg:w-96 mx-auto text-yellow-600 hover:text-blue-700">
-                            <div class="font-bold font-body">
-                                <a href="index.php">Deposit here</a>
+                            <div id="" class="deposit-btn font-bold font-body">
+                                Deposit here
                             </div>
                             <i>&rightarrow;</i>
                         </div>
@@ -89,8 +94,8 @@
                         </div>
                         <div class="border-b border-brand-gray-light-7"></div>
                         <div class="flex py-3 px-4 space-x-4 w-80 lg:w-96 mx-auto text-brand-gray-dark-3 hover:text-blue-700">
-                            <div class="font-bold font-body">
-                                <a href="index.php">Deposit here</a>
+                            <div id="" class="deposit-btn font-bold font-body">
+                                Deposit here
                             </div>
                             <i>&rightarrow;</i>
                         </div>
@@ -124,9 +129,8 @@
                    
                     <?php
                         include('includes/dbh.inc.php');
-                        // $db_select = mysqli_select_db($conn, 'crypcoin') or die(mysqli_error()); 
-
-                        $sql = "SELECT * FROM tbl_deposits WHERE users_id=2";
+                        $id = $_SESSION["usersid"];
+                        $sql = "SELECT * FROM tbl_deposits WHERE users_id=$id;";
                         $res = mysqli_query($conn, $sql);
 
                         if($res==true) {
@@ -159,5 +163,7 @@
             </div>
         </section>
     </main>
+
+    <script src="js/deposit.js"></script>
 </body>
 </html>

@@ -7,12 +7,12 @@
     <title>Referral</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="font-body">
-    <header>
+<body class="font-body bg-brand-blue-light-1">
+    <header class="bg-white">
         <?php include("dashboard-header.php") ?>
     </header>
     <main>
-        <section class="py-20 bg-blue-100"> 
+        <section class="h-screen flex items-center justify-center"> 
             <div class="max-w-lg mx-auto mb-10 px-6 pt-16 pb-10 bg-white">       
                 <div class="max-w-lg mx-auto mb-10 px-6 text-center">
                     <div class="flex justify-center items-center space-x-4 mb-4">
