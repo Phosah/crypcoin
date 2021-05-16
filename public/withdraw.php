@@ -10,7 +10,7 @@
 <body class="font-body">
     <?php include("dashboard-header.php") ?>
     <div id="withdraw-overlay"class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center">
-        <div class="bg-gray-200 max-w-lg py-2 px-3 rounded shadow-xl text-gray-800">
+        <div class="bg-gray-200 rounded shadow-xl text-gray-800">
         <?php 
             include('withdraw-form.php');
         ?>

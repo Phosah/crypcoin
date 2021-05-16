@@ -13,7 +13,7 @@
 ?>
 
 
-<header class="max-w-6xl mx-auto py-3 px-6">   
+<header class="max-w-6xl mx-auto py-3 px-6 bg-white">   
     <nav class="flex justify-between items-center space-x-8 text-brand-gray-dark-1">
         <div class="w-2/3 flex justify-between">
             <div>

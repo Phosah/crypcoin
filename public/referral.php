@@ -21,10 +21,11 @@
                     </div>
                     <p class="text-brand-gray-dark-1">Use this link to refer a friend that is also willing to earn through trading</p>
                 </div>
-                <div class="flex space-x-8 max-w-md mx-auto py-3 border-b border-brand-gray-dark-4 text-center">
+                <div class="flex space-x-8 py-3 text-center">
                     <p>122t3t3yui88whuwueu73892iwi838iiqikq82820203ujei</p>
                     <img src="img/copy.png" alt="">
                 </div>
+                <div class="border-b border-brand-gray-dark-4"></div>
             </div>     
         </section>
     </main>

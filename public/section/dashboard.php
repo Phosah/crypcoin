@@ -17,7 +17,7 @@
             <button class="bg-blue-700 border-blue-700 px-8 py-4 text-white font-semibold rounded-md hover:bg-white hover:text-blue-700 border hover:border-blue-700"><a href="register.php">Get started</a></button>
         </div>
         <div class="md:w-1/2">
-            <img src="img/dashboard.png" alt="Dashboard photo">
+            <img src="img/dashboard-2.png" alt="Dashboard photo">
         </div>
     </div>
 </section>

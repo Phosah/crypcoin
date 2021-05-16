@@ -49,9 +49,9 @@
                 <div class="bg-white border border-brand-gray-light-3 border-opacity-50 rounded-md shadow-lg">
                     <div class="flex items-center justify-between border-b border-opacity-50 p-4 border-brand-gray-light-4">
                         <div class="space-x-6 text-brand-gray-light-1 font-semibold">
-                            <a class="text-blue-700" href="dashboard.php">Bitcoin</a>
+                            <a href="dashboard.php">Bitcoin</a>
                             <a href="dashboard-1.php">Litecoin</a>
-                            <a href="dashboard-2.php">Ethereum</a>
+                            <a class="text-blue-700" href="dashboard-2.php">Ethereum</a>
                             <a href="dashboard-3.php">Bitcoincash</a>
                         </div>
                         <div class="flex items-center space-x-4 px-2 py-1 border rounded-md border-brand-gray-light-4 border-opacity-50 text-brand-gray-light-1"> 
@@ -66,7 +66,7 @@
                                 <img src="img/money-tag.png" alt="Price tag">
                             </div>
                             <div>
-                                <h2 class="text-brand-gray-dark-1 text-lg font-bold"><?php echo '$'. $btc_price; ?></h2>
+                                <h2 class="text-brand-gray-dark-1 text-lg font-bold"><?php echo '$'. $eth_price; ?></h2>
                                 <p class="text-brand-gray-light-1 text-sm">Current price</p>
                             </div>
                         </div>
