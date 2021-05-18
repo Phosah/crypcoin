@@ -1,12 +1,13 @@
 <?php
     session_start();
+    include 'includes/dbh.inc.php';
     include("includes/functions.inc.php");
 
-    if(!isset($_SESSION["usersid"])) {
+    if(!isset($_SESSION["userid"])) {
         header("location: index.php");
         exit();
     } else {
-        echo $_SESSION["usersid"];
+        echo $_SESSION["userid"];
         echo $_SESSION["email"];
         echo $_SESSION["name"];
     }
@@ -32,9 +33,23 @@
         </div>
         <div class="w-1/3 flex items-center justify-end space-x-4"> 
             <img src="img/notification bell.png" alt="Notification">
-            <div>
-                <img src="img/dashboard-profile.png" alt="Profile image">
-            </div>
+            <?php
+                $currentUser = $_SESSION['userid'];
+                echo $currentUser;
+                $sql = "SELECT $currentUser FROM tbl_users";
+                $result = mysqli_query($conn, $sql);
+                $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid='$currentUser'";
+                $resultImg = mysqli_query($conn, $sqlImg);
+                while($rowImg = mysqli_fetch_assoc($resultImg)) {
+                    echo "<div>";
+                    if ($rowImg['status'] == 0) {
+                        echo "<div class='w-10 mx-auto'><img src='uploads/profile".$currentUser.".png'></div>";
+                    } else {    
+                        echo "<div class='w-10 mx-auto'><img src='uploads/default-profile-photo.png'></div>";      
+                    }
+                }
+                echo "</div>";
+            ?>
             <p class="text-brand-gray-dark-1 font-semibold"><?php echo $_SESSION["name"]; ?></p>
             <img src="img/down-arrow.png" alt="down arrow">
         </div>

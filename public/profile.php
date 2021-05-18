@@ -1,3 +1,5 @@
+<?php include 'includes/dbh.inc.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,23 +10,39 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-body ">
-    <?php include("dashboard-header.php") ?>
+    <?php 
+        include("dashboard-header.php");
+    ?>
 
     <main class="bg-brand-blue-light-1">
         <section class="pt-20 pb-10">       
             <div class="max-w-6xl px-6 mx-auto">
-                <div class="flex space-x-8 items-start">               
+                <div class="flex space-x-8 items-start">            
                     <div class="">
 
-                        <!-- <form action="upload.php" method="$_POST" enctype="multipart/form-data">
-                            <input type="file" name="file">
+                        <?php
+                            $currentUser = $_SESSION['userid'];
+                            echo $currentUser;
+                            $sql = "SELECT $currentUser FROM tbl_users";
+                            $result = mysqli_query($conn, $sql);
+                            $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid='$currentUser'";
+                            $resultImg = mysqli_query($conn, $sqlImg);
+                            while($rowImg = mysqli_fetch_assoc($resultImg)) {
+                                echo "<div>";
+                                if ($rowImg['status'] == 0) {
+                                    echo "<div class='max-w-xs mx-auto'><img src='uploads/profile".$currentUser.".png'></div>";
+                                } else {    
+                                    echo "<div class='max-w-xs mx-auto'><img src='uploads/default-profile-photo.png'></div>";      
+                                }
+                            }
+                            echo "</div>";
+                        ?>
+
+                        <form action="includes/upload.inc.php" method="POST" enctype="multipart/form-data">
+                            <div><input type="file" name="file"></div>
                             <button type="submit" name="submit">Upload</button>
-                        </form> -->
+                        </form>
 
-
-                        <div class="mb-8">                       
-                            <img src="img/profile-photo.png" alt="Profile photo">
-                        </div>
                         <div class="flex space-x-4 items-center">
                             <img src="img/delete-icon.png" alt="Delete icon">
                             <p class="text-red-600">Delete account</p>

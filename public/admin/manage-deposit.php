@@ -17,7 +17,7 @@
         <form action="" method="POST">
             <div class="flex space-x-4 mb-4">
                 <label for="">User id</label>
-                <input type="text" name="user_id">
+                <input type="text" name="userid">
             </div>
             <div class="flex space-x-4 mb-4">
                 <label for="">Plan</label>
@@ -56,7 +56,7 @@
     include('../includes/dbh.inc.php');    
 
     if(isset($_POST['submit'])) {
-        $userId = $_POST['user_id'];
+        $userId = $_POST['userid'];
         $plan = $_POST['plan'];
         $coin = $_POST['coin'];
         $amount = $_POST['amount'];
@@ -65,7 +65,7 @@
         $status = $_POST['status'];
 
         $sql = "INSERT INTO tbl_deposits SET
-            users_id = '$userId',
+            userid = '$userId',
             plan = '$plan',
             coin = '$coin',
             amount = '$amount',

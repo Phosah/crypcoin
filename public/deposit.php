@@ -109,6 +109,11 @@
                 echo $_SESSION['deposit'];
                 unset($_SESSION['deposit']);
             }
+
+            if(isset($_SESSION['deposit-pending'])) {
+                echo $_SESSION['deposit-pending'];
+                unset($_SESSION['deposit-pending']);
+            }
         ?>
         
 
@@ -129,8 +134,8 @@
                    
                     <?php
                         include('includes/dbh.inc.php');
-                        $id = $_SESSION["usersid"];
-                        $sql = "SELECT * FROM tbl_deposits WHERE users_id=$id;";
+                        $id = $_SESSION["userid"];
+                        $sql = "SELECT * FROM tbl_deposits WHERE userid=$id;";
                         $res = mysqli_query($conn, $sql);
 
                         if($res==true) {

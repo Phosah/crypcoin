@@ -7,7 +7,7 @@
             </svg>
         </div>
         <div class="mb-8 border-t border-brand-gray-light-7"></div>
-        <form action="">
+        <form action="includes/withdraw-pending.inc.php" method="POST">
             <div class="flex space-x-8 justify-between mb-6 px-8">
                 <div class="flex flex-1 w-1/2 items-center space-x-6 border-b border-brand-gray-light-7 focus-within:ring-2 ring-blue-200 rounded-t-lg focus-within:border-transparent">               
                     <div class="w-6">
@@ -16,8 +16,6 @@
                     <div class="flex space-x-6 h-14 w-full bg-green-100">
                         <select class="w-full focus:outline-none" name="" id="">
                             <option value="Bitcoin">Bitcoin</option>
-                            <option value="Bitcoin">Ethereum</option>
-                            <option value="Bitcoin">Litecoin</option>
                         </select>
                     </div>
                 </div>
@@ -26,16 +24,16 @@
                         <img src="img/dollar-sign.png" alt="Dollar sign">
                     </div>           
                     <div class="flex space-x-6 h-14 w-full bg-blue-100">
-                        <input class="w-full focus:outline-none" type="number" placeholder="Enter amount">
+                        <input class="w-full focus:outline-none" type="text" name="amount" placeholder="Enter amount">
                     </div>
                     <div class=""></div>
                 </div>
             </div>
             <div class=" mb-12 px-8">
-                <h2>Value: <span class="font-bold font-body text-lg text-brand-gray-dark-1">0.3233</span></h2>
+                <h2>Value: <span class="font-bold font-body text-lg text-brand-gray-dark-1">0.0000</span></h2>
             </div>
             <div class="px-8 mb-12">   
-                <button class="bg-blue-700 text-white text-md rounded-md px-6 py-2">Continue</button>
+                <button class="bg-blue-700 text-white text-md rounded-md px-6 py-2" name="submit" type="submit">Continue</button>
             </div>
         </form>
     </div>

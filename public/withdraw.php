@@ -30,6 +30,11 @@
                     echo $_SESSION['withdraw'];
                     unset($_SESSION['withdraw']);
                 }
+
+                if(isset($_SESSION['withdraw-pending'])) {
+                    echo $_SESSION['withdraw-pending'];
+                    unset($_SESSION['withdraw-pending']);
+                }
             ?>
                 <div>
                     <div class="flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">
@@ -44,14 +49,14 @@
 
                     <?php
                         include('includes/dbh.inc.php');
-                        $id = $_SESSION["usersid"];
-                        $sql = "SELECT * FROM tbl_withdrawals WHERE user_id=$id;";
+                        $id = $_SESSION["userid"];
+                        $sql = "SELECT * FROM tbl_withdrawals WHERE userid=$id;";
                         $res = mysqli_query($conn, $sql);
 
                         if($res==true) {
 
                             while ($row = mysqli_fetch_assoc($res)) {
-                                $userId = $row['user_id'];
+                                $userId = $row['userid'];
                                 $amount = $row['amount'];
                                 $value = $row['value'];
                                 $bank = $row['bank'];

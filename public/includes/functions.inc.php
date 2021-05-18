@@ -34,7 +34,7 @@ function pwdMatch($pwd, $pwdRepeat) {
 }
 
 function uidExists($conn, $email) {
-    $sql = "SELECT * FROM tbl_users WHERE usersEmail = ?;";
+    $sql = "SELECT * FROM tbl_users WHERE userEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../register.php?error=stmtfailed");
@@ -58,8 +58,7 @@ function uidExists($conn, $email) {
 }
 
 function createUser($conn, $name, $email, $pwd) {
-    $sql = "INSERT INTO tbl_users (usersName, usersEmail, usersPwd) VALUES (?, ?, ?);";
-
+    $sql = "INSERT INTO tbl_users (userName, userEmail, userPwd) VALUES (?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: ../register.php?error=stmtfailed");
@@ -71,6 +70,21 @@ function createUser($conn, $name, $email, $pwd) {
     mysqli_stmt_bind_param($stmt, "sss", $name, $email, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+
+    $sql2 = "SELECT * FROM tbl_users WHERE userEmail='$email'";
+    $result = mysqli_query($conn, $sql2);
+
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $userid = $row['userId'];
+            $sql3 = "INSERT INTO tbl_profileimage (userid, status)
+            VALUES ('$userid', 1)";
+            mysqli_query($conn, $sql3);
+        }
+    }   else {
+        echo "You have an error";
+    }
+
     header("location: ../register.php?error=none");
     exit();
 }
@@ -94,7 +108,7 @@ function loginUser($conn, $email, $pwd) {
         exit();
     }
 
-    $hashedPwd = $uidExists["usersPwd"];
+    $hashedPwd = $uidExists["userPwd"];
     $checkedPwd = password_verify($pwd, $hashedPwd);
 
     if($checkedPwd === false) {
@@ -103,9 +117,9 @@ function loginUser($conn, $email, $pwd) {
     }
     else if ($checkedPwd === true) {
         session_start();
-        $_SESSION["usersid"] = $uidExists["users_id"];
-        $_SESSION["email"] = $uidExists["usersEmail"];
-        $_SESSION["name"] = $uidExists["usersName"];
+        $_SESSION["userid"] = $uidExists["userId"];
+        $_SESSION["email"] = $uidExists["userEmail"];
+        $_SESSION["name"] = $uidExists["userName"];
         header("location: ../dashboard.php");
         exit();
     }
