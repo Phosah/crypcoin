@@ -13,7 +13,7 @@
         <a class="block md:inline-block mb-4 md:mb-0 ml-0 md:ml-4 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2" href="contact.php">Contact us</a>
         
         <?php 
-            if(isset($_SESSION["usersid"])) {
+            if(isset($_SESSION["userid"])) {
                 echo "<a class='block md:inline-block mb-4 md:mb-0 ml-0 md:ml-4 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2' href='includes/logout.inc.php'>Logout</a>";
             } else {
                 echo "<a class='block md:inline-block mb-4 md:mb-0 ml-0 md:ml-4 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2' href='login.php'>Login</a>";
@@ -43,7 +43,7 @@
         <a class="block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2" href="contact.php">Contact us</a>
 
         <?php 
-            if(isset($_SESSION["usersid"])) {
+            if(isset($_SESSION["userid"])) {
                 echo "<a class='block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2' href='includes/logout.inc.php'>Logout</a>";
             } else {
                 echo "<a class='block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2' href='login.php'>Login</a>";

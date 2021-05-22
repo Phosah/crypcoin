@@ -28,14 +28,13 @@
                     <img class="h-4" src="img/referral-crown.png" alt="">
                     <a href="referral.php">Referrals</a>
                 </div>
-                <a href="includes/logout.inc.php">Logout</a>
             </div>
         </div>
         <div class="w-1/3 flex items-center justify-end space-x-4"> 
             <img src="img/notification bell.png" alt="Notification">
             <?php
                 $currentUser = $_SESSION['userid'];
-                echo $currentUser;
+                // echo $currentUser;
                 $sql = "SELECT $currentUser FROM tbl_users";
                 $result = mysqli_query($conn, $sql);
                 $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid='$currentUser'";
@@ -51,7 +50,25 @@
                 echo "</div>";
             ?>
             <p class="text-brand-gray-dark-1 font-semibold"><?php echo $_SESSION["name"]; ?></p>
-            <img src="img/down-arrow.png" alt="down arrow">
+
+            <div class="">
+                <div class="" id="menu-btn">               
+                    <button class="focus:outline-none"><img src="img/down-arrow.png" alt="down arrow"></button>
+                </div>
+                <!-- <div class="hidden flex-col" id="dropdown">
+                    <div class="px-3 py-2 hover:text-blue-500"><a href="profile.php">Profile</a></div>
+                    <div class="px-3 py-2 hover:text-blue-500"><a href="includes/logout.inc.php">Logout</a></div>
+                </div>         -->
+            </div>
         </div>
     </nav>
 </header>
+
+<div class="max-w-6xl mx-auto hidden justify-end bg-blue-200" id="dropdown">
+    <div class="w-20">
+        <div class="px-3 py-2 hover:text-blue-500"><a href="profile.php">Profile</a></div>
+        <div class="px-3 py-2 hover:text-blue-500"><a href="includes/logout.inc.php">Logout</a></div>
+    </div>
+</div>
+<script src="js/dropdown.js"></script>
+

@@ -23,7 +23,7 @@
             <div class="max-w-6xl px-6 mx-auto">
                 <h2 class="mb-2 font-bold text-brand-gray-dark-1 text-xl">Deposit</h2>
                 <p class="mb-4 text-brand-gray-dark-4">Select one of the deposit plans listed below to make payments</p>
-                <div class="flex items-center justify-center space-x-4 max-w-6xl">                   
+                <div class="flex items-center justify-center space-x-4 max-w-6xl px-6">                   
                     <div class="w-1/4 mb-3 border border-brand-gray-light-7 rounded-md bg-blue-100">
                         <div class="flex py-3 px-4">
                             <div class="">

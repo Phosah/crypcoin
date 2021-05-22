@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+    
+</body>
+</html>
+
 <section class="bg-brand-gray-light-6">
     <div class="pb-10 bg-white rounded-md">
         <div class="flex justify-between px-8 py-6">
@@ -13,7 +27,7 @@
                     <div class="w-4">
                         <img src="img/dollar-sign.png" alt="Dollar sign">
                     </div>           
-                    <div class="flex space-x-6 h-14 w-full bg-blue-100">
+                    <div class="flex space-x-6 h-14 w-full">
                         <input class="w-full focus:outline-none" type="text" name="amount" placeholder="Enter amount">
                     </div>
                     <div class=""></div>
@@ -39,11 +53,35 @@
                 <img src="img/qrcode.png" alt="QR Code">
             </div>
             <div class="flex space-x-8 text-center px-8 pb-4 cursor-pointer">
-                <p class="text-sm">122t3t3yui88whuwueu73892iwi838iiqikq82820203ujei</p>
-                <img src="img/copy.png" alt="">
+                <!-- <input id="wallet-address" class="text-sm"> -->
+                <p id="wallet-address" class="selectable">dfggdewewssssdsdsdsdfsfgfgfdghjfhjdjdkksdksdjksjdjdk</p>
+                <div id="copy-btn"><img src="img/copy.png" alt=""></div>
             </div>
             <div class="mx-6 mb-8 border-b border-brand-gray-dark-4"></div>
             <div class="mx-8"><button class="py-2 px-6 bg-blue-700 text-white rounded-md cursor-pointer" name="submit" type="submit">Submit</button></div>
         </form>
     </div>
 </section>
+
+<script type="text/javascript">
+    const walletAddress = document.getElementById("wallet-address");
+    const copyBtn = document.getElementById("copy-btn");
+
+    function copyText(htmlElement) {
+        if (!htmlElement) {
+            return;
+        }
+
+        let elementText = htmlElement.innerText;
+        let inputElement = document.createElement('input');
+        inputElement.setAttribute('value', elementText);
+        document.body.appendChild(inputElement);
+        inputElement.select();
+        document.execCommand('copy');
+        inputElement.parentNode.removeChild(inputElement);
+    }
+
+    copyBtn.onclick = function () {
+        copyText(walletAddress);
+    }
+</script>

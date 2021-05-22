@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-gray-900">
+<body class="bg-gray-900 font-body">
     <header class="max-w-6xl mx-auto px-6">
         <?php include("navbar.php") ?>
     </header>
@@ -26,28 +26,28 @@
                     <button class="bg-blue-700 py-3 px-8 rounded-md text-white border-blue-700 hover:bg-white hover:text-blue-700 border hover:border-blue-700">Get started</button>
                 </div>
                 <div class="md:w-1/2">
-                    <div class="flex mb-8">                 
-                        <div class="flex flex-1 items-center space-x-4">
+                    <div class="sm:flex space-x-4 mb-8">                 
+                        <div class="flex flex-1 items-center space-x-4 mb-6">
                             <div class="flex-shrink-0 bg-blue-200 p-2">
                                 <img class="w-6" src="img/trust.png" alt="Trust">
                             </div>
                             <p class="text-white font-body font-bold text-xl">Trust & Respect</p>
                         </div>
-                        <div class="flex flex-1 items-center space-x-4">
+                        <div class="flex flex-1 items-center space-x-4 mb-6">
                             <div class="flex-shrink-0 bg-blue-200 p-2">
                                 <img class="w-6" src="img/transparency.png" alt="Transparency">
                             </div>
                             <p class="text-white font-body font-bold text-xl">Transparency</p>
                         </div>
                     </div>
-                    <div class="flex">                  
-                        <div class="flex flex-1 items-center space-x-4">
+                    <div class="sm:flex space-x-4">                  
+                        <div class="flex flex-1 items-center space-x-4 mb-6">
                             <div class="flex-shrink-0 bg-blue-200 p-2">
                                 <img class="w-6" src="img/bulb.png" alt="Innovation">
                             </div>
                             <p class="text-white font-body font-bold text-xl">Innovation</p>
                         </div>
-                        <div class="flex flex-1 items-center space-x-4">
+                        <div class="flex flex-1 items-center space-x-4 mb-6">
                             <div class="flex-shrink-0 bg-blue-200 p-2">
                                 <img class="w-6" src="img/crown.png" alt="Simplicity">
                             </div>
@@ -71,7 +71,7 @@
         </section>
         <?php include("section/why-us.php") ?>
         <?php include("section/user.php") ?>
-        <?php include("section/update.php") ?>
+        <?php include("section/update2.php") ?>
     </main>
     <?php include("footer.php") ?>
 </body>

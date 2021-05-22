@@ -129,7 +129,7 @@
                             <textarea class="w-full rounded-md py-3 px-4 focus:outline-none" name="message" id="" cols="30" rows="4" placeholder="Enter your question"></textarea>
                         </div>
                     
-                        <button class="px-8 py-3 font-medium border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700" type="submit" name="submit">Register</button>
+                        <button class="px-8 py-3 font-medium border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700" type="submit" name="submit">Submit</button>
                     </form>
 
                 </div>

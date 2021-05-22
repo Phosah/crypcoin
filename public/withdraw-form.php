@@ -13,7 +13,7 @@
                     <div class="w-6">
                         <img src="img/bitcoin-small.png" alt="Bitcoin small logo">
                     </div>
-                    <div class="flex space-x-6 h-14 w-full bg-green-100">
+                    <div class="flex space-x-6 h-14 w-full">
                         <select class="w-full focus:outline-none" name="" id="">
                             <option value="Bitcoin">Bitcoin</option>
                         </select>

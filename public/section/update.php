@@ -1,4 +1,4 @@
-<section class="py-16 md:py-20">
+<section class="py-16 md:py-20 text-white">
     <div class="md:flex items-center md:space-x-12 max-w-6xl mx-auto px-6">
         <div class="md:w-1/2 mx-auto mb-12 md:mb-0">
             <img class="" src="img/update.png" alt="Update">
@@ -14,6 +14,22 @@
                     <button class="w-12" type="submit" name="submit"><img src="img/arrow.png" alt="Send"></button>
                 </div>
             </form>
+            <?php 
+                if(isset($_GET["error"])) {
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p>Fill in all fields</p>";
+                    }
+                    else if($_GET["error"] == "invalidemail") {
+                        echo "<p>Choose a proper email</p>";
+                    }
+                    else if($_GET["error"] == "stmtfailed") {
+                        echo "<p>Fill in all fields</p>";
+                    }
+                    else if($_GET["error"] == "none") {
+                        echo "<p>You have signed up for updates!</p>";
+                    }
+                }
+            ?>   
         </div>
     </div>
 </section>

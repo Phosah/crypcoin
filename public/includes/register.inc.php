@@ -27,7 +27,6 @@ if(isset($_POST["submit"])) {
         exit();
     }
     createUser($conn, $name, $email, $pwd);
-    // createProfileImage($conn, $name, $email);
 
 } else {
     

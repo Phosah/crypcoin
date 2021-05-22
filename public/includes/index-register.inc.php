@@ -26,7 +26,8 @@ if(isset($_POST["submit"])) {
         header("location: ../index.php?error=emailexists");
         exit();
     }
-
+    createUser($conn, $name, $email, $pwd);
+    
 } else {
     
     header("location: ../index.php");

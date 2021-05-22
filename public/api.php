@@ -1,11 +1,11 @@
 <?php
 
-$url = "https://bitpay.com/api/rates";
-$json = json_decode(file_get_contents($url));
-$dollar = $btc = 0;
-foreach($json as $obj) {
-    if($obj->code=="USD") $btc = $obj->rate;
-}
+// $url = "https://bitpay.com/api/rates";
+// $json = json_decode(file_get_contents($url));
+// $dollar = $btc = 0;
+// foreach($json as $obj) {
+//     if($obj->code=="USD") $btc = $obj->rate;
+// }
 
 $ch = curl_init();
 $url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&order=market_cap_desc&per_page=100&page=1&sparkline=false";

@@ -1,9 +1,62 @@
 <?php 
-// session_start();
 function emptyInputRegister($name, $email, $pwd, $pwdRepeat) {
     $result = true;
     
     if (empty($name) || empty($email) || empty($pwd) || empty($pwdRepeat)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function emptyPersonalDetails($fullname, $email, $number) {
+    $result = true;
+    
+    if (empty($fullname) || empty($email) || empty($number)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function emptyAccountDetails($bank, $accountName, $accountNumber) {
+    $result = true;
+    
+    if (empty($bank) || empty($accountName) || empty($accountNumber)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function emptyDeposit($amount) {
+    $result = true;
+    
+    if (empty($amount)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+function emptyWithdrawal($amount) {
+    $result = true;
+    
+    if (empty($amount)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function emptyAddressDetails($street, $city, $state, $country) {
+    $result = true;
+    
+    if (empty($street) || empty($city) || empty($state) || empty($country)) {
         $result = true;
     } else {
         $result = false;
@@ -84,8 +137,8 @@ function createUser($conn, $name, $email, $pwd) {
     }   else {
         echo "You have an error";
     }
-
-    header("location: ../register.php?error=none");
+    header("location: ../index.php?error=none");
+    // header("location: ../index.php");
     exit();
 }
 
@@ -137,7 +190,23 @@ function createSubscriber($conn, $subscriberEmail) {
     mysqli_stmt_bind_param($stmt, "s", $subscriberEmail);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../register.php?error=none");
+    header("location: ../index.php?error=none");
+    exit();
+}
+
+function createSubscriber2($conn, $subscriberEmail) {
+    $sql = "INSERT INTO tbl_subscribers (subscriber_email) VALUES (?);";
+
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../about.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "s", $subscriberEmail);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../about.php?error=none");
     exit();
 }
 
@@ -173,14 +242,14 @@ function createQuestion($conn, $question_email, $question_content) {
 
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("location: ../contact.php?error=stmtfailed");
+        header("location: ../faq.php?error=stmtfailed");
         exit();
     }
 
     mysqli_stmt_bind_param($stmt, "ss", $question_email, $question_content);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../contact.php?error=none");
+    header("location: ../faq.php?error=none");
     exit();
 }
 
@@ -194,3 +263,19 @@ function emptyInputQuestion($email, $message) {
     }
     return $result;
 }
+
+// function createPersonalDetails($conn, $userid, $name, $email, $number) {
+//     $sql = "INSERT INTO tbl_personal_details (userid, name, email, number) VALUES ('$id', ?, ?, ?);";
+
+//     $stmt = mysqli_stmt_init($conn);
+//     if (!mysqli_stmt_prepare($stmt, $sql)) {
+//         header("location: ../contact.php?error=stmtfailed");
+//         exit();
+//     }
+
+//     mysqli_stmt_bind_param($stmt, "ss", $question_email, $question_content);
+//     mysqli_stmt_execute($stmt);
+//     mysqli_stmt_close($stmt);
+//     header("location: ../contact.php?error=none");
+//     exit();
+// }

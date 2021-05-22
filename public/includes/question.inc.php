@@ -17,6 +17,6 @@
         }
         createQuestion($conn, $question_email, $question_content);
     } else {
-        header('location: ../index.php');
+        header('location: ../faq.php');
         exit();
     }
