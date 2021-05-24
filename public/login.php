@@ -23,29 +23,21 @@
                     <div class="w-80 lg:w-96 mx-auto">
                         <h2 class="text-3xl text-white font-body font-bold mb-3">Log into your account</h2>
                         <p class="mb-20 text-brand-gray-light-1">Do not have an account? <span class="text-blue-700 font-semibold hover:text-blue-800"><a href="register.php">Sign Up</a></span></p>
-
-                        <?php 
-                            // if(isset($_SESSION['error'])) {
-                            //     echo $_SESSION['error'];
-                            //     unset ($_SESSION['error']);
-                            // }
-                        ?>
-
                         <div>
                             <form action="includes/login.inc.php" method="POST">
                                 <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/mail-dark.png" alt="Email icon">                         
                                     </div>                   
-                                    <input class="w-full pb-4 text-white bg-transparent focus:outline-none" type="email" name="email" id="" placeholder="Email address">
+                                    <input class="w-full pb-4 text-white bg-transparent focus:outline-none" type="email" name="email" placeholder="Email address">
                                 </div>
                                 <div class="flex space-x-3 mb-8 border-b border-brand-gray-light-1 focus-within:ring-2 ring-blue-700 focus-within:border-transparent rounded-t-lg">     
                                     <div>                              
                                         <img class="w-6" src="img/password-dark.png" alt="Password icon">                         
                                     </div>                     
-                                    <input class="w-full pb-4 text-white bg-transparent focus:outline-none" type="password" name="pwd" id="" placeholder="Password">
+                                    <input id="login-pass" class="w-full pb-4 text-white bg-transparent focus:outline-none" type="password" name="pwd" placeholder="Password">
                                     <div>                              
-                                        <img class="w-6" src="img/password-show-dark.png" alt="Password icon">                         
+                                        <img id="login-pwd-icon" class="w-6 cursor-pointer" src="img/password-show-dark.png" alt="Password icon">                         
                                     </div>
                                 </div>
                                 <div class="flex justify-between mb-12">
@@ -78,5 +70,6 @@
             }
         ?>
     </main>
+    <script src="js/login-password.js"></script>
 </body>
 </html>

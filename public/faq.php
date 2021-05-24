@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-black">
+<body class="bg-gray-900 font-body">
     <header class="max-w-6xl mx-auto px-6">
         <?php include("navbar.php") ?>
     </header>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="py-10 md:py-20">
+        <section class="py-10 md:py-20 text-white">
             <div class="md:flex items-center md:space-x-16 max-w-6xl mx-auto px-6">
                 <div class="md:w-1/2 mb-12">
                     <img src="img/faq-photo.png" alt="Woman standing and smiling">
@@ -125,14 +125,29 @@
                             </div>                   
                             <input class="w-full bg-transparent pb-4 focus:outline-none" type="email" name="email" id="" placeholder="Email address">
                         </div>
-                        <div class="mb-12 rounded-md border focus-within:ring-2 ring-blue-700 bg-white">
+                        <div class="mb-12 rounded-md border focus-within:ring-2 ring-blue-700 bg-white text-gray-800">
                             <textarea class="w-full rounded-md py-3 px-4 focus:outline-none" name="message" id="" cols="30" rows="4" placeholder="Enter your question"></textarea>
                         </div>
                     
                         <button class="px-8 py-3 font-medium border bg-blue-700 rounded-md text-white hover:text-blue-700 hover:bg-white hover:border-blue-700" type="submit" name="submit">Submit</button>
                     </form>
-
                 </div>
+                <?php 
+                    if(isset($_GET["error"])) {
+                        if($_GET["error"] == "emptyinput") {
+                            echo "<p>Fill in all fields</p>";
+                        }
+                        else if($_GET["error"] == "invalidemail") {
+                            echo "<p>Choose a proper email</p>";
+                        }
+                        else if($_GET["error"] == "stmtfailed") {
+                            echo "<p>Fill in all fields</p>";
+                        }
+                        else if($_GET["error"] == "questionsent") {
+                            echo "<p>Your message has been sent!</p>";
+                        }
+                    }
+                ?> 
             </div>
         </section>
     </main>

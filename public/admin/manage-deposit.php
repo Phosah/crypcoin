@@ -77,11 +77,11 @@
         $res = mysqli_query($conn, $sql);
 
         if($res==true) {
-            $_SESSION['deposit'] = "<div class='font-body font-bold'>Deposit completed</div>";
+            $_SESSION['deposit'] = "<div class='font-body font-bold text-green-600'>Deposit completed</div>";
             header('location: ../deposit.php');
             // echo $_SESSION['deposit'];
         } else {
-            $_SESSION['deposit'] = "<div class='text-red-600 font-bold font-body'>Failed to deposit</div>";
+            $_SESSION['deposit'] = "<div class='text-red-600 font-bold font-body'>Deposit failed!</div>";
         }
     }
 ?>

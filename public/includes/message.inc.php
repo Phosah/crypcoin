@@ -9,7 +9,7 @@
         require_once 'functions.inc.php';
 
         if(emptyInputEnquiry($message_name, $message_email, $message_content) !== false) {
-            header('location: ../contact.php?error=passwordsdontmatch');
+            header('location: ../contact.php?error=emptyinput');
             exit();
         }
         if(invalidEmail($message_email) !== false) {
@@ -18,6 +18,6 @@
         }
         createEnquiry($conn, $message_name, $message_email, $message_content);
     } else {
-        header('location: ../index.php');
+        header('location: ../contact.php');
         exit();
     }

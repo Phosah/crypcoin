@@ -8,7 +8,7 @@
         require_once 'functions.inc.php';
 
         if(emptyInputQuestion($question_email, $question_content) !== false) {
-            header('location: ../faq.php?error=passwordsdontmatch');
+            header('location: ../faq.php?error=emptyinput');
             exit();
         }
         if(invalidEmail($question_email) !== false) {

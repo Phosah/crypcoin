@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-body">
-    <?php include("dashboard-header.php") ?>
+    <?php include "dashboard-header.php" ?>
     <div id="withdraw-overlay"class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center">
         <div class="bg-gray-200 rounded shadow-xl text-gray-800">
         <?php 
@@ -31,10 +31,11 @@
                     unset($_SESSION['withdraw']);
                 }
 
-                if(isset($_SESSION['withdraw-pending'])) {
-                    echo $_SESSION['withdraw-pending'];
-                    unset($_SESSION['withdraw-pending']);
+                if(isset($_SESSION['withdraw-processing'])) {
+                    echo $_SESSION['withdraw-processing'];
+                    unset($_SESSION['withdraw-processing']);
                 }
+
             ?>
                 <div>
                     <div class="flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">
@@ -54,7 +55,6 @@
                         $res = mysqli_query($conn, $sql);
 
                         if($res==true) {
-
                             while ($row = mysqli_fetch_assoc($res)) {
                                 $userId = $row['userid'];
                                 $amount = $row['amount'];
@@ -66,14 +66,14 @@
                                 ?>
 
                                 <div class="flex items-center justify-center py-6 px-6 font-bold">
-                                    <div class="flex-1"><?php echo $amount; ?></div>
-                                    <div class="flex-1"><?php echo $value; ?></div>
+                                    <div class="flex-1"><?php echo $amount.' BTC'; ?></div>
+                                    <div class="flex-1"><?php echo '$'.$value; ?></div>
                                     <div class="flex-1"><?php echo $bank; ?></div>
                                     <div class="flex-1"><?php echo $accountNumber; ?></div>
                                     <div class="flex-1"><?php echo $date; ?></div>
-                                    <div class="flex-1 text-yellow-400"><?php echo $status; ?></div>
+                                    <div class="flex-1"><?php echo $status; ?></div>
                                 </div>
-                                <div class="border-b border-brand-gray-dark-3"></div>
+                                <div class="border-b border-brand-gray-light-3"></div>
                                 <?php
                             }                       
                         }

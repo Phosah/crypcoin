@@ -30,11 +30,6 @@
                     echo $_SESSION['withdraw'];
                     unset($_SESSION['withdraw']);
                 }
-
-                if(isset($_SESSION['withdraw-pending'])) {
-                    echo $_SESSION['withdraw-pending'];
-                    unset($_SESSION['withdraw-pending']);
-                }
             ?>
                 <div>
                     <div class="flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">

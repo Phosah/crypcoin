@@ -28,8 +28,8 @@
                         <div class="flex py-3 px-4">
                             <div class="">
                                 <h2 class="mb-2 text-brand-gray-dark-1 font-bold text-lg">Starter</h2>
-                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">50%</span> profit / week</p>
-                                <p class="text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$200 - $4,999</span></p>
+                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">400%</span> profit / week</p>
+                                <p class="text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$200 - $9,999</span></p>
                             </div>
                             <div class="flex justify-center items-center bg-blue-200 rounded-full h-16 w-16 mx-auto mb-4">
                                 <img class="w-8" src="img/starter.png" alt="Starter tag">
@@ -47,8 +47,8 @@
                         <div class="flex py-3 px-4">
                             <div class="">
                                 <h2 class="mb-2 text-brand-gray-dark-1 font-bold text-lg">Silver</h2>
-                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">50%</span> profit / week</p>
-                                <p class="text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$2000 - $4,999</span></p>
+                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">500%</span> profit / week</p>
+                                <p class="text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$10,000 - $99,999</span></p>
                             </div>
                             <div class="flex justify-center items-center bg-gray-200 rounded-full h-16 w-16 mx-auto mb-4">
                                 <img class="w-8" src="img/silver.png" alt="Silver tag">
@@ -66,8 +66,8 @@
                         <div class="flex py-3 px-4">
                             <div class="">
                                 <h2 class="mb-2 text-brand-gray-dark-1 font-bold text-lg">Gold</h2>
-                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">50%</span> profit / week</p>
-                                <p class="text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$10000 - $49,999</span></p>
+                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">600%</span> profit / week</p>
+                                <p class="text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$100,000 - $499,999</span></p>
                             </div>
                             <div class="flex justify-center items-center bg-yellow-200 rounded-full h-16 w-16 mx-auto mb-4">
                                 <img class="w-8" src="img/gold.png" alt="Gold tag">
@@ -85,8 +85,8 @@
                         <div class="flex py-3 px-4">
                             <div class="">
                                 <h2 class="mb-2 text-brand-gray-dark-1 font-bold text-lg">Platinum</h2>
-                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">50%</span> profit / week</p>
-                                <p class="flex flex-shrink-0 text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$50000 - $100,000</span></p>
+                                <p class="mb-4 text-brand-gray-dark-4"><span class="font-bold">700%</span> profit / week</p>
+                                <p class="flex flex-shrink-0 text-brand-gray-dark-4 text-sm">Trade: <span class="font-bold">$500,000 - $1,000,000</span></p>
                             </div>
                             <div class="flex justify-center items-center bg-gray-200 rounded-full h-16 w-16 mx-auto mb-4">
                                 <img class="w-8" src="img/platinum.png" alt="Platinum tag">
@@ -101,34 +101,31 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <?php 
-            if(isset($_SESSION['deposit'])) {
-                echo $_SESSION['deposit'];
-                unset($_SESSION['deposit']);
-            }
+                <?php 
+                if(isset($_SESSION['deposit'])) {
+                    echo $_SESSION['deposit'];
+                    unset($_SESSION['deposit']);
+                }
 
-            if(isset($_SESSION['deposit-pending'])) {
-                echo $_SESSION['deposit-pending'];
-                unset($_SESSION['deposit-pending']);
-            }
+                if(isset($_SESSION['deposit-pending'])) {
+                    echo $_SESSION['deposit-pending'];
+                    unset($_SESSION['deposit-pending']);
+                }
         ?>
-        
-
+            </div>
+        </section>       
         <section class="py-10">       
             <div class="max-w-6xl mx-auto px-6 bg-white">
                 <h2 class="mb-2 px-4 py-6 font-bold text-brand-gray-dark-1 text-xl">Deposit history</h2>
                 <div>
                     <div class="flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">
-                        <div  class="flex-1">Plan</div>
-                        <div  class="flex-1">Coin</div>
-                        <div  class="flex-1">Amount</div>
-                        <div  class="flex-1">Value</div>
-                        <div  class="flex-1">Date</div>
-                        <div  class="flex-1">Status</div>
-                        <div  class="flex-1">Proof of Payment</div>
+                        <div class="flex-1">Plan</div>
+                        <div class="flex-1">Coin</div>
+                        <div class="flex-1">Amount</div>
+                        <div class="flex-1">Value</div>
+                        <div class="flex-1">Date</div>
+                        <div class="flex-1">Status</div>
+                        <div class="flex-1">Proof of Payment</div>
                     </div>
                     <div class="border-b border-brand-gray-dark-3"></div>
                    
@@ -149,14 +146,30 @@
                                 $status = $row['status'];
                                 ?>
 
-                                <div class="flex items-center justify-center py-6 px-6 font-bold">
+                                <div class="flex items-center justify-center py-6 px-6 font-bold text-sm">
                                     <div class="flex-1"><?php echo $plan; ?></div>
                                     <div class="flex-1"><?php echo $coin; ?></div>
-                                    <div class="flex-1"><?php echo $amount; ?></div>
-                                    <div class="flex-1"><?php echo $value; ?></div>
+                                    <div class="flex-1 text-xs"><?php echo $amount. ' BTC'; ?></div>
+                                    <div class="flex-1"><?php echo '$'.$value; ?></div>
                                     <div class="flex-1"><?php echo $date; ?></div>
-                                    <div class="flex-1 text-yellow-400"><?php echo $status; ?></div>
-                                    <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md">Update payment slip</button></div>
+                                    <?php
+                                        // switch($status) {
+                                        //     case "Success":
+                                        //         echo "<div class='flex-1 text-green-600'>$status</div>";
+                                        //     case "Pending":
+                                        //         echo "<div class='flex-1 text-yellow-600'>$status</div>";
+                                        //     case "Failed":
+                                        //         echo "<div class='flex-1 text-red-500'>$status</div>";
+                                        // }  
+                                        if ($status == "Success") {
+                                            echo "<div class='flex-1 text-green-600'>$status</div>";
+                                        } else if ($status == "Pending") {
+                                            echo "<div class='flex-1 text-yellow-600'>$status</div>";
+                                        } else if ($status == "Failed") {
+                                            echo "<div class='flex-1 text-red-600'>$status</div>";
+                                        }
+                                    ?>
+                                    <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md"><a href="upload-receipt.php">Update payment slip</a></button></div>
                                 </div>
                                 <div class="border-b border-brand-gray-dark-3"></div>
                                 <?php

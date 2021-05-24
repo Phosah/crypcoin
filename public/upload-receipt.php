@@ -31,7 +31,6 @@
                     <h1 class="font-body font-bold text-brand-gray-dark-1 text-xl">Upload image of paymet</h1>
                     <p>The image uploaded would be used to verify transaction</p>
                 </div>
-                <div></div>
             </div>
             <div class="mb-8 border-t border-brand-gray-light-7"></div>
             <form action="includes/upload.inc.php" method="POST" enctype="multipart/form-data">
@@ -42,18 +41,14 @@
                         </div>
                         <div class="w-1/2 mx-auto">Click here to image or drop and drop image here.</div> -->
                         <?php
-                            $sql = "SELECT * FROM tbl_receipts_img WHERE userid=1 ORDER BY ID DESC LIMIT 1";
+                            $sql = "SELECT * FROM tbl_receipts_img WHERE userid=$id ORDER BY ID DESC LIMIT 1;";
                             $res = mysqli_query($conn, $sql);
 
                             if (mysqli_num_rows($res) > 0) {
-                                echo mysqli_num_rows($res);
-
                                 while ($images = mysqli_fetch_assoc($res)) { ?>
-
                                 <div>
                                     <img src="uploads/<?=$images['image_url']?>" alt="">
                                 </div>
-
                             <?php   }
                             }
                         ?>

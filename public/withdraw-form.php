@@ -24,7 +24,7 @@
                         <img src="img/dollar-sign.png" alt="Dollar sign">
                     </div>           
                     <div class="flex space-x-6 h-14 w-full bg-blue-100">
-                        <input class="w-full focus:outline-none" type="text" name="amount" placeholder="Enter amount">
+                        <input class="w-full focus:outline-none" type="number" name="amount" placeholder="Enter amount">
                     </div>
                     <div class=""></div>
                 </div>

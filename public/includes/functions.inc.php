@@ -222,7 +222,7 @@ function createEnquiry($conn, $message_name, $message_email, $message_content) {
     mysqli_stmt_bind_param($stmt, "sss", $message_name, $message_email, $message_content);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../contact.php?error=none");
+    header("location: ../contact.php?error=messagesent");
     exit();
 }
 
@@ -249,7 +249,7 @@ function createQuestion($conn, $question_email, $question_content) {
     mysqli_stmt_bind_param($stmt, "ss", $question_email, $question_content);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../faq.php?error=none");
+    header("location: ../faq.php?error=questionsent");
     exit();
 }
 

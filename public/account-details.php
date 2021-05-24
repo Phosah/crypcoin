@@ -18,10 +18,17 @@
             </div>
             <div class="w-1/2 mb-8 mx-6 border-b border-gray-500 px-6 focus-within:border-blue-600">
                 <input class="w-full bg-transparent py-4 focus-within:outline-none" type="number" name="account-number" placeholder="Account number">
-            </div>
+            </div>            
             <div class="px-8 mb-12">   
                 <button class="bg-blue-700 text-white text-md rounded-md px-6 py-2" name="submit" type="submit">Finish</button>
             </div>
         </form>
+        <?php         
+            if(isset($_GET["error"])) {
+                if($_GET["error"] == "emptyinput") {
+                    echo "<p class='text-red-500 mx-6'>Fill in all fields!</p>";
+                }
+            }
+        ?>
     </div>
 </section>

@@ -21,10 +21,9 @@ if(isset($_POST['submit'])) {
     $res = mysqli_query($conn, $sql);
 
     if($res==true) {
-    $_SESSION['deposit-pending'] = "<div class='font-body font-bold'>Deposit pending completed</div>";
+    $_SESSION['deposit-pending'] = "<div class='font-body font-bold text-yellow-600'>Deposit is pending</div>";
     header('location: ../deposit.php');
-    // echo $_SESSION['deposit'];
     } else {
-        $_SESSION['deposit-pending'] = "<div class='text-red-600 font-bold font-body'>Failed to deposit</div>";
+        $_SESSION['deposit-pending'] = "<div class='text-red-600 font-bold font-body'>Deposit failed</div>";
     }
 }

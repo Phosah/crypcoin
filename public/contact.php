@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-gray-900">
+<body class="bg-gray-900 font-body">
     <header class="max-w-6xl mx-auto px-6">
         <?php include("navbar.php") ?>
     </header>
@@ -18,7 +18,7 @@
                 <p class="text-brand-gray-light-1 text-xl lg:text-2xl">It doesnt matter where you are or the time of the day, we are always here to answer you</p>
             </div>
         </section>
-        <section class="py-10 md:py-28">
+        <section class="py-10 md:py-28 text-white">
             <div class="md:flex items-center md:space-x-12 max-w-6xl mx-auto px-6">               
                 <div class="md:w-1/2 mb-12 md:mb-0">
                     <h3 class="max-w-sm mb-12 text-white text-4xl lg:text-5xl font-body font-bold">Want to make more enquires?</h3>
@@ -38,13 +38,28 @@
                         <span class=""><img src="img/mail-dark.png" alt="Mail icon"></span>
                             <input class="w-full rounded-md py-3 px-4 focus:outline-none" type="email" name="email" id="" placeholder="Email address">
                         </div>
-                        <div class="mb-12 rounded-md border focus-within:ring-2 ring-blue-700 bg-white">
+                        <div class="mb-12 rounded-md border focus-within:ring-2 ring-blue-700 bg-white text-gray-800">
                             <textarea class="w-full rounded-md py-3 px-4 focus:outline-none" name="message" id="" cols="30" rows="10" placeholder="Type a description"></textarea>
                         </div>
                         <button class="bg-blue-700 px-8 py-4 text-white font-semibold rounded-md border border-blue-700 hover:bg-white hover:text-blue-700 hover:border-blue-700" type="submit" name="submit">Send message</button>
                     </form>
-
                 </div>
+                <?php 
+                    if(isset($_GET["error"])) {
+                        if($_GET["error"] == "emptyinput") {
+                            echo "<p>Fill in all fields</p>";
+                        }
+                        else if($_GET["error"] == "invalidemail") {
+                            echo "<p>Choose a proper email</p>";
+                        }
+                        else if($_GET["error"] == "stmtfailed") {
+                            echo "<p>Fill in all fields</p>";
+                        }
+                        else if($_GET["error"] == "messagesent") {
+                            echo "<p>Your message has been sent!</p>";
+                        }
+                    }
+                ?>   
             </div>
         </section>
     </main>

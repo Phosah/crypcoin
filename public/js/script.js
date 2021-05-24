@@ -5,7 +5,7 @@ let getRandomNumber = function(start, range) {
     }
     return getRandom;
 }
-console.log(getRandomNumber(500, 1000));
+// console.log(getRandomNumber(500, 1000));
 
 let activeAccount = document.querySelector('.active_account');
 activeAccount.textContent = getRandomNumber(10, 20) + 'K+';
