@@ -11,43 +11,45 @@
     <title>Manage Deposits</title>
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <section class="mx-20 py-20 bg-red-200">
-        <h1>Manage Deposit</h1>
-        <form action="" method="POST">
-            <div class="flex space-x-4 mb-4">
-                <label for="">User id</label>
-                <input type="text" name="userid">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Plan</label>
-                <input type="text" name="plan">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Coin</label>
-                <input type="text" name="coin">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Amount</label>
-                <input type="text" name="amount">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Value</label>
-                <input type="text" name="value">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Date</label>
-                <input type="text" name="date">
-            </div>
-            <div class="flex space-x-4 mb-4">
-                <label for="">Status</label>
-                <input type="text" name="status">
-            </div>
-            <div>
-                <input type="hidden" name="id" value="<?php echo $id; ?>">
-                <input type="submit" name="submit">
-            </div>
-        </form>
+<body class="font-body text-white bg-gray-800">
+    <section class="mx-20 py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <h1 class="text-4xl lg:text-5xl font-bold mb-12">Manage Deposit</h1>
+            <form action="" method="POST">
+                <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label class="" for="">Username</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="username">
+                </div>
+                <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label for="">Plan</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="plan" placeholder="e.g Starter">
+                </div>
+                <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label for="">Coin</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="coin" placeholder="e.g BTC">
+                </div>
+                <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label for="">Amount</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="amount" placeholder="e.g 0.87009807">
+                </div>
+                <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label for="">Value</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="value" placeholder="789,900">
+                </div>
+                <!-- <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label for="">Date</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="date">
+                </div> -->
+                <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label for="">Status</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="status" placeholder="e.g Pending">
+                </div>
+                <div>
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <button class="bg-blue-700 px-8 py-3 text-white font-semibold rounded-md border border-blue-700 hover:bg-white hover:text-blue-700 hover:border-blue-700" type="submit" name="submit">Submit</button>
+                </div>
+            </form>
+        </div>
     </section>
 </body>
 </html>
@@ -56,7 +58,7 @@
     include('../includes/dbh.inc.php');    
 
     if(isset($_POST['submit'])) {
-        $userId = $_POST['userid'];
+        $username = $_POST['username'];
         $plan = $_POST['plan'];
         $coin = $_POST['coin'];
         $amount = $_POST['amount'];
@@ -64,7 +66,7 @@
         $date = $_POST['date'];
         $status = $_POST['status'];
 
-        $sql = "INSERT INTO tbl_deposits (userid, plan, coin, amount, value, date, status) VALUES ('$userId', '$plan', '$coin', '$amount', '$value', NOW(), '$status');";
+        $sql = "INSERT INTO tbl_deposits (username, plan, coin, amount, value, date, status) VALUES ('$username', '$plan', '$coin', '$amount', '$value', NOW(), '$status');";
 
         $res = mysqli_query($conn, $sql);
 

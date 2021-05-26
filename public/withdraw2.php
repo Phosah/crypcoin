@@ -16,7 +16,6 @@
         ?>
         </div>
     </div>
-
     <main class="bg-brand-blue-light-1">
         <section class="py-20">       
             <div class="max-w-6xl mx-auto px-6 bg-white">
@@ -44,14 +43,12 @@
 
                     <?php
                         include('includes/dbh.inc.php');
-                        $id = $_SESSION["userid"];
-                        $sql = "SELECT * FROM tbl_withdrawals WHERE userid=$id;";
+                        $username = $_SESSION["name"];
+                        $sql = "SELECT * FROM tbl_withdrawals WHERE username='$username';";
+
                         $res = mysqli_query($conn, $sql);
-
                         if($res==true) {
-
                             while ($row = mysqli_fetch_assoc($res)) {
-                                $userId = $row['userid'];
                                 $amount = $row['amount'];
                                 $value = $row['value'];
                                 $bank = $row['bank'];

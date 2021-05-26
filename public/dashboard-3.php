@@ -31,34 +31,14 @@
         ?>
         </div>
     </div>
-    <?php
-        $id = $_SESSION['userid'];
-        $sql = "SELECT userid, bchBought, bchEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcPortfolio, ltcPortfolioValue, ethPortfolio, ethPortfolioValue, bchPortfolio, bchPortfolioValue FROM tbl_dashboard WHERE userid=$id;";
-        $res = mysqli_query($conn, $sql);
-        // var_dump($res);
-        while ($row = mysqli_fetch_assoc($res)) {
-            $userId = $row['userid'];
-            $bchBought = $row['bchBought'];
-            $bchEarnings = $row['bchEarnings'];
-            $portfolioValue = $row['portfolioValue'];
-            $btcPortfolio = $row['btcPortfolio'];
-            $btcPortfolioValue = $row['btcPortfolioValue'];
-            $ltcPortfolio = $row['ltcPortfolioValue'];
-            $ltcPortfolioValue = $row['ltcPortfolioValue'];
-            $ethPortfolio = $row['ethPortfolio'];
-            $ethPortfolioValue = $row['ethPortfolioValue'];
-            $bchPortfolio = $row['bchPortfolio'];
-            $bchPortfolioValue = $row['bchPortfolioValue'];
-        }
-    ?>
       <?php
         $id = $_SESSION['userid'];
-        $sql = "SELECT userid, bchBought, bchEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcPortfolio, ltcPortfolioValue, ethPortfolio, ethPortfolioValue, bchPortfolio, bchPortfolioValue FROM tbl_dashboard WHERE userid=$id;";
+        $username = $_SESSION['name'];
+
+        $sql = "SELECT bchBought, bchEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcPortfolio, ltcPortfolioValue, ethPortfolio, ethPortfolioValue, bchPortfolio, bchPortfolioValue FROM tbl_dashboard WHERE username='$username';";
         $res = mysqli_query($conn, $sql);
-        // var_dump($res);
         if (mysqli_num_rows($res) > 0) {
             while ($row = mysqli_fetch_assoc($res)) {
-                $userId = $row['userid'];
                 $bchBought = $row['bchBought'];
                 $bchEarnings = $row['bchEarnings'];
                 $portfolioValue = $row['portfolioValue'];
@@ -72,10 +52,9 @@
                 $bchPortfolioValue = $row['bchPortfolioValue'];
             }
         }   else {
-            $userId = 'userid';
             $bchBought = '0.00000000';
             $bchEarnings = '0.00000000';
-            $portfolioValue = '899,890';
+            $portfolioValue = '0.00';
             $btcPortfolio = '0.00';
             $btcPortfolioValue = '0.00000000';
             $ltcPortfolio = '0.00';

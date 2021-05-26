@@ -15,10 +15,9 @@ $id = $_SESSION['userid'];
 echo $id;
 
 if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
-    // include_once 'dbh.inc.php';
-    echo "<pre>";
-    print_r($_FILES['my_image']);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($_FILES['my_image']);
+    // echo "</pre>";
 
     $img_name = $_FILES['my_image']['name'];
     $img_size = $_FILES['my_image']['size'];
@@ -47,9 +46,8 @@ if (isset($_POST['submit']) && isset($_FILES['my_image'])) {
         }
     } else {
         $em = "unknown error occurred!";
-        // header("Location: ../deposit.php?error=$em");
+        header("Location: ../deposit.php?error=$em");
     }
-
 } else {
     header("Location: ../deposit.php");
 }

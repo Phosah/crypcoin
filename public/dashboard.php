@@ -33,12 +33,12 @@
     </div>
     <?php
         $id = $_SESSION['userid'];
-        $sql = "SELECT userid, btcBought, btcEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcPortfolio, ltcPortfolioValue, ethPortfolio, ethPortfolioValue, bchPortfolio, bchPortfolioValue FROM tbl_dashboard WHERE userid=$id;";
+        $username = $_SESSION['name'];
+        $sql = "SELECT btcBought, btcEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcPortfolio, ltcPortfolioValue, ethPortfolio, ethPortfolioValue, bchPortfolio, bchPortfolioValue FROM tbl_dashboard WHERE username='$username';";
+
         $res = mysqli_query($conn, $sql);
-        // var_dump($res);
         if (mysqli_num_rows($res) > 0) {
             while ($row = mysqli_fetch_assoc($res)) {
-                $userId = $row['userid'];
                 $btcBought = $row['btcBought'];
                 $btcEarnings = $row['btcEarnings'];
                 $portfolioValue = $row['portfolioValue'];
@@ -51,11 +51,11 @@
                 $bchPortfolio = $row['bchPortfolio'];
                 $bchPortfolioValue = $row['bchPortfolioValue'];
             }
+            
         }   else {
-            $userId = 'userid';
             $btcBought = '0.00000000';
             $btcEarnings = '0.00000000';
-            $portfolioValue = '899,890';
+            $portfolioValue = '0.00';
             $btcPortfolio = '0.00';
             $btcPortfolioValue = '0.00000000';
             $ltcPortfolio = '0.00';

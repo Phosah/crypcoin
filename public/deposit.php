@@ -131,12 +131,11 @@
                    
                     <?php
                         include('includes/dbh.inc.php');
-                        $id = $_SESSION["userid"];
-                        $sql = "SELECT * FROM tbl_deposits WHERE userid=$id;";
+                        $username = $_SESSION["name"];
+                        $sql = "SELECT * FROM tbl_deposits WHERE username='$username';";
+
                         $res = mysqli_query($conn, $sql);
-
                         if($res==true) {
-
                             while ($row = mysqli_fetch_assoc($res)) {
                                 $plan = $row['plan'];
                                 $coin = $row['coin'];
@@ -153,21 +152,24 @@
                                     <div class="flex-1"><?php echo '$'.$value; ?></div>
                                     <div class="flex-1"><?php echo $date; ?></div>
                                     <?php
-                                        // switch($status) {
-                                        //     case "Success":
-                                        //         echo "<div class='flex-1 text-green-600'>$status</div>";
-                                        //     case "Pending":
-                                        //         echo "<div class='flex-1 text-yellow-600'>$status</div>";
-                                        //     case "Failed":
-                                        //         echo "<div class='flex-1 text-red-500'>$status</div>";
-                                        // }  
-                                        if ($status == "Success") {
-                                            echo "<div class='flex-1 text-green-600'>$status</div>";
-                                        } else if ($status == "Pending") {
-                                            echo "<div class='flex-1 text-yellow-600'>$status</div>";
-                                        } else if ($status == "Failed") {
-                                            echo "<div class='flex-1 text-red-600'>$status</div>";
-                                        }
+                                        switch($status) {
+                                            case "Success":
+                                                echo "<div class='flex-1 text-green-600'>$status</div>";
+                                                    break;
+                                            case "Pending":
+                                                echo "<div class='flex-1 text-yellow-600'>$status</div>";
+                                                    break;
+                                            case "Failed":
+                                                echo "<div class='flex-1 text-red-500'>$status</div>";
+                                                    break;
+                                        }  
+                                        // if ($status == "Success") {
+                                        //     echo "<div class='flex-1 text-green-600'>$status</div>";
+                                        // } else if ($status == "Pending") {
+                                        //     echo "<div class='flex-1 text-yellow-600'>$status</div>";
+                                        // } else if ($status == "Failed") {
+                                        //     echo "<div class='flex-1 text-red-600'>$status</div>";
+                                        // }
                                     ?>
                                     <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md"><a href="upload-receipt.php">Update payment slip</a></button></div>
                                 </div>

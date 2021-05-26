@@ -263,32 +263,3 @@ function emptyInputQuestion($email, $message) {
     }
     return $result;
 }
-
-// function createPersonalDetails($conn, $userid, $name, $email, $number) {
-//     $sql = "INSERT INTO tbl_personal_details (userid, name, email, number) VALUES ('$id', ?, ?, ?);";
-
-//     $stmt = mysqli_stmt_init($conn);
-//     if (!mysqli_stmt_prepare($stmt, $sql)) {
-//         header("location: ../contact.php?error=stmtfailed");
-//         exit();
-//     }
-
-//     mysqli_stmt_bind_param($stmt, "ss", $question_email, $question_content);
-//     mysqli_stmt_execute($stmt);
-//     mysqli_stmt_close($stmt);
-//     header("location: ../contact.php?error=none");
-//     exit();
-// }
-
-
-// $userId = $_SESSION['userid'];
-// $sql4 = "INSERT INTO tbl_dashboard (userid, btcBought, btcEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcBought, ltcEarnings, ltcPortfolio, ltcPortfolioValue, ethBought, ethEarnings, ethPortfolio, ethPortfolioValue, bchBought, bchEarnings, bchPortfolio, bchPortfolioValue) 
-//         VALUES ('$userId', '0.00000000', '0.00000000', '0.00', '$0.00', '0.00000000', '0.00000000', '0.00000000', '0.00', '0.00000000', '0.00000000', '0.00000000', '0.00', '0.00000000', '0.00000000', '0.00000000', '0.00', '0.00000000');
-//         ";
-
-// $res = mysqli_query($conn, $sql4);
-// if($res==true) {
-//     $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
-// } else {
-//     $_SESSION['dashboard'] = "<div class='text-red-600 font-bold font-body'>Failed to update dashboard</div>";
-// }

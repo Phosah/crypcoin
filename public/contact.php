@@ -30,11 +30,11 @@
                 <div class="md:w-1/2">
 
                     <form action="includes/message.inc.php" method="POST">
-                        <div class="flex items-center mb-6 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700 bg-white">
+                        <div class="flex items-center mb-6 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700 bg-white text-gray-800">
                             <span class=""><img src="img/user-dark.png" alt="User icon"></span>
                             <input class=" w-full rounded-md py-3 px-4 focus:outline-none" type="text" name="name" id="" placeholder="Fullname">
                         </div>
-                        <div class="flex items-center mb-12 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700 bg-white">
+                        <div class="flex items-center mb-12 px-3 border-b rounded-lg focus-within:ring-2 ring-blue-700 bg-white text-gray-800">
                         <span class=""><img src="img/mail-dark.png" alt="Mail icon"></span>
                             <input class="w-full rounded-md py-3 px-4 focus:outline-none" type="email" name="email" id="" placeholder="Email address">
                         </div>
