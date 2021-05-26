@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .div__box {
+        width: 300px;
+        background-color: yellowgreen;
+        transition: all 2s ease-in-out;
+    }
+</style>
 <body>
-    
+    <div class="div__box">This is a div</div>
+    <div>This is a second div</div>
 </body>
 </html>
-
-<?php
-$items = array('stones', 'grains', 'tarts');
-$i = 0; 
-$len = count($items); 
-foreach ($items as $item) { 
-if ($i == $len - 1) { 
-    echo "Last item";
-} else { 
-    echo "Not the last element";
-} 
-$i++; 
-}

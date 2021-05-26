@@ -20,8 +20,7 @@
                         <div class="mb-10">
                         <?php
                             $currentUser = $_SESSION['userid'];
-                            echo $currentUser;
-
+                            // echo $currentUser;
                             $sql = "SELECT $currentUser FROM tbl_users";
                             $result = mysqli_query($conn, $sql);
                             $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid='$currentUser'";

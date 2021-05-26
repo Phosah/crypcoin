@@ -61,12 +61,20 @@
                                 ?>
 
                                 <div class="flex items-center justify-center py-6 px-6 font-bold">
-                                    <div class="flex-1"><?php echo $amount; ?></div>
-                                    <div class="flex-1"><?php echo $value; ?></div>
+                                    <div class="flex-1"><?php echo $amount. 'BTC'; ?></div>
+                                    <div class="flex-1"><?php echo '$'.$value; ?></div>
                                     <div class="flex-1"><?php echo $bank; ?></div>
                                     <div class="flex-1"><?php echo $accountNumber; ?></div>
                                     <div class="flex-1"><?php echo $date; ?></div>
-                                    <div class="flex-1 text-yellow-400"><?php echo $status; ?></div>
+                                    <?php 
+                                        if ($status == "Success") {
+                                            echo "<div class='flex-1 text-green-600'>$status</div>";
+                                        } else if ($status == "Pending") {
+                                            echo "<div class='flex-1 text-yellow-600'>$status</div>";
+                                        } else if ($status == "Failed") {
+                                            echo "<div class='flex-1 text-red-600'>$status</div>";
+                                        }
+                                    ?>
                                 </div>
                                 <div class="border-b border-brand-gray-dark-3"></div>
                                 <?php

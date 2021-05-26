@@ -64,15 +64,7 @@
         $date = $_POST['date'];
         $status = $_POST['status'];
 
-        $sql = "INSERT INTO tbl_withdrawals SET
-            userid = '$userId',
-            amount = '$amount',
-            value = '$value',
-            bank = '$bank',
-            accountNumber = '$accountNumber',
-            date = '$date',
-            status = '$status'
-        ";
+        $sql = "INSERT INTO tbl_withdrawals (userid, amount, value, bank, accountNumber, date, status) VALUES ('$userId', '$amount', '$value', '$bank', '$accountNumber', NOW(), '$status');";
 
         $res = mysqli_query($conn, $sql);
 

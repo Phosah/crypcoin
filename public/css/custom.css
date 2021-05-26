@@ -10,12 +10,7 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-/* .video {
-    background-image: url("../img/video.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-} */
+
 @media screen and (max-width: 768px) {
     .user {
         background-image: none;
@@ -28,3 +23,15 @@
 .selectable {
     user-select: all;
 }
+
+/* .dashboard-nav {
+    display: block;
+    transition-property: display;
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .5s;
+} */
+
+/* .referral-height {
+    height: calc(100vh - 90px);
+} */

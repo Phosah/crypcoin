@@ -24,8 +24,8 @@
                     <h3 class="max-w-sm mb-12 text-white text-4xl lg:text-5xl font-body font-bold">Want to make more enquires?</h3>
                     <h4 class="mb-6 text-brand-gray-dark-1 text-xl font-bold">Want a direct reach?</h4>
                     <p class="mb-6 text-brand-gray-light-1 text-xl">crypcoinsupport@gmail.com</p>
-                    <p class="mb-6 text-brand-gray-light-1 text-xl">+091123930400</p>
-                    <p class="text-brand-gray-light-1 text-xl w-3/4">2345A Kent mac hall avenue, Manchester, London</p>
+                    <p class="mb-6 text-brand-gray-light-1 text-xl">+1 (786) 527-2947</p>
+                    <p class="text-brand-gray-light-1 text-xl w-3/4">1201 Brickell Ave, Miami, Florida 33131</p>
                 </div>
                 <div class="md:w-1/2">
 

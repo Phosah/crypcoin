@@ -119,14 +119,12 @@ function createUser($conn, $name, $email, $pwd) {
     }
 
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-
     mysqli_stmt_bind_param($stmt, "sss", $name, $email, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
     $sql2 = "SELECT * FROM tbl_users WHERE userEmail='$email'";
     $result = mysqli_query($conn, $sql2);
-
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $userid = $row['userId'];
@@ -138,8 +136,10 @@ function createUser($conn, $name, $email, $pwd) {
         echo "You have an error";
     }
     header("location: ../index.php?error=none");
-    // header("location: ../index.php");
     exit();
+
+    // $sql4 = "SELECT * FROM tbl_users WHERE userEmail='$email'";
+    // header("location: ../index.php");
 }
 
 function emptyInputLogin($email, $pwd) {
@@ -278,4 +278,17 @@ function emptyInputQuestion($email, $message) {
 //     mysqli_stmt_close($stmt);
 //     header("location: ../contact.php?error=none");
 //     exit();
+// }
+
+
+// $userId = $_SESSION['userid'];
+// $sql4 = "INSERT INTO tbl_dashboard (userid, btcBought, btcEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcBought, ltcEarnings, ltcPortfolio, ltcPortfolioValue, ethBought, ethEarnings, ethPortfolio, ethPortfolioValue, bchBought, bchEarnings, bchPortfolio, bchPortfolioValue) 
+//         VALUES ('$userId', '0.00000000', '0.00000000', '0.00', '$0.00', '0.00000000', '0.00000000', '0.00000000', '0.00', '0.00000000', '0.00000000', '0.00000000', '0.00', '0.00000000', '0.00000000', '0.00000000', '0.00', '0.00000000');
+//         ";
+
+// $res = mysqli_query($conn, $sql4);
+// if($res==true) {
+//     $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
+// } else {
+//     $_SESSION['dashboard'] = "<div class='text-red-600 font-bold font-body'>Failed to update dashboard</div>";
 // }

@@ -31,7 +31,41 @@
         ?>
         </div>
     </div>
-
+    <?php
+        $id = $_SESSION['userid'];
+        $sql = "SELECT userid, ltcBought, ltcEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcPortfolio, ltcPortfolioValue, ethPortfolio, ethPortfolioValue, bchPortfolio, bchPortfolioValue FROM tbl_dashboard WHERE userid=$id;";
+        $res = mysqli_query($conn, $sql);
+        // var_dump($res);
+        if (mysqli_num_rows($res) > 0) {
+            while ($row = mysqli_fetch_assoc($res)) {
+                $userId = $row['userid'];
+                $ltcBought = $row['ltcBought'];
+                $ltcEarnings = $row['ltcEarnings'];
+                $portfolioValue = $row['portfolioValue'];
+                $btcPortfolio = $row['btcPortfolio'];
+                $btcPortfolioValue = $row['btcPortfolioValue'];
+                $ltcPortfolio = $row['ltcPortfolioValue'];
+                $ltcPortfolioValue = $row['ltcPortfolioValue'];
+                $ethPortfolio = $row['ethPortfolio'];
+                $ethPortfolioValue = $row['ethPortfolioValue'];
+                $bchPortfolio = $row['bchPortfolio'];
+                $bchPortfolioValue = $row['bchPortfolioValue'];
+            }
+        }   else {
+            $userId = 'userid';
+            $ltcBought = '0.00000000';
+            $ltcEarnings = '0.00000000';
+            $portfolioValue = '899,890';
+            $btcPortfolio = '0.00';
+            $btcPortfolioValue = '0.00000000';
+            $ltcPortfolio = '0.00';
+            $ltcPortfolioValue = '0.00000000';
+            $ethPortfolio = '0.00';
+            $ethPortfolioValue = '0.00000000';
+            $bchPortfolio = '0.00';
+            $bchPortfolioValue = '0.00000000';
+        }
+    ?>
 
     <main class="bg-brand-blue-light-1">
         <div class="max-w-6xl mx-auto flex items-stretch space-x-8 px-6">
@@ -52,7 +86,7 @@
                             <a href="dashboard.php">Bitcoin</a>
                             <a class="text-blue-700" href="dashboard-1.php">Litecoin</a>
                             <a href="dashboard-2.php">Ethereum</a>
-                            <a href="dashboard-3">Bitcoincash</a>
+                            <a href="dashboard-3.php">Bitcoincash</a>
                         </div>
                         <div class="flex items-center space-x-4 px-2 py-1 border rounded-md border-brand-gray-light-4 border-opacity-50 text-brand-gray-light-1"> 
                             <img src="img/calendar-outline.png" alt="Calendar">
@@ -66,7 +100,7 @@
                                 <img src="img/money-tag.png" alt="Price tag">
                             </div>
                             <div>
-                                <h2 class="text-brand-gray-dark-1 text-lg font-bold"><?php echo '$'. $ltc_price; ?></h2>
+                                <h2 class="text-brand-gray-dark-1 text-sm font-bold"><?php echo '$'. $ltc_price; ?></h2>
                                 <p class="text-brand-gray-light-1 text-sm">Current price</p>
                             </div>
                         </div>
@@ -75,7 +109,7 @@
                                 <img src="img/cart.png" alt="Buy cart">
                             </div>
                             <div>
-                                <h2 class="text-brand-gray-dark-1 text-lg font-bold">0.0000 LTC</h2>
+                                <h2 class="text-brand-gray-dark-1 text-sm font-bold"><?php echo $ltcBought. ' LTC'; ?></h2>
                                 <p class="text-brand-gray-light-1 text-sm">Total bought</p>
                             </div>
                         </div>
@@ -84,7 +118,7 @@
                                 <img src="img/earnings.png" alt="Earnings">
                             </div>
                             <div>
-                                <h2 class="text-brand-gray-dark-1 text-lg font-bold">0.0000 LTC</h2>
+                                <h2 class="text-brand-gray-dark-1 text-sm font-bold"><?php echo $ltcEarnings. ' LTC'; ?></h2>
                                 <p class="text-brand-gray-light-1 text-sm">Total earnings</p>
                             </div>
                         </div>              
@@ -101,7 +135,7 @@
                             <h3 class="">Portfolio value</h3>
                             <img class="w-24" src="img/logo-white.png" alt="Logo">
                         </div>
-                        <h2 class="mb-4 px-4 text-2xl font-bold">$0.00</h2>
+                        <h2 class="mb-4 px-4 text-2xl font-bold"><?php echo '$'.$portfolioValue; ?></h2>
                         <p class="px-4">Portfolio owner</p>
                         <p class="pb-4 px-4"><?php echo $_SESSION["name"]; ?></p>
                     </div>
@@ -114,8 +148,8 @@
                                     <h3 class="font-bold text-sm text-brand-gray-dark-1">Bitcoin</h3>
                                 </div>
                                 <div>
-                                    <h3 class="text-sm font-bold text-brand-gray-dark-1">$0.00</h3>
-                                    <p class="text-brand-gray-light-1 text-sm">0.0000 BTC</p>
+                                    <h3 class="text-sm font-bold text-brand-gray-dark-1"><?php echo "$". $btcPortfolio ;?></h3>
+                                    <p class="text-brand-gray-light-1 text-sm"><?php echo $btcPortfolioValue. ' BTC' ?></p>
                                 </div>
                             </div>
                             <div class="flex justify-between px-3 py-3 border-b border-brand-gray-light-3 border-opacity-50">
@@ -124,18 +158,8 @@
                                     <h3 class="font-bold text-sm text-brand-gray-dark-1">Litecoin</h3>
                                 </div>
                                 <div>
-                                    <h3 class="text-sm font-bold text-brand-gray-dark-1">$0.00</h3>
-                                    <p class="text-brand-gray-light-1 text-sm">0.0000 LTC</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-between px-3 py-3 border-b border-brand-gray-light-3 border-opacity-50">
-                                <div class="flex items-center space-x-3">                       
-                                    <img src="img/bitcoincash-icon.png" alt="Bitcoincash icon">
-                                    <h3 class="font-bold text-sm text-brand-gray-dark-1">Bitcoincash</h3>
-                                </div>
-                                <div>
-                                    <h3 class="text-sm font-bold text-brand-gray-dark-1">$0.00</h3>
-                                    <p class="text-brand-gray-light-1 text-sm">0.0000 BCH</p>
+                                    <h3 class="text-sm font-bold text-brand-gray-dark-1"><?php echo "$". $ltcPortfolio ;?></h3>
+                                    <p class="text-brand-gray-light-1 text-sm"><?php echo $btcPortfolioValue. ' LTC' ?></p>
                                 </div>
                             </div>
                             <div class="flex justify-between px-3 py-3">
@@ -144,8 +168,18 @@
                                     <h3 class="font-bold text-sm text-brand-gray-dark-1">Ethereum</h3>
                                 </div>
                                 <div>
-                                    <h3 class="text-sm font-bold text-brand-gray-dark-1">$10.00</h3>
-                                    <p class="text-brand-gray-light-1 text-sm">0.0000 ETH</p>
+                                    <h3 class="text-sm font-bold text-brand-gray-dark-1"><?php echo "$". $ethPortfolio ;?></h3>
+                                    <p class="text-brand-gray-light-1 text-sm"><?php echo $ethPortfolioValue. ' ETH' ?></p>
+                                </div>
+                            </div>
+                            <div class="flex justify-between px-3 py-3 border-b border-brand-gray-light-3 border-opacity-50">
+                                <div class="flex items-center space-x-3">                       
+                                    <img src="img/bitcoincash-icon.png" alt="Bitcoincash icon">
+                                    <h3 class="font-bold text-xs text-brand-gray-dark-1">Bitcoincash</h3>
+                                </div>
+                                <div>
+                                    <h3 class="text-xs font-bold text-brand-gray-dark-1"><?php echo "$". $bchPortfolio ;?></h3>
+                                    <p class="text-brand-gray-light-1 text-xs"><?php echo $bchPortfolioValue. ' BCH' ?></p>
                                 </div>
                             </div>
                         </div>

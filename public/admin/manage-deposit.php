@@ -64,15 +64,7 @@
         $date = $_POST['date'];
         $status = $_POST['status'];
 
-        $sql = "INSERT INTO tbl_deposits SET
-            userid = '$userId',
-            plan = '$plan',
-            coin = '$coin',
-            amount = '$amount',
-            value = '$value',
-            date = '$date',
-            status = '$status'
-        ";
+        $sql = "INSERT INTO tbl_deposits (userid, plan, coin, amount, value, date, status) VALUES ('$userId', '$plan', '$coin', '$amount', '$value', NOW(), '$status');";
 
         $res = mysqli_query($conn, $sql);
 
