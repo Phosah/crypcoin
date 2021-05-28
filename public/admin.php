@@ -1,3 +1,18 @@
+<?php
+    session_start();
+    // include 'includes/dbh.inc.php';
+    include 'includes/functions.inc.php';
+
+    if(!isset($_SESSION["username"])) {
+        header("location: admin/signup.php");
+        exit();
+    } else {
+        // echo $_SESSION["id"];
+        echo $_SESSION["username"];
+        echo $_SESSION["email"];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,21 +23,26 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="font-body bg-gray-800 text-white">
-    <section class="py-20 px-6 max-w-3xl mx-auto bg-red-200">
-        <h1 class="mb-4 text-2xl">Admin Panel</h1>
-        <p class="mb-8">Welcome to Crypcoin Binary Trade Panel </p>
-        <div>
-            <div>
-                <a href="admin/manage-deposit.php">Manage Deposit</a>
+<body class="font-body bg-gray-600 text-brand-gray-dark-3">
+    <main class="">
+        <section class="py-20 px-6 max-w-3xl mx-auto bg-gray-200">
+            <h1 class="mb-4 text-3xl">Admin Panel</h1>
+            <p class="mb-8 text-xl">Welcome to Crypcoin Binary Trade Panel </p>
+            <div class="flex space-x-10 justify-center mb-8">
+                <div>
+                    <a class="hover:text-blue-500" href="admin/manage-deposit.php">Manage Deposit</a>
+                </div>
+                <div>
+                    <a class="hover:text-blue-500" href="admin/manage-withdraw.php">Manage Withdrawal</a>
+                </div>
+                <div>
+                    <a class="hover:text-blue-500" href="admin/manage-dashboard.php">Manage Dashboard</a>
+                </div>
             </div>
-            <div>
-                <a href="admin/manage-withdraw.php">Manage Withdrawal</a>
+            <div class="flex justify-end">
+                <div class="text-red-500 hover:text-red-800"><a href="includes/admin-logout.inc.php">Logout</a></div>
             </div>
-            <div>
-                <a href="admin/manage-dashboard.php">Manage Dashboard</a>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>

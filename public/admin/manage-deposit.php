@@ -1,7 +1,16 @@
-<?php 
+<?php
     session_start();
-?>
+    // include 'includes/dbh.inc.php';
+    include '../includes/functions.inc.php';
 
+    if(!isset($_SESSION["username"])) {
+        header("location: signup.php");
+        exit();
+    } else {
+        echo $_SESSION["username"];
+        echo $_SESSION["email"];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +21,13 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="font-body text-white bg-gray-800">
-    <section class="mx-20 py-20">
+    <section class="md:mx-20 py-20">
         <div class="max-w-5xl mx-auto px-6">
             <h1 class="text-4xl lg:text-5xl font-bold mb-12">Manage Deposit</h1>
             <form action="" method="POST">
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label class="" for="">Username</label>
-                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="username">
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="username" placeholder="Fullname">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Plan</label>

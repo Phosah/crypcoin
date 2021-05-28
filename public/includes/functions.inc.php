@@ -263,3 +263,88 @@ function emptyInputQuestion($email, $message) {
     }
     return $result;
 }
+
+// ADMIN FUNCTIONS //
+
+function emptyAdminSignUp($fullname, $username, $email, $pwd, $pwdRepeat) {
+    $result = true;
+    
+    if (empty($fullname) || empty($username) || empty($email) || empty($pwd) || empty($pwdRepeat)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function createAdmin($conn, $fullname, $username, $email, $pwd) {
+    $sql = "INSERT INTO tbl_admin (fullname, username, email, pwd) VALUES (?, ?, ?, ?);";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../admin/signup.php?error=stmtfailed");
+        exit();
+    }
+
+    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+    mysqli_stmt_bind_param($stmt, "ssss", $fullname, $username, $email, $hashedPwd);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    header("location: ../admin/signup.php?error=none");
+}
+
+function loginAdmin($conn, $username, $pwd) {
+    $userExists = userExists($conn, $username);
+
+    if($userExists === false) {
+        header("location: ../admin/login.php");
+        exit();
+    }
+
+    $hashedPwd = $userExists["pwd"];
+    $checkedPwd = password_verify($pwd, $hashedPwd);
+
+    if($checkedPwd === false) {
+        header("location: ../admin/login.php?error=wronglogin");
+        exit();
+    }
+    else if ($checkedPwd === true) {
+        session_start();
+        $_SESSION["userid"] = $userExists["id"];
+        $_SESSION["username"] = $userExists["username"];
+        $_SESSION["email"] = $userExists["email"];
+        header("location: ../admin.php");
+        exit();
+    }
+}
+
+function emptyAdminLogin($username, $pwd) {
+    $result = true;
+    
+    if (empty($username) || empty($pwd)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function userExists($conn, $username) {
+    $sql = "SELECT * FROM tbl_admin WHERE username = ?;";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../admin/login.php?error=stmtfailed");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_execute($stmt);
+
+    $res = mysqli_stmt_get_result($stmt);
+    if ($row = mysqli_fetch_assoc($res)) {
+        return $row; 
+    } else {
+        $result = false;
+        return $result;
+    }
+    mysqli_stmt_close($stmt);
+}

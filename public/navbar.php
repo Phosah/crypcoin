@@ -2,7 +2,7 @@
     session_start();
 ?>
 
-<nav class="hidden md:flex justify-between items-center mb-10 py-8 opacity-70 text-white">
+<nav class="hidden md:flex justify-between items-center mb-10 py-8 text-white">
     <div class="mb-4 md:mb-0">
         <a href="index.php"><img src="img/logo.png" class="w-6/12" alt="Logo"></a>
     </div>
@@ -25,7 +25,7 @@
     </div>
 </nav>
 
-<nav class="md:hidden mb-10 py-8 opacity-80 text-white">
+<nav class="md:hidden mb-10 py-8 text-white">
     <div class="flex justify-between items-center">
         <div class="mb-4 md:mb-0">
             <a href="index.php"><img src="img/logo.png" class="w-6/12" alt="Logo"></a>
