@@ -137,9 +137,6 @@ function createUser($conn, $name, $email, $pwd) {
     }
     header("location: ../index.php?error=none");
     exit();
-
-    // $sql4 = "SELECT * FROM tbl_users WHERE userEmail='$email'";
-    // header("location: ../index.php");
 }
 
 function emptyInputLogin($email, $pwd) {
@@ -265,7 +262,6 @@ function emptyInputQuestion($email, $message) {
 }
 
 // ADMIN FUNCTIONS //
-
 function emptyAdminSignUp($fullname, $username, $email, $pwd, $pwdRepeat) {
     $result = true;
     
@@ -347,4 +343,26 @@ function userExists($conn, $username) {
         return $result;
     }
     mysqli_stmt_close($stmt);
+}
+
+function emptyAdminDeposit($username, $plan, $coin, $amount, $value, $status) {
+    $result = true;
+    
+    if (empty($username) || empty($plan) || empty($coin) || empty($amount) || empty($value) || empty($status)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function emptyAdminWithdraw($username, $amount, $value, $bank, $accountNumber, $status) {
+    $result = true;
+    
+    if (empty($username) || empty($amount) || empty($value) || empty($bank) || empty($accountNumber) || empty($status)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
 }

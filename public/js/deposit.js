@@ -16,4 +16,3 @@ function toggleDepositModal () {
     depositOverlay.classList.toggle('hidden');
     depositOverlay.classList.toggle('flex');
 }
-

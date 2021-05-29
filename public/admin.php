@@ -4,10 +4,9 @@
     include 'includes/functions.inc.php';
 
     if(!isset($_SESSION["username"])) {
-        header("location: admin/signup.php");
+        header("location: admin/login.php");
         exit();
     } else {
-        // echo $_SESSION["id"];
         echo $_SESSION["username"];
         echo $_SESSION["email"];
     }

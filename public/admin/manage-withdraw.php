@@ -22,9 +22,17 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="font-body text-white bg-gray-800">
-    <section class="md:mx-20 py-20">
-        <div class="max-w-5xl mx-auto px-6">
-            <h1 class="text-4xl lg:text-5xl font-bold mb-12">Manage Withdrawal</h1>
+    <section class="md:mx-10 py-20">
+        <div class="max-w-5xl mx-auto px-6 text-xs sm:text-sm">
+            <div class="flex items-end pb-16">
+                <div class="flex space-x-4 w-80 mx-auto text-brand-gray-light-1 hover:text-blue-700">
+                    <i>&LeftArrow;</i>
+                    <div class="font-bold font-body">
+                        <a href="../admin.php">Back to Admin Panel</a>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-lg sm:text-4xl lg:text-5xl font-bold mb-12">Manage Withdrawal</h1>
             <form action="" method="POST">
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Username</label>
@@ -59,6 +67,16 @@
                     <button class="bg-blue-700 px-8 py-3 text-white font-semibold rounded-md border border-blue-700 hover:bg-white hover:text-blue-700 hover:border-blue-700" type="submit" name="submit">Submit</button>
                 </div>
             </form>
+            <?php 
+                if(isset($_GET["error"])) {
+                    if($_GET["error"] == "emptyinput") {
+                        echo "<p class='text-white'>Fill in all fields</p>";
+                    }
+                    else if($_GET["error"] == "none") {
+                        echo "<p class='text-white'>Withdraw status updated!</p>";
+                    }
+                }
+            ?>
         </div>
     </section>
 </body>
@@ -72,15 +90,20 @@
         $value = $_POST['value'];
         $bank = $_POST['bank'];
         $accountNumber = $_POST['account_number'];
-        $date = $_POST['date'];
+        // $date = $_POST['date'];
         $status = $_POST['status'];
+
+        if(emptyAdminWithdraw($username, $amount, $value, $bank, $accountNumber, $status)) {
+            header("location: manage-withdraw.php?error=emptyinput");
+            exit();
+        }
 
         $sql = "INSERT INTO tbl_withdrawals (username, amount, value, bank, accountNumber, date, status) VALUES ('$username', '$amount', '$value', '$bank', '$accountNumber', NOW(), '$status');";
         $res = mysqli_query($conn, $sql);
 
         if($res==true) {
             $_SESSION['withdraw'] = "<div class='font-body font-bold text-green-600 mb-8'>withdraw completed</div>";
-            header('location: ../withdraw.php');
+            header('location: manage-withdraw.php?error=none');
         } else {
             $_SESSION['withdraw'] = "<div class='text-red-600 font-bold font-body mb-8'>Failed to deposit</div>";
         }

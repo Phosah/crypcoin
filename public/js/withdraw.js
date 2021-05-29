@@ -1,3 +1,22 @@
+window.addEventListener('DOMContentLoaded', load);
+
+function load () {
+    const withdrawBtns = document.getElementsByClassName('withdraw-btn');
+    console.log(withdrawBtns);
+    for (let withdrawElementIndex = 0; withdrawElementIndex < withdrawBtns.length; withdrawElementIndex++) {
+        withdrawBtns[withdrawElementIndex].addEventListener('click', toggleWithdrawModal);
+    }
+
+    const withdrawCloseBtn = document.querySelector('#withdraw-close-modal');
+    withdrawCloseBtn.addEventListener('click', toggleWithdrawModal);
+}
+
+function toggleWithdrawModal () {
+    const withdrawOverlay = document.querySelector('#withdraw-overlay');
+    withdrawOverlay.classList.toggle('hidden');
+    withdrawOverlay.classList.toggle('flex');
+}
+
 // window.addEventListener('DOMContentLoaded', load);
 
 // function load () {
@@ -21,22 +40,3 @@
 //     withdrawOverlay.classList.toggle('hidden');
 //     withdrawOverlay.classList.toggle('flex');
 // }
-
-window.addEventListener('DOMContentLoaded', load);
-
-function load () {
-    const withdrawBtns = document.getElementsByClassName('withdraw-btn');
-    console.log(withdrawBtns);
-    for (let withdrawElementIndex = 0; withdrawElementIndex < withdrawBtns.length; withdrawElementIndex++) {
-        withdrawBtns[withdrawElementIndex].addEventListener('click', toggleWithdrawModal);
-    }
-
-    const withdrawCloseBtn = document.querySelector('#withdraw-close-modal');
-    withdrawCloseBtn.addEventListener('click', toggleWithdrawModal);
-}
-
-function toggleWithdrawModal () {
-    const withdrawOverlay = document.querySelector('#withdraw-overlay');
-    withdrawOverlay.classList.toggle('hidden');
-    withdrawOverlay.classList.toggle('flex');
-}

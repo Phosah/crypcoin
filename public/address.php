@@ -18,14 +18,20 @@
         <section class="py-16 md:py-28">
             <div class="max-w-6xl mx-auto px-6 ">
                 <div class="flex-1 bg-white shadow-md">
-                    <div class="border-b border-gray-100 pt-6 pb-4 pl-6 mb-8">
-                        <a class="mr-12" href="profile.php">Personal Details</a>
-                        <a class="mr-12 text-blue-700 font-bold" href="address.php">Address</a>
-                        <a href="change-password.php">Change Password</a>
+                    <div class="sm:flex border-b border-gray-100 pt-6 pb-4 px-6 mb-8">
+                        <div class="sm:mr-12 font-bold">                            
+                            <a href="profile.php">Personal Details</a>
+                        </div>
+                        <div class="sm:mr-12 text-blue-700">                            
+                            <a href="address.php">Address</a>
+                        </div>
+                        <div>                           
+                            <a href="change-password.php">Change Password</a>
+                        </div>
                     </div>
                     <div class="max-w-4xl mx-auto px-6">
                         <form action="includes/address.inc.php" method="POST">       
-                            <div class="flex space-x-6 mb-8">                       
+                            <div class="sm:flex sm:space-x-6 sm:mb-8">                       
                                 <div class="flex-1 items-center border-b border-gray-500 pl-6 focus-within:border-blue-600">
                                     <input class="w-full bg-transparent py-4 focus-within:outline-none" type="text" name="street" placeholder="street number and name">
                                 </div>
@@ -33,7 +39,7 @@
                                     <input class="w-full bg-transparent py-4 focus-within:outline-none" type="text" name="city" placeholder="city">
                                 </div>
                             </div>
-                            <div class="flex space-x-6 mb-8">
+                            <div class="sm:flex sm:space-x-6 mb-8">
                                 <div class="flex-1 items-center border-b border-gray-500 pl-6 focus-within:border-blue-600">
                                     <input class="w-full bg-transparent py-4 focus-within:outline-none" type="text" name="state" placeholder="state">
                                 </div>

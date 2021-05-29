@@ -68,16 +68,20 @@
 <nav class="md:hidden mb-4 py-4 px-6 text-brand-gray-dark-1">
     <div class="flex justify-between items-center">
         <div class="mb-4 md:mb-0">
-            <a href="index.php"><img src="img/footer-logo.png" class="w-6/12" alt="Logo"></a>
+            <a href="dashboard.php"><img src="img/footer-logo.png" class="w-6/12" alt="Logo"></a>
         </div>
-    
-        <label for="menu-toggle" class="cursor-pointer block">
+        <!--  -->
+        <!-- <label for="menu-toggle" class="cursor-pointer block">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </label> -->
+        
+        <div id="menu-toggle">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </label>
+        </div>
     </div>
 
-    <input type="checkbox" class="hidden" id="menu-toggle">
-    <div id="menu" class="font-medium hidden">
+    <!-- <input type="checkbox" class="hidden" id="menu-toggle"> -->
+    <div id="menu" class="font-medium hidden flex-col">
         <p class="mb-4 text-brand-gray-dark-1 font-bold"><?php echo $_SESSION["name"]; ?></p>
         <div class="">
             <a class="mb-4 block hover:text-blue-600" href="dashboard.php">Dashboard</a>
@@ -95,3 +99,14 @@
 
 <!-- JS -->
 <script src="js/dropdown.js"></script>
+<!-- Dashboard menu toggle -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    function toggleMenu () {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+    }
+    menuToggle.addEventListener('click', toggleMenu);
+</script>

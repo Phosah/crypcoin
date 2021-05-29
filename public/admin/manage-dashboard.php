@@ -12,8 +12,6 @@
     }
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,23 +22,31 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="font-body text-white bg-gray-800">
-    <section class="mx-20 py-20 ">
-        <div class="max-w-5xl mx-auto px-6">
-            <h1 class="text-4xl lg:text-5xl font-bold mb-12">Manage Dashboard</h1>
+    <section class="md:mx-10 py-20 ">
+        <div class="flex items-end pb-16">
+            <div class="flex space-x-4 w-80 mx-auto text-brand-gray-light-1 hover:text-blue-700">
+                <i>&LeftArrow;</i>
+                <div class="font-bold font-body">
+                    <a href="../admin.php">Back to Admin Panel</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto px-6 text-xs sm:text-sm">
+            <h1 class="text-lg sm:text-4xl lg:text-5xl font-bold mb-12">Manage Dashboard</h1>
             <form action="" method="POST">
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Username</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="username" placeholder="Full name">
                 </div>
                 <!-- GENERAL PORTFOLIO VALUE -->
-                <h2 class="my-8 text-3xl text-gray-500">PORTFOLIO INFO</h2>      
+                <h2 class="my-8 text-md md:text-3xl text-gray-500">PORTFOLIO INFO</h2>      
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Portfolio value</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="portfolio-value" placeholder="e.g 100,250">
                 </div>
     
                 <!-- BTC -->
-                <h2 class="my-8 text-3xl text-gray-500">BITCOIN INFO</h2>
+                <h2 class="my-8 text-md md:text-3xl text-gray-500">BITCOIN INFO</h2>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Total bought BTC</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="btc-bought" placeholder="e.g 0.90889078">
@@ -58,7 +64,7 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="btc-portfolio-value" placeholder="e.g 0.90889078">
                 </div>
                  <!-- LITECOIN -->
-                 <h2 class="my-8 text-3xl text-gray-500">LITECOIN INFO</h2>
+                 <h2 class="my-8 text-md md:text-3xl text-gray-500">LITECOIN INFO</h2>
                  <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Total bought LTC</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="ltc-bought" placeholder="e,g 0.90889078">
@@ -77,7 +83,7 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="ltc-portfolio-value" placeholder="e.g 0.90889078">
                 </div>
                  <!-- ETHEREUM -->
-                 <h2 class="my-8 text-3xl text-gray-500">ETHEREUM INFO</h2>
+                 <h2 class="my-8 text-md md:text-3xl text-gray-500">ETHEREUM INFO</h2>
                  <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Total bought ETH</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="eth-bought" placeholder="e.g 0.90889078">
@@ -96,7 +102,7 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="eth-portfolio-value" placeholder="e,g 17.94299078">
                 </div>
                  <!-- BITCOINCASH -->
-                 <h2 class="my-8 text-3xl text-gray-500">BITCOINCASH INFO</h2>
+                 <h2 class="my-8 text-md md:text-3xl text-gray-500">BITCOINCASH INFO</h2>
                  <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Total bought BCH</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="bch-bought" placeholder="e.g 5.90889078">

@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="font-body">
-    <?php 
-        include("dashboard-header.php");
-    ?>
+    <?php  include 'dashboard-header.php'; ?>
 
     <div id="deposit-overlay" class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center">
         <div class="bg-gray-200 rounded shadow-xl text-gray-800">
