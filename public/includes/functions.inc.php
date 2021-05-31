@@ -139,6 +139,37 @@ function createUser($conn, $name, $email, $pwd) {
     exit();
 }
 
+// function createUser($conn, $name, $email, $pwd) {
+//     $sql = "INSERT INTO tbl_users (userName, userEmail, userPwd) VALUES (?, ?, ?);";
+//     $stmt = mysqli_stmt_init($conn);
+//     if (!mysqli_stmt_prepare($stmt, $sql)) {
+//         header("location: ../register.php?error=stmtfailed");
+//         exit();
+//     }
+//     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+//     mysqli_stmt_bind_param($stmt, "sss", $name, $email, $hashedPwd);
+//     mysqli_stmt_execute($stmt);
+//     mysqli_stmt_close($stmt);
+//     header("location: ../index.php?error=none");
+//     exit();
+//     // 
+//     $sql2 = "SELECT * FROM tbl_users WHERE userEmail='$email'";
+//     $result = mysqli_query($conn, $sql2);
+//     if ($result == true ) {
+//         $row = mysqli_fetch_assoc($result);
+//         $userid = $row['userId'];
+//     } else {
+//         echo "You have an error";
+//     }
+
+//     $sql3 = "INSERT INTO tbl_profileimage (userid, status, path_extension) VALUES ('$userid', 1, 'png');";
+//     $res = mysqli_query($conn, $sql3);
+//     if ($res == true) {
+//         header("location: ../index.php?error=none");
+//         exit();
+//     }    
+// }
+
 function emptyInputLogin($email, $pwd) {
     $result = true;
     

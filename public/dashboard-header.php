@@ -19,7 +19,7 @@
             <div class="flex-shrink-0 mr-4">
                 <a href="dashboard.php"><img class="w-24" src="img/footer-logo.png" alt="Logo"></a>
             </div>
-            <div class="flex space-x-6 font-medium">
+            <div class="flex md:space-x-4 lg:space-x-8 font-medium">
                 <a class="hover:text-blue-600" href="dashboard.php">Dashboard</a>
                 <a class="hover:text-blue-600" href="withdraw.php">Withdrawals</a>
                 <a class="hover:text-blue-600" href="deposit.php">Deposits</a>
@@ -33,16 +33,15 @@
             <!-- <img src="img/notification bell.png" alt="Notification"> -->
             <?php
                 $currentUser = $_SESSION['userid'];
-                $sql = "SELECT $currentUser FROM tbl_users";
-                $result = mysqli_query($conn, $sql);
-                $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid='$currentUser'";
-                $resultImg = mysqli_query($conn, $sqlImg);
-                while($rowImg = mysqli_fetch_assoc($resultImg)) {
+                $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid=$currentUser";
+                $resImg = mysqli_query($conn, $sqlImg);
+                while($rowImg = mysqli_fetch_assoc($resImg)) {
+                    $path_ex = $rowImg['path_extension'];
                     echo "<div>";
                     if ($rowImg['status'] == 0) {
-                        echo "<div class='w-10 mx-auto'><img src='uploads/profile".$currentUser.".png'></div>";
+                        echo "<div class='max-w-xs mx-auto'><img class='w-12 rounded-full' src='uploads/profile".$currentUser.".".$path_ex."'></div>";
                     } else {    
-                        echo "<div class='w-10 mx-auto'><img src='uploads/default-profile-photo.png'></div>";      
+                        echo "<div class='max-w-xs mx-auto'><img class='w-12' src='uploads/default-profile-photo.png'></div>";      
                     }
                 }
                 echo "</div>";

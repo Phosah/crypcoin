@@ -1,5 +1,5 @@
 <section class="bg-brand-gray-light-6">
-    <div class="pb-10 bg-white rounded-md text-xs">
+    <div class="pb-10 bg-white rounded-md text-xs sm:text-lg">
         <div class="flex justify-between px-8 py-6">
             <h1 class="font-body font-bold text-brand-gray-dark-1 sm:text-xl">Withdraw</h1>
             <svg id="withdraw-close-modal" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer p-1 hover:bg-gray-500 rounded-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div class=" mb-12 px-8">
-                <h2>Value: <span class="font-bold font-body sm:text-lg text-brand-gray-dark-1">0.0000</span></h2>
+                <h2>Value: <span class="font-bold font-body sm:text-sm text-brand-gray-dark-1">0.0000</span></h2>
             </div>
             <div class="px-8 mb-12">   
                 <button class="bg-blue-700 text-white text-md rounded-md px-6 py-2" name="submit" type="submit">Continue</button>

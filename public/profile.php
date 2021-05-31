@@ -17,15 +17,13 @@
                         <div class="mb-10">
                         <?php
                             $currentUser = $_SESSION['userid'];
-                            // echo $currentUser;
-                            $sql = "SELECT $currentUser FROM tbl_users";
-                            $result = mysqli_query($conn, $sql);
-                            $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid='$currentUser'";
-                            $resultImg = mysqli_query($conn, $sqlImg);
-                            while($rowImg = mysqli_fetch_assoc($resultImg)) {
+                            $sqlImg = "SELECT * FROM tbl_profileimage WHERE userid=$currentUser";
+                            $resImg = mysqli_query($conn, $sqlImg);
+                            while($rowImg = mysqli_fetch_assoc($resImg)) {
+                                $path_ex = $rowImg['path_extension'];
                                 echo "<div>";
                                 if ($rowImg['status'] == 0) {
-                                    echo "<div class='max-w-xs mx-auto'><img src='uploads/profile".$currentUser.".png'></div>";
+                                    echo "<div class='max-w-xs mx-auto'><img src='uploads/profile".$currentUser.".".$path_ex."'></div>";
                                 } else {    
                                     echo "<div class='max-w-xs mx-auto'><img src='uploads/default-profile-photo.png'></div>";      
                                 }
@@ -36,7 +34,7 @@
 
                         <form action="includes/upload-profile-image.inc.php" method="POST" enctype="multipart/form-data">
                             <div class="mb-8">
-                                <div class="mb-3"><input class="w-56" type="file" name="file"></div>
+                                <div class="mb-3"><input class="sm:w-full w-52" type="file" name="file"></div>
                                 <button class="px-6 py-2 bg-blue-700 rounded-md text-white hover:bg-blue-800" type="submit" name="submit">Upload</button>
                             </div>
                         </form>
@@ -49,7 +47,7 @@
                     <div class="md:flex-1 bg-white shadow-md">
                         <div class="sm:flex border-b border-gray-100 pt-6 pb-4 px-6 mb-8">
                             <div class="sm:mr-12 text-blue-700 font-bold">                            
-                                <a href="profile.php">Personal Details</a>
+                                <a href="personal-details.php">Personal Details</a>
                             </div>
                             <div class="sm:mr-12">                            
                                 <a href="address.php">Address</a>
@@ -74,7 +72,7 @@
                                         <input class="sm:w-full bg-transparent py-4 focus-within:outline-none" type="email" name="email" placeholder="email">
                                     </div>
                                 </div>
-                                <div class="w-1/2 mb-24 border-b border-gray-500 px-6 focus-within:border-blue-500">
+                                <div class="sm:w-1/2 mb-24 border-b border-gray-500 px-6 focus-within:border-blue-500">
                                     <img src="" alt="">
                                     <input class="sm:w-full bg-transparent py-4 focus-within:outline-none" type="number" name="number" placeholder="phone number">
                                 </div>
