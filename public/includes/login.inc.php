@@ -1,5 +1,5 @@
 <?php
-
+echo 'This page';
 if(isset($_POST["submit"])) {
     $email = $_POST["email"];
     $pwd = $_POST["pwd"];
@@ -11,10 +11,9 @@ if(isset($_POST["submit"])) {
         header("location: ../login.php?error=emptyinput");
         exit();
     }
-
     loginUser($conn, $email, $pwd);
 }
 else {
-    header("location: ../dashboard.php");
+    header("location: ../login.php");
     exit();
 }

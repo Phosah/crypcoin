@@ -98,9 +98,9 @@ function uidExists($conn, $email) {
     mysqli_stmt_execute($stmt);
 
     $resultData = mysqli_stmt_get_result($stmt);
-
     if ($row = mysqli_fetch_assoc($resultData)) {
-        return $row; 
+        return $row;
+        var_dump($row['userPwd']);
 
     } else {
         $result = false;
@@ -117,9 +117,8 @@ function createUser($conn, $name, $email, $pwd) {
         header("location: ../register.php?error=stmtfailed");
         exit();
     }
-
-    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-    mysqli_stmt_bind_param($stmt, "sss", $name, $email, $hashedPwd);
+    // $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+    mysqli_stmt_bind_param($stmt, "sss", $name, $email, $pwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
@@ -128,9 +127,15 @@ function createUser($conn, $name, $email, $pwd) {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $userid = $row['userId'];
+            $username = $row['userName'];
             $sql3 = "INSERT INTO tbl_profileimage (userid, status)
             VALUES ('$userid', 1)";
             mysqli_query($conn, $sql3);
+
+            $sql4 = "INSERT INTO tbl_dashboard (username, portfolioValue, btcBought, btcEarnings, btcPortfolio, btcPortfolioValue, ltcBought, ltcEarnings, ltcPortfolio, ltcPortfolioValue, ethBought, ethEarnings, ethPortfolio, ethPortfolioValue, bchBought, bchEarnings, bchPortfolio, bchPortfolioValue) 
+            VALUES ('$username', '0.00', '0.0000', '0.00', '0.00', '0.0000', '0.0000', '0.00', '0.00', '0.0000', '0.0000', '0.00', '0.00', '0.0000', '0.000', '0.00', '0.00', '0.0000');
+            ";
+            mysqli_query($conn, $sql4);
         }
     }   else {
         echo "You have an error";
@@ -183,20 +188,19 @@ function emptyInputLogin($email, $pwd) {
 
 function loginUser($conn, $email, $pwd) {
     $uidExists = uidExists($conn, $email);
-
     if($uidExists === false) {
         header("location: ../login.php");
         exit();
     }
+    // $hashedPwd = $uidExists["userPwd"];
+    // $checkedPwd = password_verify($pwd, $hashedPwd);
+    $pwdCorrect = $uidExists["userPwd"];
 
-    $hashedPwd = $uidExists["userPwd"];
-    $checkedPwd = password_verify($pwd, $hashedPwd);
-
-    if($checkedPwd === false) {
+    if($pwd !== $pwdCorrect) {
         header("location: ../login.php?error=wronglogin");
         exit();
     }
-    else if ($checkedPwd === true) {
+    else if ($pwd === $pwdCorrect) {
         session_start();
         $_SESSION["userid"] = $uidExists["userId"];
         $_SESSION["email"] = $uidExists["userEmail"];
@@ -311,9 +315,8 @@ function createAdmin($conn, $fullname, $username, $email, $pwd) {
         header("location: ../admin/signup.php?error=stmtfailed");
         exit();
     }
-
-    $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
-    mysqli_stmt_bind_param($stmt, "ssss", $fullname, $username, $email, $hashedPwd);
+    // $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
+    mysqli_stmt_bind_param($stmt, "ssss", $fullname, $username, $email, $pwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
@@ -321,25 +324,26 @@ function createAdmin($conn, $fullname, $username, $email, $pwd) {
 }
 
 function loginAdmin($conn, $username, $pwd) {
-    $userExists = userExists($conn, $username);
+    $adminExists = adminExists($conn, $username);
 
-    if($userExists === false) {
+    if($adminExists === false) {
         header("location: ../admin/login.php");
         exit();
     }
 
-    $hashedPwd = $userExists["pwd"];
-    $checkedPwd = password_verify($pwd, $hashedPwd);
+    // $hashedPwd = $userExists["pwd"];
+    // $checkedPwd = password_verify($pwd, $hashedPwd);
+    $pwdCorrect = $adminExists["pwd"];
 
-    if($checkedPwd === false) {
+    if($pwdCorrect !== $pwd) {
         header("location: ../admin/login.php?error=wronglogin");
         exit();
     }
-    else if ($checkedPwd === true) {
+    else if ($pwdCorrect === $pwd) {
         session_start();
-        $_SESSION["userid"] = $userExists["id"];
-        $_SESSION["username"] = $userExists["username"];
-        $_SESSION["email"] = $userExists["email"];
+        $_SESSION["userid"] = $adminExists["id"];
+        $_SESSION["username"] = $adminExists["username"];
+        $_SESSION["email"] = $adminExists["email"];
         header("location: ../admin.php");
         exit();
     }
@@ -356,7 +360,7 @@ function emptyAdminLogin($username, $pwd) {
     return $result;
 }
 
-function userExists($conn, $username) {
+function adminExists($conn, $username) {
     $sql = "SELECT * FROM tbl_admin WHERE username = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {

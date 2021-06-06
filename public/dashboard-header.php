@@ -41,7 +41,7 @@
                     if ($rowImg['status'] == 0) {
                         echo "<div class='max-w-xs mx-auto'><img class='w-12 rounded-full' src='uploads/profile".$currentUser.".".$path_ex."'></div>";
                     } else {    
-                        echo "<div class='max-w-xs mx-auto'><img class='w-12' src='uploads/default-profile-photo.png'></div>";      
+                        echo "<div class='max-w-xs mx-auto'><img class='w-12 rounded-full' src='uploads/default-profile-photo.png'></div>";      
                     }
                 }
                 echo "</div>";

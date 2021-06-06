@@ -1,6 +1,5 @@
 <?php
     session_start();
-    // include 'includes/dbh.inc.php';
     include '../includes/functions.inc.php';
 
     if(!isset($_SESSION["username"])) {
@@ -35,8 +34,8 @@
             <h1 class="text-lg sm:text-4xl lg:text-5xl font-bold mb-12">Manage Dashboard</h1>
             <form action="" method="POST">
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
-                    <label for="">Username</label>
-                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="username" placeholder="Full name">
+                    <label for="">Full name</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="fullname" placeholder="Full name">
                 </div>
                 <!-- GENERAL PORTFOLIO VALUE -->
                 <h2 class="my-8 text-md md:text-3xl text-gray-500">PORTFOLIO INFO</h2>      
@@ -52,8 +51,8 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="btc-bought" placeholder="e.g 0.90889078">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
-                    <label for="">Total earnings BTC</label>
-                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="btc-earning" placeholder="e.g 0.90889078">
+                    <label for="">Total earnings ($)</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="btc-earning" placeholder="e.g 1,250">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Portfolio value ($)</label>
@@ -70,7 +69,7 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="ltc-bought" placeholder="e,g 0.90889078">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
-                    <label for="">Total earnings LTC</label>
+                    <label for="">Total earnings ($)</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="ltc-earning" placeholder="e.g 7,500">
                 </div>
     
@@ -89,8 +88,8 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="eth-bought" placeholder="e.g 0.90889078">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
-                    <label for="">Total earnings ETH</label>
-                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="eth-earning" placeholder="e.g 0.90889078">
+                    <label for="">Total earnings ($)</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="eth-earning" placeholder="e.g 1,235">
                 </div>
     
                  <div class="flex space-x-4 items-center mb-6 rounded-lg">
@@ -108,8 +107,8 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="bch-bought" placeholder="e.g 5.90889078">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
-                    <label for="">Total earnings BCH</label>
-                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="bch-earning" placeholder="e.g 0.90889078">
+                    <label for="">Total earnings ($)</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="bch-earning" placeholder="e.g 1,250">
                 </div>
     
                  <div class="flex space-x-4 items-center mb-6 rounded-lg">
@@ -131,14 +130,14 @@
 </body>
 </html>
 
-<?php 
-    include('../includes/dbh.inc.php');    
-
+<?php
+    include '../includes/dbh.inc.php';
     if(isset($_POST['submit'])) {
-        $username = $_POST['username'];
+        $fullname = $_POST['fullname'];
+        // var_dump($fullname);
+        $portfolioValue = $_POST['portfolio-value'];
         $btcBought = $_POST['btc-bought'];
         $btcEarnings = $_POST['btc-earning'];
-        $portfolioValue = $_POST['portfolio-value'];
         $btcPortfolio = $_POST['btc-portfolio'];
         $btcPortfolioValue = $_POST['btc-portfolio-value'];
         $ltcBought = $_POST['ltc-bought'];
@@ -153,18 +152,150 @@
         $bchEarnings = $_POST['bch-earning'];
         $bchPortfolio = $_POST['bch-portfolio'];
         $bchPortfolioValue = $_POST['bch-portfolio-value'];
-
-        $sql = "INSERT INTO tbl_dashboard (username, btcBought, btcEarnings, portfolioValue, btcPortfolio, btcPortfolioValue, ltcBought, ltcEarnings, ltcPortfolio, ltcPortfolioValue, ethBought, ethEarnings, ethPortfolio, ethPortfolioValue, bchBought, bchEarnings, bchPortfolio, bchPortfolioValue) 
-                VALUES ('$username', '$btcBought', '$btcEarnings', '$portfolioValue', '$btcPortfolio', '$btcPortfolioValue', '$ltcBought', '$ltcEarnings', '$ltcPortfolio', '$ltcPortfolioValue', '$ethBought', '$ethEarnings', '$ethPortfolio', '$ethPortfolioValue', '$bchBought', '$bchEarnings', '$bchPortfolio', '$bchPortfolioValue');
-                ";
-
+        
+        $sql = "SELECT * FROM tbl_dashboard WHERE username='$fullname';";
         $res = mysqli_query($conn, $sql);
-        if($res==true) {
-            $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
+        if (mysqli_num_rows($res) > 0) {
+            while ($row = mysqli_fetch_assoc($res)) {
+                // var_dump($row);
+                $sql2 = "UPDATE tbl_dashboard SET portfolioValue ='$portfolioValue', btcBought = '$btcBought', btcEarnings = '$btcEarnings', btcPortfolio = '$btcPortfolio', btcPortfolioValue = '$btcPortfolioValue', ltcBought = '$ltcBought', ltcEarnings = '$ltcEarnings', ltcPortfolio = '$ltcPortfolio', ltcPortfolioValue = '$ltcPortfolioValue', ethBought = '$ethBought', ethEarnings = '$ethEarnings', ethPortfolio = '$ethPortfolio', ethPortfolioValue = '$ethPortfolioValue', bchBought = '$bchBought', bchEarnings = '$bchEarnings', bchPortfolio = '$bchPortfolio', bchPortfolioValue = '$bchPortfolioValue' WHERE username = '$fullname'; ";
+                // $res = mysqli_query($conn, $sql)  or die(mysqli_error($conn));
+
+                $res2 = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
+                echo $res2;
+
+                if($res2 == true) {
+                    $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
+                } else {
+                    echo "Update failed";
+                }
+            }
         } else {
-            $_SESSION['dashboard'] = "<div class='text-red-600 font-bold font-body'>Failed to update dashboard</div>";
+            echo "Update not working";
         }
     } else {
-
+        echo "An error occured";
     }
+?>
+
+
+<?php
+    // include '../includes/dbh.inc.php';
+    // if(isset($_POST['submit'])) {
+    //     $username = $_POST['username'];
+    //     echo $username;
+    //     $portfolioValue = $_POST['portfolio-value'];
+    //     $btcBought = $_POST['btc-bought'];
+    //     $btcEarnings = $_POST['btc-earning'];
+    //     $btcPortfolio = $_POST['btc-portfolio'];
+    //     $btcPortfolioValue = $_POST['btc-portfolio-value'];
+    //     $ltcBought = $_POST['ltc-bought'];
+    //     $ltcEarnings = $_POST['ltc-earning'];
+    //     $ltcPortfolio = $_POST['ltc-portfolio'];
+    //     $ltcPortfolioValue = $_POST['ltc-portfolio-value'];
+    //     $ethBought = $_POST['eth-bought'];
+    //     $ethEarnings = $_POST['eth-earning'];
+    //     $ethPortfolio = $_POST['eth-portfolio'];
+    //     $ethPortfolioValue = $_POST['eth-portfolio-value'];
+    //     $bchBought = $_POST['bch-bought'];
+    //     $bchEarnings = $_POST['bch-earning'];
+    //     $bchPortfolio = $_POST['bch-portfolio'];
+    //     $bchPortfolioValue = $_POST['bch-portfolio-value'];
+
+    //     $sql = "SELECT userName FROM tbl_users;";
+    //     $result = mysqli_query($conn, $sql);
+    //     if (mysqli_num_rows($result) > 0) {
+    //         while ($row = mysqli_fetch_assoc($result)) {
+    //             $fullname = $row['userName'];
+    //             var_dump($fullname);
+
+    //             $sql2 = "UPDATE tbl_dashboard SET
+    //             portfolioValue ='$portfolioValue', 
+    //             btcBought = '$btcBought', 
+    //             btcEarnings = '$btcEarnings', 
+    //             btcPortfolio = '$btcPortfolio', 
+    //             btcPortfolioValue = '$btcPortfolioValue', 
+    //             ltcBought = '$ltcBought', 
+    //             ltcEarnings = '$ltcEarnings', 
+    //             ltcPortfolio = '$ltcPortfolio', 
+    //             ltcPortfolioValue = '$ltcPortfolioValue', 
+    //             ethBought = '$ethBought', 
+    //             ethEarnings = '$ethEarnings', 
+    //             ethPortfolio = '$ethPortfolio', 
+    //             ethPortfolioValue = '$ethPortfolioValue', 
+    //             bchBought = '$bchBought', 
+    //             bchEarnings = '$bchEarnings', 
+    //             bchPortfolio = '$bchPortfolio', 
+    //             bchPortfolioValue = '$bchPortfolioValue')  
+    //             WHERE username='$username';";
+    //             mysqli_query($conn, $sql2);
+
+    //             $res = mysqli_query($conn, $sql2);
+    //             if($res == true) {
+    //                 $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
+    //             } else {
+    //                 echo "Update not working";
+    //             }
+    //         }
+    //     } else {
+    //         header("location: ../admin/manage-dashboard.php?error=stmtfailed");
+    //         exit();
+    //     }
+    // } else {
+    //     echo "An error occured";
+    // }
+?>
+
+<?php
+    // include '../includes/dbh.inc.php';
+    // if(isset($_POST['submit'])) {
+    //     $fullname = $_POST['fullname'];
+    //     var_dump($fullname);
+    //     $portfolioValue = $_POST['portfolio-value'];
+    //     $btcBought = $_POST['btc-bought'];
+    //     $btcEarnings = $_POST['btc-earning'];
+    //     $btcPortfolio = $_POST['btc-portfolio'];
+    //     $btcPortfolioValue = $_POST['btc-portfolio-value'];
+    //     $ltcBought = $_POST['ltc-bought'];
+    //     $ltcEarnings = $_POST['ltc-earning'];
+    //     $ltcPortfolio = $_POST['ltc-portfolio'];
+    //     $ltcPortfolioValue = $_POST['ltc-portfolio-value'];
+    //     $ethBought = $_POST['eth-bought'];
+    //     $ethEarnings = $_POST['eth-earning'];
+    //     $ethPortfolio = $_POST['eth-portfolio'];
+    //     $ethPortfolioValue = $_POST['eth-portfolio-value'];
+    //     $bchBought = $_POST['bch-bought'];
+    //     $bchEarnings = $_POST['bch-earning'];
+    //     $bchPortfolio = $_POST['bch-portfolio'];
+    //     $bchPortfolioValue = $_POST['bch-portfolio-value'];
+        
+    //     $sql = "UPDATE tbl_dashboard SET
+    //     portfolioValue ='$portfolioValue', 
+    //     btcBought = '$btcBought', 
+    //     btcEarnings = '$btcEarnings', 
+    //     btcPortfolio = '$btcPortfolio', 
+    //     btcPortfolioValue = '$btcPortfolioValue',
+    //     ltcBought = '$ltcBought', 
+    //     ltcEarnings = '$ltcEarnings', 
+    //     ltcPortfolio = '$ltcPortfolio', 
+    //     ltcPortfolioValue = '$ltcPortfolioValue', 
+    //     ethBought = '$ethBought', 
+    //     ethEarnings = '$ethEarnings', 
+    //     ethPortfolio = '$ethPortfolio', 
+    //     ethPortfolioValue = '$ethPortfolioValue', 
+    //     bchBought = '$bchBought', 
+    //     bchEarnings = '$bchEarnings', 
+    //     bchPortfolio = '$bchPortfolio', 
+    //     bchPortfolioValue = '$bchPortfolioValue')  
+    //     WHERE username='$fullname;";
+
+    //     $res = mysqli_query($conn, $sql);
+    //     if($res == true) {
+    //         $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
+    //     } else {
+    //         echo "Update not working";
+    //     }
+    // } else {
+    //     echo "An error occured";
+    // }
 ?>

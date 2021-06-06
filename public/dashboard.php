@@ -1,5 +1,5 @@
 <?php
-    include('api.php');
+    include 'api.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <div id="deposit-overlay" class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center">
         <div class="bg-gray-200 rounded shadow-xl text-gray-800">
         <?php 
-            include('deposit-form.php');
+            include 'deposit-form.php';
         ?>
         </div>
     </div>
@@ -25,7 +25,7 @@
     <div id="withdraw-overlay"class="bg-black bg-opacity-50 absolute inset-0 hidden justify-center items-center">
         <div class="bg-gray-200 rounded shadow-xl text-gray-800">
         <?php 
-            include('withdraw-form.php');
+            include 'withdraw-form.php';
         ?>
         </div>
     </div>
@@ -120,7 +120,7 @@
                                 <img src="img/earnings.png" alt="Earnings">
                             </div>
                             <div>
-                                <h2 class="text-brand-gray-dark-1 text-sm font-bold"><?php echo $btcEarnings. ' BTC'; ?></h2>
+                                <h2 class="text-brand-gray-dark-1 text-sm font-bold"><?php echo '$' .$btcEarnings; ?></h2>
                                 <p class="text-brand-gray-light-1 text-sm">Total earnings</p>
                             </div>
                         </div>              
@@ -161,7 +161,7 @@
                                 </div>
                                 <div>
                                     <h3 class="lg:text-sm font-bold text-brand-gray-dark-1"><?php echo "$". $ltcPortfolio ;?></h3>
-                                    <p class="text-brand-gray-light-1 lg:text-sm"><?php echo $btcPortfolioValue. ' LTC' ?></p>
+                                    <p class="text-brand-gray-light-1 lg:text-sm"><?php echo $ltcPortfolioValue. ' LTC' ?></p>
                                 </div>
                             </div>
                             <div class="flex justify-between space-x-12 px-3 lg:px-1 py-3">

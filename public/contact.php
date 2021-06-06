@@ -43,8 +43,7 @@
                         </div>
                         <button class="bg-blue-700 px-8 py-4 text-white font-semibold rounded-md border border-blue-700 hover:bg-white hover:text-blue-700 hover:border-blue-700" type="submit" name="submit">Send message</button>
                     </form>
-                </div>
-                <?php 
+                    <?php 
                     if(isset($_GET["error"])) {
                         if($_GET["error"] == "emptyinput") {
                             echo "<p>Fill in all fields</p>";
@@ -59,7 +58,8 @@
                             echo "<p>Your message has been sent!</p>";
                         }
                     }
-                ?>   
+                ?> 
+                </div>  
             </div>
         </section>
     </main>

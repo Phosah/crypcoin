@@ -22,7 +22,7 @@ if(isset($_POST["submit"])) {
         header("location: ../admin/signup.php?error=passwordsdontmatch");
         exit();
     }
-    if (uidExists($conn, $email) !== false ) {
+    if (adminExists($conn, $email) !== false ) {
         header("location: ../admin/signup.php?error=emailexists");
         exit();
     }
