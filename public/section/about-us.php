@@ -1,7 +1,7 @@
 <section class="py-16 md:py-28">
     <div class="md:flex items-center max-w-6xl mx-auto md:space-x-12 px-6">
         <div class="md:w-1/2 mb-32 md:mb-0">
-            <img class="md:h-full mx-auto md:w-full" src="img/about.png" alt="Who are we">
+            <img class="mx-auto md:w-full" src="img/about.png" alt="Who are we">
         </div>
         <div class="md:w-1/2">
             <h2 class="text-center md:text-left text-4xl lg:text-5xl text-white mb-12 font-body font-bold">Who we are</h2>

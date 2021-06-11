@@ -6,13 +6,13 @@
                 <div class="flex-shrink-0">
                     <img class="w-6" src="img/checkmark.png" alt="Checkmark">
                 </div>
-                <p class="text-brand-gray-light-1 text-justify text-xl">Dashboard giving upates on the top selling cryptocurrencies</p>
+                <p class="text-brand-gray-light-1 text-justify lg:text-xl">Dashboard giving upates on the top selling cryptocurrencies</p>
             </div>
             <div class="flex space-x-4 mb-12 w-10/12">
                 <div class="flex-shrink-0">
                     <img class="w-6" src="img/checkmark.png" alt="Checkmark">
                 </div>
-                <p class="text-brand-gray-light-1 text-justify text-xl">Easy buy and easy withdrawal of cryptocurrency to seleceted account</p>
+                <p class="text-brand-gray-light-1 text-justify lg:text-xl">Easy buy and easy withdrawal of cryptocurrency to seleceted account</p>
             </div>
             <button class="bg-blue-700 border-blue-700 px-8 py-4 text-white font-semibold rounded-md hover:bg-white hover:text-blue-700 border hover:border-blue-700"><a href="register.php">Get started</a></button>
         </div>

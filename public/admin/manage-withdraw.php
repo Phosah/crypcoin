@@ -47,13 +47,17 @@
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="value" placeholder="e.g 50,000">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
+                    <label for="">Receiving wallet</label>
+                    <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="receiving-wallet" placeholder="">
+                </div>
+                <!-- <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Bank</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="bank" placeholder="e.g Bank of America">
                 </div>
                 <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Account number</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="account_number" placeholder="0102030403">
-                </div>
+                </div> -->
                 <!-- <div class="flex space-x-4 items-center mb-6 rounded-lg">
                     <label for="">Date</label>
                     <input class="w-full text-gray-800 rounded-md py-3 px-4 focus:outline-none" type="text" name="date">
@@ -88,17 +92,18 @@
         $username = $_POST['username'];
         $amount = $_POST['amount'];
         $value = $_POST['value'];
-        $bank = $_POST['bank'];
-        $accountNumber = $_POST['account_number'];
-        // $date = $_POST['date'];
+        $receivingWallet = $_POST['rceiving-wallet'];
         $status = $_POST['status'];
+        // $bank = $_POST['bank'];
+        // $accountNumber = $_POST['account_number'];
+        // $date = $_POST['date'];
 
-        if(emptyAdminWithdraw($username, $amount, $value, $bank, $accountNumber, $status)) {
+        if(emptyAdminWithdraw($username, $amount, $value, $receivingWallet, $status)) {
             header("location: manage-withdraw.php?error=emptyinput");
             exit();
         }
 
-        $sql = "INSERT INTO tbl_withdrawals (username, amount, value, bank, accountNumber, date, status) VALUES ('$username', '$amount', '$value', '$bank', '$accountNumber', NOW(), '$status');";
+        $sql = "INSERT INTO tbl_withdrawals (username, amount, value, walletAddress, date, status) VALUES ('$username', '$amount', '$value', '$receivingWallet', NOW(), '$status');";
         $res = mysqli_query($conn, $sql);
 
         if($res==true) {

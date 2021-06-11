@@ -112,7 +112,7 @@
         <section class="py-10 md:py-20 text-white">
             <div class="md:flex items-center md:space-x-16 max-w-6xl mx-auto px-6">
                 <div class="md:w-1/2 mb-12">
-                    <img src="img/faq-photo.png" alt="Woman standing and smiling">
+                    <img class="mx-auto w-80 md:w-full" src="img/faq-photo.png" alt="Woman standing and smiling">
                 </div>
                 <div class="md:w-1/2 py-2">
                     <h2 class="max-w-xl mx-auto text-white font-body font-bold text-4xl lg:text-5xl mb-8">Still have unanswered questions?</h2>

@@ -1,7 +1,7 @@
 <section class="py-16 md:py-20 text-white">
     <div class="md:flex items-center md:space-x-12 max-w-6xl mx-auto px-6">
         <div class="md:w-1/2 mx-auto mb-12 md:mb-0">
-            <img class="" src="img/update.png" alt="Update">
+            <img class="w-80 md:w-full mx-auto" src="img/update.png" alt="Update">
         </div>
         <div class="md:w-1/2 mx-auto">
             <h3 class="sm:text-center md:text-left text-white font-body font-bold text-4xl lg:text-5xl mb-3">Stay connected</h3>

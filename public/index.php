@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/animate.css">
+    <title>Crypcoin - Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body class="bg-gray-900 font-body">
     <header class="home-header min-h-screen pb-30 text-white">

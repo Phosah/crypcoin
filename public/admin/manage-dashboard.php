@@ -134,7 +134,6 @@
     include '../includes/dbh.inc.php';
     if(isset($_POST['submit'])) {
         $fullname = $_POST['fullname'];
-        // var_dump($fullname);
         $portfolioValue = $_POST['portfolio-value'];
         $btcBought = $_POST['btc-bought'];
         $btcEarnings = $_POST['btc-earning'];
@@ -153,15 +152,69 @@
         $bchPortfolio = $_POST['bch-portfolio'];
         $bchPortfolioValue = $_POST['bch-portfolio-value'];
         
-        $sql = "SELECT * FROM tbl_dashboard WHERE username='$fullname';";
+        $sql = "SELECT * FROM tbl_dashboard WHERE username='Danny Doe';";
         $res = mysqli_query($conn, $sql);
         if (mysqli_num_rows($res) > 0) {
             while ($row = mysqli_fetch_assoc($res)) {
-                // var_dump($row);
-                $sql2 = "UPDATE tbl_dashboard SET portfolioValue ='$portfolioValue', btcBought = '$btcBought', btcEarnings = '$btcEarnings', btcPortfolio = '$btcPortfolio', btcPortfolioValue = '$btcPortfolioValue', ltcBought = '$ltcBought', ltcEarnings = '$ltcEarnings', ltcPortfolio = '$ltcPortfolio', ltcPortfolioValue = '$ltcPortfolioValue', ethBought = '$ethBought', ethEarnings = '$ethEarnings', ethPortfolio = '$ethPortfolio', ethPortfolioValue = '$ethPortfolioValue', bchBought = '$bchBought', bchEarnings = '$bchEarnings', bchPortfolio = '$bchPortfolio', bchPortfolioValue = '$bchPortfolioValue' WHERE username = '$fullname'; ";
-                // $res = mysqli_query($conn, $sql)  or die(mysqli_error($conn));
+                // $sql2 = "UPDATE tbl_dashboard SET portfolioValue ='$portfolioValue', btcBought = '$btcBought', btcEarnings = '$btcEarnings', btcPortfolio = '$btcPortfolio', btcPortfolioValue = '$btcPortfolioValue', ltcBought = '$ltcBought', ltcEarnings = '$ltcEarnings', ltcPortfolio = '$ltcPortfolio', ltcPortfolioValue = '$ltcPortfolioValue', ethBought = '$ethBought', ethEarnings = '$ethEarnings', ethPortfolio = '$ethPortfolio', ethPortfolioValue = '$ethPortfolioValue', bchBought = '$bchBought', bchEarnings = '$bchEarnings', bchPortfolio = '$bchPortfolio', bchPortfolioValue = '$bchPortfolioValue' WHERE username = '$fullname'; ";
 
-                $res2 = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
+                $prepStmt = "";
+                if (strlen($portfolioValue) > 0) {
+                    $prepStmt .= "portfolioValue ='$portfolioValue', ";
+                }
+                if (strlen($btcBought) > 0) {
+                    $prepStmt .= "btcBought ='$btcBought', ";
+                }
+                if (strlen($btcEarnings) > 0) {
+                    $prepStmt .= "btcEarnings ='$btcEarnings', ";
+                }
+                if (strlen($btcPortfolio) > 0) {
+                    $prepStmt .= "btcPortfolio ='$btcPortfolio', ";
+                }
+                if (strlen($btcPortfolioValue) > 0) {
+                    $prepStmt .= "btcPortfolioValue ='$btcPortfolioValue', ";
+                }
+                if (strlen($ltcBought) > 0) {
+                    $prepStmt .= "ltcBought ='$ltcBought', ";
+                }
+                if (strlen($ltcEarnings) > 0) {
+                    $prepStmt .= "ltcEarnings ='$ltcEarnings', ";
+                }
+                if (strlen($ltcPortfolio) > 0) {
+                    $prepStmt .= "ltcPortfolio ='$ltcPortfolio', ";
+                }
+                if (strlen($ltcPortfolioValue) > 0) {
+                    $prepStmt .= "ltcPortfolioValue ='$ltcPortfolioValue', ";
+                }
+                if (strlen($ethBought) > 0) {
+                    $prepStmt .= "ethBought ='$ethBought', ";
+                }
+                if (strlen($ethEarnings) > 0) {
+                    $prepStmt .= "ethEarnings ='$ethEarnings', ";
+                }
+                if (strlen($ethPortfolio) > 0) {
+                    $prepStmt .= "ethPortfolio ='$ethPortfolio', ";
+                }
+                if (strlen($ethPortfolioValue) > 0) {
+                    $prepStmt .= "ethPortfolioValue ='$ethPortfolioValue', ";
+                }
+                if (strlen($bchBought) > 0) {
+                    $prepStmt .= "bchBought ='$bchBought', ";
+                }
+                if (strlen($bchEarnings) > 0) {
+                    $prepStmt .= "bchEarnings ='$bchEarnings', ";
+                }
+                if (strlen($bchPortfolio) > 0) {
+                    $prepStmt .= "bchPortfolio ='$bchPortfolio', ";
+                }
+                if (strlen($bchPortfolioValue) > 0) {
+                    $prepStmt .= "bchPortfolioValue ='$bchPortfolioValue' ";
+                }
+
+                $sql3 = "UPDATE tbl_dashboard SET $prepStmt WHERE username = 'Danny Doe'";
+                var_dump($sql3);
+
+                $res2 = mysqli_query($conn, $sql3) or die(mysqli_error($conn));
                 echo $res2;
 
                 if($res2 == true) {
@@ -176,126 +229,4 @@
     } else {
         echo "An error occured";
     }
-?>
-
-
-<?php
-    // include '../includes/dbh.inc.php';
-    // if(isset($_POST['submit'])) {
-    //     $username = $_POST['username'];
-    //     echo $username;
-    //     $portfolioValue = $_POST['portfolio-value'];
-    //     $btcBought = $_POST['btc-bought'];
-    //     $btcEarnings = $_POST['btc-earning'];
-    //     $btcPortfolio = $_POST['btc-portfolio'];
-    //     $btcPortfolioValue = $_POST['btc-portfolio-value'];
-    //     $ltcBought = $_POST['ltc-bought'];
-    //     $ltcEarnings = $_POST['ltc-earning'];
-    //     $ltcPortfolio = $_POST['ltc-portfolio'];
-    //     $ltcPortfolioValue = $_POST['ltc-portfolio-value'];
-    //     $ethBought = $_POST['eth-bought'];
-    //     $ethEarnings = $_POST['eth-earning'];
-    //     $ethPortfolio = $_POST['eth-portfolio'];
-    //     $ethPortfolioValue = $_POST['eth-portfolio-value'];
-    //     $bchBought = $_POST['bch-bought'];
-    //     $bchEarnings = $_POST['bch-earning'];
-    //     $bchPortfolio = $_POST['bch-portfolio'];
-    //     $bchPortfolioValue = $_POST['bch-portfolio-value'];
-
-    //     $sql = "SELECT userName FROM tbl_users;";
-    //     $result = mysqli_query($conn, $sql);
-    //     if (mysqli_num_rows($result) > 0) {
-    //         while ($row = mysqli_fetch_assoc($result)) {
-    //             $fullname = $row['userName'];
-    //             var_dump($fullname);
-
-    //             $sql2 = "UPDATE tbl_dashboard SET
-    //             portfolioValue ='$portfolioValue', 
-    //             btcBought = '$btcBought', 
-    //             btcEarnings = '$btcEarnings', 
-    //             btcPortfolio = '$btcPortfolio', 
-    //             btcPortfolioValue = '$btcPortfolioValue', 
-    //             ltcBought = '$ltcBought', 
-    //             ltcEarnings = '$ltcEarnings', 
-    //             ltcPortfolio = '$ltcPortfolio', 
-    //             ltcPortfolioValue = '$ltcPortfolioValue', 
-    //             ethBought = '$ethBought', 
-    //             ethEarnings = '$ethEarnings', 
-    //             ethPortfolio = '$ethPortfolio', 
-    //             ethPortfolioValue = '$ethPortfolioValue', 
-    //             bchBought = '$bchBought', 
-    //             bchEarnings = '$bchEarnings', 
-    //             bchPortfolio = '$bchPortfolio', 
-    //             bchPortfolioValue = '$bchPortfolioValue')  
-    //             WHERE username='$username';";
-    //             mysqli_query($conn, $sql2);
-
-    //             $res = mysqli_query($conn, $sql2);
-    //             if($res == true) {
-    //                 $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
-    //             } else {
-    //                 echo "Update not working";
-    //             }
-    //         }
-    //     } else {
-    //         header("location: ../admin/manage-dashboard.php?error=stmtfailed");
-    //         exit();
-    //     }
-    // } else {
-    //     echo "An error occured";
-    // }
-?>
-
-<?php
-    // include '../includes/dbh.inc.php';
-    // if(isset($_POST['submit'])) {
-    //     $fullname = $_POST['fullname'];
-    //     var_dump($fullname);
-    //     $portfolioValue = $_POST['portfolio-value'];
-    //     $btcBought = $_POST['btc-bought'];
-    //     $btcEarnings = $_POST['btc-earning'];
-    //     $btcPortfolio = $_POST['btc-portfolio'];
-    //     $btcPortfolioValue = $_POST['btc-portfolio-value'];
-    //     $ltcBought = $_POST['ltc-bought'];
-    //     $ltcEarnings = $_POST['ltc-earning'];
-    //     $ltcPortfolio = $_POST['ltc-portfolio'];
-    //     $ltcPortfolioValue = $_POST['ltc-portfolio-value'];
-    //     $ethBought = $_POST['eth-bought'];
-    //     $ethEarnings = $_POST['eth-earning'];
-    //     $ethPortfolio = $_POST['eth-portfolio'];
-    //     $ethPortfolioValue = $_POST['eth-portfolio-value'];
-    //     $bchBought = $_POST['bch-bought'];
-    //     $bchEarnings = $_POST['bch-earning'];
-    //     $bchPortfolio = $_POST['bch-portfolio'];
-    //     $bchPortfolioValue = $_POST['bch-portfolio-value'];
-        
-    //     $sql = "UPDATE tbl_dashboard SET
-    //     portfolioValue ='$portfolioValue', 
-    //     btcBought = '$btcBought', 
-    //     btcEarnings = '$btcEarnings', 
-    //     btcPortfolio = '$btcPortfolio', 
-    //     btcPortfolioValue = '$btcPortfolioValue',
-    //     ltcBought = '$ltcBought', 
-    //     ltcEarnings = '$ltcEarnings', 
-    //     ltcPortfolio = '$ltcPortfolio', 
-    //     ltcPortfolioValue = '$ltcPortfolioValue', 
-    //     ethBought = '$ethBought', 
-    //     ethEarnings = '$ethEarnings', 
-    //     ethPortfolio = '$ethPortfolio', 
-    //     ethPortfolioValue = '$ethPortfolioValue', 
-    //     bchBought = '$bchBought', 
-    //     bchEarnings = '$bchEarnings', 
-    //     bchPortfolio = '$bchPortfolio', 
-    //     bchPortfolioValue = '$bchPortfolioValue')  
-    //     WHERE username='$fullname;";
-
-    //     $res = mysqli_query($conn, $sql);
-    //     if($res == true) {
-    //         $_SESSION['dashboard'] = "<div class='font-body font-bold'>Dashboard modified</div>";
-    //     } else {
-    //         echo "Update not working";
-    //     }
-    // } else {
-    //     echo "An error occured";
-    // }
 ?>

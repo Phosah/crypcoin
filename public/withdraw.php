@@ -39,8 +39,9 @@
                         <div class="hidden md:flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">
                             <div  class="flex-1">Amount</div>
                             <div  class="flex-1">Value</div>
-                            <div  class="flex-1">Bank</div>
-                            <div  class="flex-1">Account Number</div>
+                            <div  class="flex-1">Receiving wallet</div>
+                            <!-- <div  class="flex-1">Bank</div>
+                            <div  class="flex-1">Account Number</div> -->
                             <div  class="flex-1">Date</div>
                             <div  class="flex-1">Status</div>
                         </div>
@@ -56,17 +57,19 @@
                                 while ($row = mysqli_fetch_assoc($res)) {
                                     $amount = $row['amount'];
                                     $value = $row['value'];
-                                    $bank = $row['bank'];
-                                    $accountNumber = $row['accountNumber'];
+                                    $receivingWallet = $row['walletAddress'];
+                                    // $bank = $row['bank'];
+                                    // $accountNumber = $row['accountNumber'];
                                     $date = $row['date'];
                                     $status = $row['status'];
                                     ?>
 
-                                    <div class="flex items-center justify-center py-6 px-6 font-bold text-sm">
+                                    <div class="flex space-x-3 items-center justify-center py-6 px-6 font-bold text-sm">
                                         <div class="flex-1"><?php echo $amount.' BTC'; ?></div>
                                         <div class="flex-1"><?php echo '$'.$value; ?></div>
-                                        <div class="flex-1"><?php echo $bank; ?></div>
-                                        <div class="flex-1"><?php echo $accountNumber; ?></div>
+                                        <div class="flex-1"><?php echo $receivingWallet; ?></div>
+                                        <!-- <div class="flex-1">// $bank; ?></div>
+                                        <div class="flex-1">// $accountNumber; ?></div> -->
                                         <div class="flex-1"><?php echo $date; ?></div>
                                         <?php
                                         if ($status == "Success") {
@@ -107,8 +110,9 @@
                             while ($row = mysqli_fetch_assoc($res)) {
                                 $amount = $row['amount'];
                                 $value = $row['value'];
-                                $bank = $row['bank'];
-                                $accountNumber = $row['accountNumber'];
+                                $receivingWallet = $row['walletAddress'];
+                                // $bank = $row['bank'];
+                                // $accountNumber = $row['accountNumber'];
                                 $date = $row['date'];
                                 $status = $row['status'];
                                 ?>
@@ -122,13 +126,17 @@
                                         <div class="flex-1"><?php echo '$'.$value; ?></div>
                                     </div>
                                     <div class="flex mb-4 border-b border-gray-200">
+                                        <div  class="flex-1 mb-4">Receiving wallet</div>
+                                        <div class="flex-1"><?php echo $receivingWallet; ?></div>
+                                    </div>
+                                    <!-- <div class="flex mb-4 border-b border-gray-200">
                                         <div  class="flex-1 mb-4">Bank</div>
                                         <div class="flex-1"><?php echo $bank; ?></div>
                                     </div>
                                     <div class="flex mb-4 border-b border-gray-200">
                                         <div  class="flex-1 mb-4">Account Number</div>
                                         <div class="flex-1"><?php echo $accountNumber; ?></div>
-                                    </div>
+                                    </div> -->
                                     <div class="flex mb-4 border-b border-gray-200">
                                         <div  class="flex-1 mb-4">Date</div>
                                         <div class="flex-1"><?php echo $date; ?></div>

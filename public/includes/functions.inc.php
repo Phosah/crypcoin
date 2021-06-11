@@ -32,6 +32,17 @@ function emptyAccountDetails($bank, $accountName, $accountNumber) {
     return $result;
 }
 
+function emptyWalletAddress($wallet) {
+    $result = true;
+    
+    if (empty($wallet)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
 function emptyDeposit($amount) {
     $result = true;
     
@@ -391,10 +402,10 @@ function emptyAdminDeposit($username, $plan, $coin, $amount, $value, $status) {
     return $result;
 }
 
-function emptyAdminWithdraw($username, $amount, $value, $bank, $accountNumber, $status) {
+function emptyAdminWithdraw($username, $amount, $value, $receivingWallet, $status) {
     $result = true;
     
-    if (empty($username) || empty($amount) || empty($value) || empty($bank) || empty($accountNumber) || empty($status)) {
+    if (empty($username) || empty($amount) || empty($value) || empty($receivingWallet) || empty($status)) {
         $result = true;
     } else {
         $result = false;

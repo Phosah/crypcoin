@@ -10,6 +10,7 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body class="font-body">
     <?php 
@@ -125,13 +126,33 @@
                             </div>
                         </div>              
                     </div>
-                    <div class="p-4">
+                    <!-- <div class="p-4">
                         <img src="img/dashboard-graph.png" alt="Dashboard crypto graph">
-                    </div>
+                    </div> -->
+                    <div id="chart"></div>
+                    <script>
+                        var options = {
+                        chart: {
+                            type: 'line'
+                        },
+                        series: [{
+                            name: 'sales',
+                            data: [30,40,35,50,49,60,70,91,125]
+                        }],
+                        xaxis: {
+                            categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
+                        }
+                        }
+
+                        var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+                        chart.render();
+
+                    </script>
                 </div>
             </section>
             <section class="lg:w-3/12 mx-auto py-20">
-                <div class="sm:flex justify-center lg:flex-col sm:space-x-12 lg:space-x-0">               
+                <div class="sm:flex items-center justify-center lg:flex-col sm:space-x-12 lg:space-x-0">               
                     <div class="mb-12 sm:mb-0 lg:mb-16 bg-blue-700 rounded-xl text-white">
                         <div class="flex space-x-12 items-center justify-between p-4 mb-6 border-b border-white border-opacity-25">
                             <h3 class="">Portfolio value</h3>

@@ -127,7 +127,7 @@
                         <div class="flex-1">Value</div>
                         <div class="flex-1">Date</div>
                         <div class="flex-1">Status</div>
-                        <div class="flex-1">Proof of Payment</div>
+                        <!-- <div class="flex-1">Proof of Payment</div> -->
                     </div>
                     <div class="border-b border-brand-gray-dark-3"></div>
                    
@@ -166,7 +166,45 @@
                                                     break;
                                         }
                                     ?>
-                                    <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md"><a href="upload-receipt.php">Update payment slip</a></button></div>
+                                    <!-- <div class="flex-shrink-0 text-blue-600"><button class="border border-blue-600 py-2 px-3 rounded-md"><a href="upload-receipt.php">Update payment slip</a></button></div> -->
+                                </div>
+                                <div class="border-b border-brand-gray-dark-3"></div>
+                                <?php
+                            }                       
+                        }
+                    ?>
+                </div>
+            </div>
+        </section>
+        <!-- Trades and Bonuses -->
+        <section class="hidden md:block py-10">       
+            <div class="max-w-6xl mx-auto px-6 bg-gray-100">
+                <h2 class="mb-2 px-4 py-6 font-bold text-brand-gray-dark-1 text-xl">Trades and Bonus</h2>
+                <div>
+                    <div class="flex items-center justify-center py-6 px-6 bg-brand-gray-light-6">
+                        <div class="flex-1">Trade</div>
+                        <div class="flex-1">Bonus</div>
+                        <div class="flex-1">Date</div>
+                    </div>
+                    <div class="border-b border-brand-gray-dark-3"></div>
+                   
+                    <?php
+                        include('includes/dbh.inc.php');
+                        $username = $_SESSION["name"];
+                        $sql = "SELECT * FROM tbl_trade WHERE username='$username';";
+
+                        $res = mysqli_query($conn, $sql);
+                        if($res==true) {
+                            while ($row = mysqli_fetch_assoc($res)) {
+                                $trade = $row['trade'];
+                                $bonus = $row['bonus'];
+                                $date = $row['date'];
+                                ?>
+
+                                <div class="flex items-center justify-center py-6 px-6 font-bold text-sm">
+                                    <div class="flex-1"><?php echo '$'.$trade; ?></div>
+                                    <div class="flex-1"><?php echo '$'.$bonus; ?></div>
+                                    <div class="flex-1"><?php echo $date; ?></div>
                                 </div>
                                 <div class="border-b border-brand-gray-dark-3"></div>
                                 <?php
@@ -238,6 +276,50 @@
                                             <div  class="flex-1 mb-4">Proof of Payment</div>
                                             <div class="flex-1 text-blue-600 text-xs"><button class="border border-blue-600 py-2 px-3 rounded-md"><a href="upload-receipt.php">Update payment slip</a></button></div>
                                         </div>
+                                    </div>
+                                    <div class="border-b border-brand-gray-light-3"></div>
+                                    <?php
+                                }                       
+                            }
+                        ?>            
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Trade mobile -->
+        <section class="block md:hidden py-10">
+            <div class="max-w-6xl mx-auto px-6 bg-gray-100">
+                <div class="px-3">
+                    <h2 class="mb-2 px-4 py-6 font-bold text-brand-gray-dark-1 text-xl">Trade history</h2>
+                </div>
+                <div>
+                    <div>
+                        <div class="border-b border-brand-gray-dark-3"></div>
+                        <?php
+                            include('includes/dbh.inc.php');
+                            $username = $_SESSION['name'];
+                            $sql = "SELECT * FROM tbl_trade WHERE username='$username' ORDER BY ID DESC;";
+                            $res = mysqli_query($conn, $sql);
+    
+                            if($res==true) {
+                                while ($row = mysqli_fetch_assoc($res)) {
+                                    $trade = $row['trade'];
+                                    $bonus = $row['bonus'];
+                                    ?>
+                                    <div class="py-6 px-6 bg-brand-gray-light-6">
+                                        <div class="flex mb-4 border-b border-gray-200">
+                                            <div class="flex-1 mb-4">Trade</div>
+                                            <div class="flex-1"><?php echo '$'.$trade; ?></div>
+                                        </div>
+                                        <div class="flex mb-4 border-b border-gray-200">
+                                            <div  class="flex-1 mb-4">Bonus</div>
+                                            <div class="flex-1"><?php echo '$'.$bonus; ?></div>
+                                        </div>
+                                        <div class="flex mb-4">
+                                            <div  class="flex-1 mb-4">Date</div>
+                                            <div class="flex-1"><?php echo $date; ?></div>
+                                        </div>
+                                        <div class="flex mb-4 border-b border-gray-200"></div>
                                     </div>
                                     <div class="border-b border-brand-gray-light-3"></div>
                                     <?php

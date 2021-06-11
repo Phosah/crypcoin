@@ -59,8 +59,8 @@
         </section>
         <section class="py-28">
             <div class="md:flex items-center max-w-6xl mx-auto md:space-x-12 px-6">
-                <div class="md:w-1/2 mb-8 md:mb-0">
-                    <img class="md:h-full mx-auto md:w-full" src="img/about.png" alt="Who are we">
+                <div class="md:w-1/2 mb-14 md:mb-0">
+                    <img class="w-80 mx-auto md:w-full" src="img/about.png" alt="Who are we">
                 </div>
                 <div class="md:w-1/2">
                     <h2 class="mb-8 text-center md:text-left text-5xl text-white font-body font-bold">Our mission</h2>

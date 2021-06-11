@@ -64,6 +64,54 @@ if($e = curl_error($ch)) {
 } else {
     $decoded = json_decode($resp);
     $bch_price = $decoded[0]->current_price;
+    echo "<br>";
+}
+
+curl_close($ch);
+
+// $ch = curl_init();
+// $url4 = "https://api.coingecko.com/api/v3/coins/dogecoin/market_chart?vs_currency=usd&days=3";
+
+// curl_setopt($ch, CURLOPT_URL, $url4);
+// curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+// $resp = curl_exec($ch);
+
+// if($e = curl_error($ch)) {
+//     echo $e;
+// } else {
+//     var_dump($decoded = json_decode($resp));
+//     echo $dogecoin_prices = $decoded->prices[0][1];
+// }
+
+// curl_close($ch);
+
+$ch = curl_init();
+$url4 = "https://api.coingecko.com/api/v3/coins/dogecoin/market_chart?vs_currency=usd&days=1";
+
+curl_setopt($ch, CURLOPT_URL, $url4);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+$resp = curl_exec($ch);
+
+if($e = curl_error($ch)) {
+    echo $e;
+} else {
+    $decoded = json_decode($resp);
+    $price_array = $decoded->prices;
+    $array_length = sizeof($price_array);
+    // var_dump(sizeof($price_array));
+    // echo "<br>";
+    for ($i = 0; $i < $array_length; $i++) {
+        // echo $price_array[$i][1];
+        // echo "<br>";
+        // echo "<div>==================================</div>";
+    }
+    for ($i = 0; $i < $array_length; $i++) {
+        // echo $price_array[$i][0];
+        // echo "<br>";
+        // echo "<div>+++++++++++++++++++++++++++++++++</div>";
+    }
 }
 
 curl_close($ch);
