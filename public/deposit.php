@@ -272,10 +272,10 @@
                                                 }
                                             ?>
                                         </div>
-                                        <div class="flex space-x-1 mb-4 border-b border-gray-200">
+                                        <!-- <div class="flex space-x-1 mb-4 border-b border-gray-200">
                                             <div  class="flex-1 mb-4">Proof of Payment</div>
                                             <div class="flex-1 text-blue-600 text-xs"><button class="border border-blue-600 py-2 px-3 rounded-md"><a href="upload-receipt.php">Update payment slip</a></button></div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="border-b border-brand-gray-light-3"></div>
                                     <?php

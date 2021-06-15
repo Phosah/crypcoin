@@ -37,6 +37,9 @@
                 <div>
                     <a class="hover:text-blue-500" href="admin/manage-dashboard.php">Manage Dashboard</a>
                 </div>
+                <div>
+                    <a class="hover:text-blue-500" href="admin/manage-users.php">Manage Users</a>
+                </div>
             </div>
             <div class="flex justify-end">
                 <div class="text-red-500 hover:text-red-800"><a href="includes/admin-logout.inc.php">Logout</a></div>

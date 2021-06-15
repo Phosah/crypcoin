@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom.css">
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/chart/bitcoin.js"></script>
+    <script src="js/api/bitcoin.js"></script>
 </head>
 <body class="font-body">
     <?php  include 'dashboard-header.php'; ?>
@@ -130,25 +132,6 @@
                         <img src="img/dashboard-graph.png" alt="Dashboard crypto graph">
                     </div> -->
                     <div id="chart"></div>
-                    <script>
-                        var options = {
-                        chart: {
-                            type: 'line'
-                        },
-                        series: [{
-                            name: 'sales',
-                            data: [30,40,35,50,49,60,70,91,125]
-                        }],
-                        xaxis: {
-                            categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-                        }
-                        }
-
-                        var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-                        chart.render();
-
-                    </script>
                 </div>
             </section>
             <section class="lg:w-3/12 mx-auto py-20">
@@ -185,7 +168,7 @@
                                     <p class="text-brand-gray-light-1 lg:text-sm"><?php echo $ltcPortfolioValue. ' LTC' ?></p>
                                 </div>
                             </div>
-                            <div class="flex justify-between space-x-12 px-3 lg:px-1 py-3">
+                            <div class="flex justify-between space-x-12 px-3 lg:px-1 py-3 border-b border-brand-gray-light-3 border-opacity-50">
                                 <div class="flex items-center space-x-3">                       
                                     <img src="img/ethereum-icon.png" alt="Ethereum icon">
                                     <h3 class="font-bold lg:text-sm text-brand-gray-dark-1">Ethereum</h3>

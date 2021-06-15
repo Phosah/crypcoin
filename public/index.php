@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/animate.css">
     <title>Crypcoin - Home</title>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/chart/litecoin.js"></script>
+    <script src="js/api/litecoin.js"></script>
 </head>
 <body class="bg-gray-900 font-body">
     <header class="home-header min-h-screen pb-30 text-white">
@@ -60,7 +62,7 @@
                                     <img id="confirm-pwd-icon" class="w-6 cursor-pointer" src="img/password-show.png" alt="Password icon">                         
                                 </div>
                             </div>
-                            <button class="mb-4 px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700" type="submit" name="submit">Register</button>
+                            <button class="mb-4 px-6 py-2 bg-blue-600 rounded-md hover:bg-blue-700 outline-none" type="submit" name="submit">Register</button>
                             <?php 
                                 if(isset($_GET["error"])) {
                                     if($_GET["error"] == "emptyinput") {
@@ -107,7 +109,7 @@
     <script>
         new WOW().init();
     </script>
-    <script src="js/script.js"></script>
     <script src="js/password.js"></script>
+    
 </body>
 </html>

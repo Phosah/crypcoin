@@ -15,7 +15,7 @@
                 echo "<a class='block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2' href='login.php'>Login</a>";
             }
         ?>
-        <button class="block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 px-7 py-2 border bg-blue-700 hover:bg-white text-white hover:text-blue-700 hover:border-blue-700 rounded-md">
+        <button class="block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 px-7 py-2 border bg-blue-700 hover:bg-white text-white hover:text-blue-700 hover:border-blue-700 rounded-md outline-none">
             <a class="" href="register.php">Sign up</a>
         </button>
     </div>
@@ -45,7 +45,7 @@
                 echo "<a class='block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 border-b-2 border-transparent hover:border-2 md:hover:border-blue-700 pb-2' href='login.php'>Login</a>";
             }
         ?>
-        <button class="block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 px-7 py-2 bg-blue-700 hover:bg-white hover:text-blue-700 text-white rounded-md">
+        <button class="block md:inline-block mb-4 md:mb-0 ml-0 md:ml-8 px-7 py-2 bg-blue-700 hover:bg-white hover:text-blue-700 text-white rounded-md outline-none">
             <a class="" href="register.php">Sign up</a>
         </button>
     </div>
